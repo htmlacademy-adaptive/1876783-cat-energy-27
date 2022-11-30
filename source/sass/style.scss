@@ -1,1 +1,19 @@
-// Начните писать стили здесь
+@use "blocks/page.scss";
+@use "blocks/header.scss";
+@use "blocks/navigation.scss";
+@use "blocks/main-container.scss";
+@use "blocks/programs.scss";
+@use "blocks/instruction.scss";
+@use "blocks/result.scss";
+@use "blocks/slider-change.scss";
+@use "blocks/scroller.scss";
+@use "blocks/button.scss";
+@use "blocks/footer.scss";
+@use "blocks/footer-address.scss";
+@use "blocks/footer-logo.scss";
+@use "blocks/footer-social.scss";
+@use "blocks/footer-copyright.scss";
+@use "global/fonts.scss";
+@use "global/global.scss";
+@use "global/variables.scss";
+

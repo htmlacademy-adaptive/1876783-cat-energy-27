@@ -1,0 +1,39 @@
+
+.programs__list{
+  display: grid;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.programs__item{
+  background-color: #f2f2f2;
+  padding: 30px 33px 18px 20px;
+}
+
+.programs__title{
+  margin: 0;
+  margin-bottom: 29px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.programs__description{
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.programs__link{
+  padding: 4px 47px 4px 0;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
