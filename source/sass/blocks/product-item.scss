@@ -1,0 +1,21 @@
+.product-item{
+  display: grid;
+}
+
+.product-item__title{
+  margin: 0;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.product-item__description{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}

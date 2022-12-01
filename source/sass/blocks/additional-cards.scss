@@ -1,0 +1,23 @@
+.additional-cards{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.additional-cards__title{
+  margin: 0;
+  margin-bottom: 49px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.additional-cards__list{
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+  display: grid;
+  gap: 32px;
+  list-style-type: none;
+}

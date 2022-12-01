@@ -1,8 +1,11 @@
+.footer {
+  background-color: #f2f2f2;
+}
+
 .footer__content{
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #f2f2f2;
 }
 
 .footer__footer-logo{
@@ -15,13 +18,4 @@
 
 .footer__copyright{
   padding: 22px 20px;
-}
-
-.footer__wrapper--catalog{
-  background-color: #f2f2f2;
-
-}
-
-.footer__wrapper--form{
-  background-color: #f2f2f2;
 }
