@@ -1,0 +1,40 @@
+.personal-data__form-group .form-group__field,
+.contacts__form-group .form-group__field {
+  width: 100%;
+}
+
+.personal-data__form-group .form-group__field {
+  padding: 14px 20px;
+}
+
+.contacts__form-group .form-group__field {
+  padding: 14px 15px;
+}
+
+.program__form-group .form-group__field,
+.add-product__form-group .form-group__field {
+  margin-right: 15px;
+}
+
+.form-group {
+  margin: 0;
+}
+
+.form-group__label {
+  align-self: center;
+  white-space: nowrap;
+}
+
+.add-product__form-group .form-group__label {
+  color: #000000;
+}
+
+.form-group__field {
+  box-sizing: border-box;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #444444;
+}

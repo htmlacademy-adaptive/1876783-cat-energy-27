@@ -1,0 +1,38 @@
+.form-program-food__personal-data,
+.form-program-food__program,
+.form-program-food__contacts,
+.form-program-food__comment,
+.form-program-food__add-product {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 13px;
+  border: none;
+}
+
+.form-program-food__personal-data,
+.form-program-food__program {
+  margin-bottom: 46px;
+}
+
+.form-program-food__contacts,
+.form-program-food__comment {
+  margin-bottom: 23px;
+}
+
+.form-program-food__button {
+  width: 100%;
+  margin-top: 34px;
+}
+
+.form-program-food__wrapper-mark {
+  padding: 21px 63px 32px;
+}
+
+.form-program-food__mark {
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-transform: none;
+}

@@ -1,5 +1,5 @@
 .main-container__inner{
-  background-image: url("../../img/background/index-background-cat.jpg");
+  background-image:  linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/index-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #68B738;
@@ -26,6 +26,10 @@
   padding: 27px 20px 49px;
 }
 
+.main-container__title--form{
+  padding: 27px 20px;
+}
+
 .main-container__slogan{
   margin: 0;
   font-family: "Oswald";
@@ -40,6 +44,13 @@
   line-height: 14px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.main-container__slogan--form{
+  margin-bottom: 19px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 10px 20px;
 }
 
 .main-container__programs{
@@ -64,3 +75,14 @@
   padding-left: 20px;
 }
 
+.main-container__form{
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #444444;
+}

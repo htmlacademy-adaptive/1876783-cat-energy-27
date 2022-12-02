@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .basic-cards {
   margin-bottom: 36px;
   padding-right: 20px;
@@ -5,11 +7,9 @@
 }
 
 .basic-cards__list {
-  margin: 0;
-  padding: 0;
+  @include bootstrap.list-reset;
   display: grid;
   row-gap: 19px;
-  list-style-type: none;
 }
 
 .basic-cards__item {
