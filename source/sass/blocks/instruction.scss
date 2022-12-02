@@ -1,8 +1,10 @@
-.instruction__wrapper{
+@use "../global/bootstrap.scss";
+
+.instruction__wrapper {
   margin-bottom: 49px;
 }
 
-.instruction__title{
+.instruction__title {
   margin: 0;
   margin-bottom: 40px;
   font-family: "Oswald";
@@ -12,30 +14,28 @@
   color: #000000;
 }
 
-.instruction__list{
+.instruction__list {
+  @include bootstrap.list-reset;
   display: grid;
   gap: 20px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
 }
 
-.instruction__item{
+.instruction__item {
   display: grid;
   grid-template-columns: 60px auto;
   gap: 20px;
 }
 
-.instruction__pic{
+.instruction__pic {
   width: 60px;
   height: 60px;
   background-color: #68B738;
 }
 
-.instruction__description{
+.instruction__description {
   margin: 0;
 }
 
-.instruction__number--hidden{
+.instruction__number--hidden {
   display: none;
 }

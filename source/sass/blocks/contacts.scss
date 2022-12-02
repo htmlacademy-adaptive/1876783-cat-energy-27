@@ -1,4 +1,4 @@
-.contacts__title{
+.contacts__title {
   margin-bottom: 35px;
   padding: 0;
   font-family: "Oswald";
@@ -9,8 +9,12 @@
   text-transform: none;
 }
 
-.contacts__form-group{
+.contacts__form-group {
   display: flex;
   gap: 11px;
-}
 
+  .form-group__field {
+    width: 100%;
+    padding: 14px 15px;
+  }
+}

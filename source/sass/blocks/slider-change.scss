@@ -1,5 +1,5 @@
-.slider-change__list{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+@use "../global/bootstrap.scss";
+
+.slider-change__list {
+  @include bootstrap.list-reset;
 }

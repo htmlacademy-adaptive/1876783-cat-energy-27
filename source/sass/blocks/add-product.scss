@@ -1,5 +1,16 @@
 @use "../global/bootstrap.scss";
 
+.add-product__form-group {
+
+  .form-group__field {
+    margin-right: 15px;
+  }
+
+  .form-group__label {
+    color: #000000;
+  }
+}
+
 .add-product__title {
   margin-bottom: 35px;
   padding: 0;

@@ -1,11 +1,11 @@
-.navigation__list{
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+@use "../global/bootstrap.scss";
+
+.navigation__list {
+  @include bootstrap.list-reset;
   text-align: center;
 }
 
-.navigation__link{
+.navigation__link {
   display: block;
   font-family: "Oswald";
   font-style: Medium;

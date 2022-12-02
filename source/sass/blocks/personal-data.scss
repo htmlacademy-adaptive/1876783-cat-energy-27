@@ -1,6 +1,9 @@
 .personal-data__form-group {
   display: flex;
   gap: 11px;
+
+  .form-group__field {
+    padding: 14px 20px;
+    width: 100%;
+  }
 }
-
-
