@@ -3,3 +3,8 @@
   padding: 0;
   list-style-type: none;
 }
+
+@mixin padding-x {
+  padding-right: 20px;
+  padding-left: 20px;
+}

@@ -6,11 +6,9 @@
 @use "blocks/instruction.scss";
 @use "blocks/result.scss";
 @use "blocks/slider-change.scss";
-@use "blocks/scroller.scss";
 @use "blocks/button.scss";
 @use "blocks/footer.scss";
 @use "blocks/footer-address.scss";
-@use "blocks/footer-logo.scss";
 @use "blocks/footer-social.scss";
 @use "blocks/footer-copyright.scss";
 @use "global/fonts.scss";
@@ -29,4 +27,5 @@
 @use "blocks/comment.scss";
 @use "blocks/add-product.scss";
 @use "global/bootstrap.scss";
-@use "global/mixins.scss"
+@use "global/mixins.scss";
+@use "blocks/cards-more.scss";

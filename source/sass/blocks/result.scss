@@ -1,9 +1,9 @@
-.result__wrapper{
+.result__wrapper {
   display: grid;
   row-gap: 20px;
 }
 
-.result__title{
+.result__title {
   margin: 0;
   margin-bottom: 40px;
   font-family: "Oswald";
@@ -13,23 +13,23 @@
   color: #000000;
 }
 
-.result__intro{
+.result__intro {
   margin: 0;
 }
 
-.result__list{
+.result__list {
   display: flex;
   justify-content: space-between;
   margin: 0;
 }
 
-.result__name{
+.result__name {
   font-size: 12px;
   line-height: 12px;
   order: 2;
 }
 
-.result__value{
+.result__value {
   margin: 0;
   font-family: "Oswald";
   font-size: 24px;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.result__price{
+.result__price {
   font-family: "Oswald";
   font-size: 14px;
   line-height: 20px;

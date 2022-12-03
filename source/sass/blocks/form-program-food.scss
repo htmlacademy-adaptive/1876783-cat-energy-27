@@ -12,21 +12,28 @@
 
 .form-program-food__personal-data,
 .form-program-food__program {
-  margin-bottom: 46px;
+  padding: 23px 20px;
 }
 
-.form-program-food__contacts,
+.form-program-food__contacts {
+  padding: 23px 20px 11px;
+}
+
 .form-program-food__comment {
-  margin-bottom: 23px;
+  padding: 12px 20px;
+}
+
+.form-program-food__add-product {
+  padding: 10px 20px;
 }
 
 .form-program-food__button {
   width: 100%;
-  margin-top: 34px;
+  margin-top: 24px;
 }
 
 .form-program-food__wrapper-mark {
-  padding: 21px 63px 32px;
+  padding: 21px 63px;
 }
 
 .form-program-food__mark {

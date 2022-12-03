@@ -1,6 +1,6 @@
 @use "../global/bootstrap.scss";
 
-.footer-social__list{
+.footer-social__list {
   @include bootstrap.list-reset;
   display: flex;
   gap: 24px;

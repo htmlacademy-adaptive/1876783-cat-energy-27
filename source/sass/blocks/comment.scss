@@ -1,6 +1,7 @@
 .comment__title {
-  margin-bottom: 35px;
+  margin-bottom: 22px;
   padding: 0;
+  padding-top: 12px;
   font-family: "Oswald";
   font-size: 24px;
   line-height: 26px;
@@ -9,8 +10,10 @@
   text-transform: none;
 }
 
-.comment__field{
+.comment__field {
+  box-sizing: border-box;
   padding: 10px 14px;
+  width: 280px;
   font-family: "Oswald";
   font-size: 16px;
   line-height: 18px;

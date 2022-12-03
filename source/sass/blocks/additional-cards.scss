@@ -1,10 +1,5 @@
 @use "../global/bootstrap.scss";
 
-.additional-cards {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .additional-cards__title {
   margin: 0;
   margin-bottom: 49px;
@@ -17,7 +12,6 @@
 
 .additional-cards__list {
   @include bootstrap.list-reset;
-  margin-bottom: 19px;
   display: grid;
   gap: 32px;
 }

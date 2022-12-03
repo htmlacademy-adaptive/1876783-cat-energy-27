@@ -1,11 +1,5 @@
 @use "../global/bootstrap.scss";
 
-.basic-cards {
-  margin-bottom: 36px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 .basic-cards__list {
   @include bootstrap.list-reset;
   display: grid;
@@ -34,12 +28,7 @@
   text-decoration: none;
 }
 
-.basic-cards__link-new-cards {
-  color: #111111;
-  background-color: #ffffff;
-  padding-top: 23px;
-  text-decoration: none;
-}
+
 
 .basic-cards__title {
   margin: 0;
@@ -59,48 +48,14 @@
   padding-bottom: 9px;
 }
 
-// .basic-cards__link{
-//   &-buy{
-//     grid-column: 1/-1;
-//   margin-top: 13px;
-//   }
-
-//   &-more{
-//     margin-top: 13px;
-//   }
-// }
-
 .basic-cards__link-buy {
   grid-column: 1/-1;
   margin-top: 13px;
 }
 
-.basic-cards__link-more {
+.cards-more__link {
+  width: 100%;
   margin-top: 13px;
-  width: 280px;
-}
-
-.basic-cards__more {
-  margin-bottom: 50px;
-  padding-right: 20px;
-  padding-left: 20px;
-  display: grid;
-  gap: 8px;
-  justify-items: center;
-}
-
-.basic-cards__title-more {
-  margin: 0;
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-decoration: none;
-  color: #111111;
-  background-color: #ffffff;
-  text-transform: uppercase;
-}
-
-.basic-cards__text-more {
-  margin: 0;
+  background-color: #f2f2f2;
+  color: #444444;
 }

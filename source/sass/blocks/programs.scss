@@ -5,10 +5,6 @@
   row-gap: 20px;
 }
 
-.programs__link-programs {
-  grid-template-columns: 1/-1;
-}
-
 .programs__list {
   @include bootstrap.list-reset;
   display: grid;
