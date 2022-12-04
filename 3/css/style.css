@@ -1,0 +1,740 @@
+.page__container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: regular;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/lato/Lato-Regular.woff") format("woff"), url("../../fonts/lato/Lato-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: medium;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/oswald/oswaldmedium.woff") format("woff"), url("../../fonts/oswald/oswaldmedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: regular;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/oswald/oswaldregular.woff") format("woff"), url("../../fonts/oswald/oswaldregular.woff2") format("woff2");
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-wrapper {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: 0;
+  width: 191px;
+  height: 38px;
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.navigation__link {
+  display: block;
+  font-family: "Oswald";
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 22px 20px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-container__inner {
+  text-align: center;
+  padding: 27px 20px 10px;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/index-background-cat.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+}
+
+.main-container__title {
+  margin: 0;
+  font-family: "Oswald";
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.main-container__title--index {
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.main-container__title--catalog {
+  padding: 27px 20px;
+}
+
+.main-container__title--form {
+  margin-bottom: 37px;
+}
+
+.main-container__slogan {
+  margin: 0;
+  font-family: "Oswald";
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.main-container__slogan--index {
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.main-container__slogan--form {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.main-container__programs {
+  padding: 10px 20px;
+}
+
+.main-container__link-programs {
+  display: block;
+  margin-top: 3px;
+  width: 100%;
+}
+
+.main-container__instruction {
+  padding: 10px 20px 50px;
+}
+
+.main-container__result {
+  padding: 25px 20px 40px;
+  background-color: #eaeaea;
+}
+
+.main-container__basic-cards {
+  padding: 27px 20px 10px;
+}
+
+.main-container__cards-more {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.main-container__additional-cards {
+  padding: 25px 20px 19px;
+}
+
+.main-container__gift {
+  padding: 35px 20px;
+}
+
+.main-container__inner-form {
+  padding: 27px 20px 16px;
+}
+
+.main-container__form {
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.programs__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
+.programs__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  row-gap: 20px;
+}
+
+.programs__item {
+  background-color: #f2f2f2;
+  padding: 30px 33px 18px 20px;
+}
+
+.programs__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.programs__description {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.programs__link {
+  padding: 4px 47px 4px 0;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.instruction__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Oswald";
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.instruction__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 20px;
+}
+
+.instruction__item {
+  display: grid;
+  grid-template-columns: 60px auto;
+  gap: 20px;
+}
+
+.instruction__pic {
+  width: 60px;
+  height: 60px;
+  background-color: #68B738;
+}
+
+.instruction__description {
+  margin: 0;
+}
+
+.instruction__number--hidden {
+  display: none;
+}
+
+.result__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
+.result__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Oswald";
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.result__intro {
+  margin: 0;
+}
+
+.result__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.result__name {
+  font-size: 12px;
+  line-height: 12px;
+  order: 2;
+}
+
+.result__value {
+  margin: 0;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+
+.result__price {
+  font-family: "Oswald";
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+
+.slider-change__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.button {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68B738;
+  border: none;
+}
+
+.button--programs {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.footer {
+  background-color: #f2f2f2;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer__footer-logo {
+  padding: 39px 20px 32px 20px;
+}
+
+.footer__social {
+  padding: 20px;
+}
+
+.footer__copyright {
+  padding: 22px 20px;
+}
+
+.footer-address__wrapper {
+  padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 139px 139px;
+  gap: 2px;
+}
+
+.footer-address__wrapper--index {
+  background-color: #ffffff;
+}
+
+.footer-address__title {
+  margin: 0;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.footer-address__text {
+  margin: 0;
+  line-height: 20px;
+}
+
+.footer-social__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 24px;
+}
+
+.footer-copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #666666;
+}
+
+.footer-copyright__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444444;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.basic-cards__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  row-gap: 19px;
+}
+
+.basic-cards__item {
+  padding-top: 11px;
+  padding-bottom: 14px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+}
+
+.basic-cards__link-img {
+  grid-row: 1/3;
+  justify-self: center;
+  align-self: center;
+  color: #222222;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.basic-cards__link {
+  color: #222222;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.basic-cards__title {
+  margin: 0;
+  margin-bottom: 18px;
+  width: 76px;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #222222;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.basic-cards__features {
+  margin: 0;
+  padding-bottom: 9px;
+}
+
+.basic-cards__link-buy {
+  grid-column: 1/-1;
+  margin-top: 13px;
+}
+
+.cards-more__link {
+  width: 100%;
+  margin-top: 13px;
+  background-color: #f2f2f2;
+  color: #444444;
+}
+
+.features-list__value {
+  margin: 0;
+}
+
+.features-list__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.additional-cards__title {
+  margin: 0;
+  margin-bottom: 49px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.additional-cards__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 32px;
+}
+
+.product-item {
+  display: grid;
+}
+
+.product-item__title {
+  margin: 0;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.product-item__description {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 14px;
+  color: #444444;
+}
+
+.gift__wrapper {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/gift-catalog.jpg");
+  background-repeat: no-repeat;
+  background-color: #68B738;
+  background-size: cover;
+  padding: 187px 61px 43px 58px;
+}
+
+.gift__slogan {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.form-program-food__personal-data,
+.form-program-food__program,
+.form-program-food__contacts,
+.form-program-food__comment,
+.form-program-food__add-product {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 13px;
+  border: none;
+}
+
+.form-program-food__personal-data,
+.form-program-food__program {
+  padding: 23px 20px;
+}
+
+.form-program-food__contacts {
+  padding: 23px 20px 11px;
+}
+
+.form-program-food__comment {
+  padding: 12px 20px;
+}
+
+.form-program-food__add-product {
+  padding: 10px 20px;
+}
+
+.form-program-food__button {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.form-program-food__wrapper-mark {
+  padding: 21px 63px;
+}
+
+.form-program-food__mark {
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-transform: none;
+}
+
+.form-group {
+  margin: 0;
+}
+
+.form-group__label {
+  align-self: center;
+  white-space: nowrap;
+}
+
+.form-group__field {
+  box-sizing: border-box;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #444444;
+}
+
+.personal-data__form-group {
+  display: flex;
+  gap: 11px;
+}
+.personal-data__form-group .form-group__field {
+  padding: 14px 20px;
+  width: 100%;
+}
+
+.program__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 15px;
+}
+
+.program__form-group {
+  color: #222222;
+}
+.program__form-group .form-group__field {
+  margin-right: 15px;
+}
+
+.contacts__title {
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 23px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.contacts__form-group {
+  display: flex;
+  gap: 11px;
+}
+.contacts__form-group .form-group__field {
+  width: 100%;
+  padding: 14px 15px;
+}
+
+.comment__title {
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 12px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.comment__field {
+  box-sizing: border-box;
+  padding: 10px 14px;
+  width: 280px;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #444444;
+  white-space: nowrap;
+}
+
+.add-product__form-group .form-group__field {
+  margin-right: 15px;
+}
+.add-product__form-group .form-group__label {
+  color: #000000;
+}
+
+.add-product__title {
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 10px;
+  font-family: "Oswald";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
+}
+
+.add-product__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  gap: 15px;
+}
+
+.cards-more__link-new-cards {
+  color: #111111;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.cards-more__title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #111111;
+  background-color: #ffffff;
+  text-transform: uppercase;
+}
+
+.cards-more__slogan {
+  margin: 0;
+}
+
+.cards-more__link {
+  width: 100%;
+  margin-top: 21px;
+  background-color: #f2f2f2;
+  color: #444444;
+}
+/*# sourceMappingURL=style.css.map */
