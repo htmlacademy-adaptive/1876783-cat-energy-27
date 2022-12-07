@@ -1,24 +1,11 @@
-.comment__title {
-  margin-bottom: 22px;
-  padding: 0;
-  padding-top: 12px;
-  font-family: "Oswald";
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-  color: #000000;
-  text-transform: none;
-}
+@use "../global/bootstrap.scss";
 
 .comment__field {
   box-sizing: border-box;
   padding: 10px 14px;
   width: 280px;
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
   text-transform: uppercase;
-  color: #444444;
   white-space: nowrap;
 }

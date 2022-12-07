@@ -6,7 +6,7 @@
 }
 
 .header__logo-wrapper {
-  @include bootstrap.padding-x;
+  @include bootstrap.offset-sides-x(20px, 20px);
   margin: 0;
   width: 191px;
   height: 38px;

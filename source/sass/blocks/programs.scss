@@ -12,18 +12,15 @@
 }
 
 .programs__item {
-  background-color: #f2f2f2;
+  background-color: bootstrap.$grey;
   padding: 30px 33px 18px 20px;
 }
 
 .programs__title {
   margin: 0;
   margin-bottom: 29px;
-  font-family: "Oswald";
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-  color: #000000;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-36, bootstrap.$primary-dark);
   text-transform: uppercase;
 }
 
@@ -34,10 +31,8 @@
 
 .programs__link {
   padding: 4px 47px 4px 0;
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 16px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$primary-dark);
   text-decoration: none;
   text-transform: uppercase;
-  color: #000000;
 }

@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .features-list__value {
   margin: 0;
 }
@@ -5,6 +7,6 @@
 .features-list__item {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
-  line-height: 16px;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-16, bootstrap.$dark-grey);
 }

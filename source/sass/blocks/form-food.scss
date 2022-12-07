@@ -1,0 +1,54 @@
+@use "../global/bootstrap.scss";
+
+.form-food__content {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 13px;
+  border: none;
+}
+
+.form-food__content--personal-data,
+.form-food__content--program {
+  padding: 23px 20px;
+}
+
+.form-food__content--contacts {
+  padding: 23px 20px 12px;
+}
+
+.form-food__content--comment {
+  padding: 12px 20px;
+}
+
+.form-food__content--add-product {
+  padding: 12px 20px 23px;
+}
+
+.form-food__title {
+  margin-bottom: 22px;
+  padding: 0;
+  padding-top: 12px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-26, bootstrap.$primary-dark);
+  text-transform: none;
+}
+
+.form-food__title--contacts {
+  padding-top: 23px;
+}
+
+.form-food__button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.form-food__wrapper-mark {
+  padding: 21px 63px;
+}
+
+.form-food__mark {
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-16, bootstrap.$primary-dark);
+  text-transform: none;
+}

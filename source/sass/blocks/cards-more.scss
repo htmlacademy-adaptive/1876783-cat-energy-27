@@ -1,21 +1,15 @@
+@use "../global/bootstrap.scss";
+
 .cards-more__link-new-cards {
-
-  color: #111111;
-  background-color: #ffffff;
-  text-decoration: none;
-
+  @include bootstrap.link(bootstrap.$secondary-dark, bootstrap.$white);
 }
 
 .cards-more__title {
   margin: 0;
   margin-bottom: 8px;
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  text-decoration: none;
-  color: #111111;
-  background-color: #ffffff;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$secondary-dark);
+  background-color: bootstrap.$white;
   text-transform: uppercase;
 }
 
@@ -26,6 +20,5 @@
 .cards-more__link {
   width: 100%;
   margin-top: 21px;
-  background-color: #f2f2f2;
-  color: #444444;
+  @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
 }

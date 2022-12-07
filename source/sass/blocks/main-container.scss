@@ -1,101 +1,94 @@
-.main-container__inner {
-  text-align: center;
-  padding: 27px 20px 10px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/background/index-background-cat.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
-}
+ @use "../global/bootstrap.scss";
 
-.main-container__title {
-  margin: 0;
-  font-family: "Oswald";
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  color: #000000;
-}
+ .main-container__inner {
+   text-align: center;
+   padding: 27px 20px 10px;
+   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/index-background-cat.jpg");
+   background-repeat: no-repeat;
+   background-size: 320px 302px;
+ }
 
-.main-container__title--index {
-  color: #ffffff;
-  margin-bottom: 25px;
-}
+ .main-container__title {
+   margin: 0;
+   font-family: bootstrap.$primary-family;
+   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-36, bootstrap.$primary-dark);
+ }
 
-.main-container__title--catalog {
-  padding: 27px 20px;
-}
+ .main-container__title--index {
+   color: bootstrap.$white;
+   margin-bottom: 25px;
+ }
 
-.main-container__title--form {
-  margin-bottom: 37px;
-}
+ .main-container__title--catalog {
+   padding: 27px 20px;
+ }
 
-.main-container__slogan {
-  margin: 0;
-  font-family: "Oswald";
-  font-size: 20px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #000000;
-}
+ .main-container__title--form-food {
+   margin-bottom: 37px;
+ }
 
-.main-container__slogan--index {
-  margin-bottom: 29px;
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
+ .main-container__slogan {
+   margin: 0;
+   font-family: bootstrap.$primary-family;
+   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+   text-transform: uppercase;
+ }
 
-.main-container__slogan--form {
-  font-size: 14px;
-  line-height: 18px;
-}
+ .main-container__slogan--index {
+   margin-bottom: 29px;
+   font-size: bootstrap.$font-14;
+   line-height: bootstrap.$height-14;
+   color: bootstrap.$white;
+   text-transform: uppercase;
+ }
 
-.main-container__programs {
-  padding: 10px 20px;
-}
+ .main-container__slogan--form-food {
+   font-size: bootstrap.$font-14;
+   line-height: bootstrap.$height-18;
+ }
 
-.main-container__link-programs {
-  display: block;
-  margin-top: 3px;
-  width: 100%;
+ .main-container__programs {
+   padding: 10px 20px;
+ }
 
-}
+ .main-container__link-programs {
+   display: block;
+   margin-top: 3px;
+   width: 100%;
+ }
 
-.main-container__instruction {
-  padding: 10px 20px 50px;
-}
+ .main-container__instruction {
+   padding: 10px 20px 50px;
+ }
 
-.main-container__result {
-  padding: 25px 20px 40px;
-  background-color: #eaeaea;
-}
+ .main-container__result {
+   padding: 25px 20px 40px;
+   background-color: #eaeaea;
+ }
 
-.main-container__basic-cards {
-  padding: 27px 20px 10px;
-}
+ .main-container__basic-cards {
+   padding: 27px 20px 10px;
+ }
 
-.main-container__cards-more {
-  padding: 25px 20px;
-  text-align: center;
-}
+ .main-container__cards-more {
+   padding: 25px 20px;
+   text-align: center;
+ }
 
-.main-container__additional-cards {
-  padding: 25px 20px 19px;
-}
+ .main-container__additional-cards {
+   padding: 25px 20px 19px;
+ }
 
-.main-container__gift {
-  padding: 35px 20px;
-}
+ .main-container__gift {
+   padding: 35px 20px;
+ }
 
-.main-container__inner-form {
-  padding: 27px 20px 16px;
-}
+ .main-container__inner-form {
+   padding: 27px 20px 16px;
+ }
 
-.main-container__form {
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: #444444;
-}
+ .main-container__form-food {
+   font-family: bootstrap.$primary-family;
+   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
+   text-transform: uppercase;
+ }

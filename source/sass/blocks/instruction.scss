@@ -3,11 +3,8 @@
 .instruction__title {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Oswald";
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
-  color: #000000;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
 }
 
 .instruction__list {
@@ -22,10 +19,10 @@
   gap: 20px;
 }
 
-.instruction__pic {
+.instruction__picture {
   width: 60px;
   height: 60px;
-  background-color: #68B738;
+  background-color: bootstrap.$green;
 }
 
 .instruction__description {

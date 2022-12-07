@@ -7,14 +7,9 @@
 
 .navigation__link {
   display: block;
-  font-family: "Oswald";
-  font-style: Medium;
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 500;
-  background-color: #ffffff;
-  color: #000000;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$medium, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+  @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
   padding: 22px 20px 24px;
-  text-decoration: none;
   text-transform: uppercase;
 }

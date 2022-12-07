@@ -1,20 +1,17 @@
+@use "../global/bootstrap.scss";
+
 .button {
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
+  @include bootstrap.offset-sides-y(10px, 10px);
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$white);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #ffffff;
-  background-color: #68B738;
+  background-color: bootstrap.$green;
   border: none;
 }
 
 .button--programs {
-  padding-top: 7px;
-  padding-bottom: 7px;
+  @include bootstrap.offset-sides-y(7px, 7px);
 }

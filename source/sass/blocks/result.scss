@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .result__wrapper {
   display: grid;
   row-gap: 20px;
@@ -6,11 +8,8 @@
 .result__title {
   margin: 0;
   margin-bottom: 40px;
-  font-family: "Oswald";
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
-  color: #000000;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
 }
 
 .result__intro {
@@ -24,26 +23,22 @@
 }
 
 .result__name {
-  font-size: 12px;
-  line-height: 12px;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-12, bootstrap.$dark-grey);
   order: 2;
 }
 
 .result__value {
   margin: 0;
-  font-family: "Oswald";
-  font-size: 24px;
-  line-height: 24px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-24, bootstrap.$primary-dark);
   text-transform: uppercase;
-  color: #000000;
   text-align: center;
 }
 
 .result__price {
-  font-family: "Oswald";
-  font-size: 14px;
-  line-height: 20px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-20, bootstrap.$primary-dark);
   text-transform: uppercase;
-  color: #000000;
   text-align: center;
 }

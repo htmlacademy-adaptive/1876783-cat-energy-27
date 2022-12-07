@@ -1,3 +1,5 @@
+@use "../global/bootstrap.scss";
+
 .footer-address__wrapper {
   padding: 26px 20px;
   display: grid;
@@ -6,20 +8,18 @@
 }
 
 .footer-address__wrapper--index {
-  background-color: #ffffff;
+  background-color: bootstrap.$white;
 }
 
 .footer-address__title {
   margin: 0;
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #111111;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$secondary-dark);
   text-transform: uppercase;
 }
 
 .footer-address__text {
   margin: 0;
-  line-height: 20px;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-20, bootstrap.$dark-grey);
 }

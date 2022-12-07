@@ -1,28 +1,5 @@
 @use "../global/bootstrap.scss";
 
-.add-product__form-group {
-
-  .form-group__field {
-    margin-right: 15px;
-  }
-
-  .form-group__label {
-    color: #000000;
-  }
-}
-
-.add-product__title {
-  margin-bottom: 22px;
-  padding: 0;
-  padding-top: 10px;
-  font-family: "Oswald";
-  font-size: 24px;
-  line-height: 26px;
-  font-weight: 400;
-  color: #000000;
-  text-transform: none;
-}
-
 .add-product__list {
   @include bootstrap.list-reset;
   display: grid;

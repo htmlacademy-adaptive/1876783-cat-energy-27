@@ -11,15 +11,13 @@
 @use "blocks/footer-address.scss";
 @use "blocks/footer-social.scss";
 @use "blocks/footer-copyright.scss";
-@use "global/fonts.scss";
 @use "global/global.scss";
-@use "global/variables.scss";
 @use "blocks/basic-cards.scss";
 @use "blocks/features-list.scss";
 @use "blocks/additional-cards.scss";
 @use "blocks/product-item.scss";
 @use "blocks/gift.scss";
-@use "blocks/form-program-food.scss";
+@use "blocks/form-food.scss";
 @use "blocks/form-group.scss";
 @use "blocks/personal-data.scss";
 @use "blocks/program.scss";
@@ -27,5 +25,4 @@
 @use "blocks/comment.scss";
 @use "blocks/add-product.scss";
 @use "global/bootstrap.scss";
-@use "global/mixins.scss";
 @use "blocks/cards-more.scss";
