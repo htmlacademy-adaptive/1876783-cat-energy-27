@@ -1,0 +1,43 @@
+@use "../global/bootstrap.scss";
+
+.form-group {
+  margin: 0;
+}
+
+.form-group__label {
+  align-self: center;
+  white-space: nowrap;
+}
+
+.form-group__field {
+  box-sizing: border-box;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
+  text-transform: uppercase;
+}
+
+.form-group__field::placeholder {
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
+}
+
+.contacts__form-group .form-group__field {
+  width: 100%;
+  padding: 14px 15px;
+}
+
+.personal-data__form-group .form-group__field {
+  padding: 14px 20px;
+  width: 100%;
+}
+
+.add-product__form-group {
+
+  .form-group__field {
+    margin-right: 15px;
+  }
+
+  .form-group__label {
+    color: bootstrap.$primary-dark;
+  }
+}

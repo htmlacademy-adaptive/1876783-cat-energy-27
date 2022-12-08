@@ -1,0 +1,15 @@
+@use "../global/bootstrap.scss";
+
+.navigation__list {
+  @include bootstrap.list-reset;
+  text-align: center;
+}
+
+.navigation__link {
+  display: block;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$medium, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+  @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
+  padding: 22px 20px 24px;
+  text-transform: uppercase;
+}

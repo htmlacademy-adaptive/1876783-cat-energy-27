@@ -1,0 +1,19 @@
+@use "../global/bootstrap.scss";
+
+.product-item {
+  display: grid;
+}
+
+.product-item__title {
+  margin: 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$third-dark);
+  text-transform: uppercase;
+}
+
+.product-item__description {
+  display: flex;
+  justify-content: space-between;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-14, bootstrap.$dark-grey);
+}

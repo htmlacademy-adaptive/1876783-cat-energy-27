@@ -1,0 +1,15 @@
+@use "../global/bootstrap.scss";
+
+.footer-copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #666666;
+}
+
+.footer-copyright__text {
+  margin: 0;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$dark-grey);
+}

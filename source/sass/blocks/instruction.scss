@@ -1,0 +1,34 @@
+@use "../global/bootstrap.scss";
+
+.instruction__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
+}
+
+.instruction__list {
+  @include bootstrap.list-reset;
+  display: grid;
+  gap: 20px;
+}
+
+.instruction__item {
+  display: grid;
+  grid-template-columns: 60px auto;
+  gap: 20px;
+}
+
+.instruction__picture {
+  width: 60px;
+  height: 60px;
+  background-color: bootstrap.$green;
+}
+
+.instruction__description {
+  margin: 0;
+}
+
+.instruction__number--hidden {
+  display: none;
+}

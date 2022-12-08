@@ -1,0 +1,15 @@
+@use "../global/bootstrap.scss";
+
+.program__list {
+  @include bootstrap.list-reset;
+  display: grid;
+  gap: 15px;
+}
+
+.program__form-group {
+  color: bootstrap.$third-dark;
+
+  .form-group__field {
+    margin-right: 15px;
+  }
+}

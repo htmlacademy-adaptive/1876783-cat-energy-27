@@ -1,0 +1,7 @@
+@use "../global/bootstrap.scss";
+
+.add-product__list {
+  @include bootstrap.list-reset;
+  display: grid;
+  gap: 15px;
+}

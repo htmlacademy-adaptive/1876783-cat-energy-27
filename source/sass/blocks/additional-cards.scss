@@ -1,0 +1,14 @@
+@use "../global/bootstrap.scss";
+
+.additional-cards__title {
+  margin: 0;
+  margin-bottom: 49px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-24, bootstrap.$primary-dark);
+}
+
+.additional-cards__list {
+  @include bootstrap.list-reset;
+  display: grid;
+  gap: 32px;
+}

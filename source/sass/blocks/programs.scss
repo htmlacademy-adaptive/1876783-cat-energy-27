@@ -1,0 +1,38 @@
+@use "../global/bootstrap.scss";
+
+.programs__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
+.programs__list {
+  @include bootstrap.list-reset;
+  display: grid;
+  row-gap: 20px;
+}
+
+.programs__item {
+  background-color: bootstrap.$grey;
+  padding: 30px 33px 18px 20px;
+}
+
+.programs__title {
+  margin: 0;
+  margin-bottom: 29px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-36, bootstrap.$primary-dark);
+  text-transform: uppercase;
+}
+
+.programs__description {
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.programs__link {
+  padding: 4px 47px 4px 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$primary-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+}

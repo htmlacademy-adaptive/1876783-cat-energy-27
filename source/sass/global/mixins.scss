@@ -1,0 +1,29 @@
+
+@mixin font($weight, $size, $height, $color) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+@mixin offset-sides-x($padding-r, $padding-l){
+  padding-right: $padding-r;
+  padding-left: $padding-l;
+}
+
+@mixin offset-sides-y($padding-t, $padding-b){
+  padding-top: $padding-t;
+  padding-bottom: $padding-b;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin link($color, $bg-color) {
+  color: $color;
+  background-color: $bg-color;
+  text-decoration: none;
+}

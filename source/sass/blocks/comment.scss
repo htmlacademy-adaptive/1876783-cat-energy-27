@@ -1,0 +1,11 @@
+@use "../global/bootstrap.scss";
+
+.comment__field {
+  box-sizing: border-box;
+  padding: 10px 14px;
+  width: 280px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
+  text-transform: uppercase;
+  white-space: nowrap;
+}

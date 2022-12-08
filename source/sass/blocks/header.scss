@@ -1,0 +1,13 @@
+@use "../global/bootstrap.scss";
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-wrapper {
+  @include bootstrap.offset-sides-x(20px, 20px);
+  margin: 0;
+  width: 191px;
+  height: 38px;
+}

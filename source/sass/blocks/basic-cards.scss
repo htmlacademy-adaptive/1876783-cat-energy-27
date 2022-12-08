@@ -1,0 +1,44 @@
+@use "../global/bootstrap.scss";
+
+.basic-cards__list {
+  @include bootstrap.list-reset;
+  display: grid;
+  row-gap: 19px;
+}
+
+.basic-cards__item {
+  @include bootstrap.offset-sides-y(11px, 14px);
+  display: grid;
+  grid-template-columns: 140px 140px;
+}
+
+.basic-cards__link-img {
+  grid-row: 1/3;
+  justify-self: center;
+  align-self: center;
+  @include bootstrap.link(bootstrap.$third-dark, bootstrap.$white);
+}
+
+.basic-cards__link {
+  @include bootstrap.link(bootstrap.$third-dark, bootstrap.$white);
+}
+
+.basic-cards__title {
+  margin: 0;
+  margin-bottom: 18px;
+  width: 76px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$third-dark);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.basic-cards__features {
+  margin: 0;
+  padding-bottom: 9px;
+}
+
+.basic-cards__link-buy {
+  grid-column: 1/-1;
+  margin-top: 13px;
+}

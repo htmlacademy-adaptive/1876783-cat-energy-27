@@ -1,0 +1,16 @@
+@use "../global/bootstrap.scss";
+
+.gift__wrapper {
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/gift-catalog.jpg");
+  background-repeat: no-repeat;
+  background-color: #68B738;
+  background-size: cover;
+  padding: 187px 61px 43px 58px;
+}
+
+.gift__slogan {
+  margin: 0;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$white);
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+@use "../global/bootstrap.scss";
+
+.result__wrapper {
+  display: grid;
+  row-gap: 20px;
+}
+
+.result__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
+}
+
+.result__intro {
+  margin: 0;
+}
+
+.result__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.result__name {
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-12, bootstrap.$dark-grey);
+  order: 2;
+}
+
+.result__value {
+  margin: 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-24, bootstrap.$primary-dark);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.result__price {
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-20, bootstrap.$primary-dark);
+  text-transform: uppercase;
+  text-align: center;
+}
