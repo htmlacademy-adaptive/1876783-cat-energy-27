@@ -1,13 +1,12 @@
+@use "../global/bootstrap.scss";
+
 body {
   min-width: 320px;
   min-height: 100%;
   margin: 0;
-
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-  background-color: #ffffff;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$dark-grey);
+  background-color: bootstrap.$white;
 }
 
 img {
