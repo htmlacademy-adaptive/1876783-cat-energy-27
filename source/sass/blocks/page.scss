@@ -1,4 +1,20 @@
+@use "../global/bootstrap.scss";
+
+.page{
+  height: 100%;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$dark-grey);
+  background-color: bootstrap.$white;
+}
+
 .page__container {
-  width: 320px;
   margin: 0 auto;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: bootstrap.$tablet-width;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: bootstrap.$desktop-width;
+  }
 }

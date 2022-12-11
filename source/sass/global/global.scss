@@ -1,11 +1,8 @@
 @use "../global/bootstrap.scss";
 
 body {
-  min-width: 320px;
-  min-height: 100%;
+  height: 100%;
   margin: 0;
-  font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$dark-grey);
   background-color: bootstrap.$white;
 }
 

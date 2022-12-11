@@ -1,7 +1,7 @@
 @use "../global/bootstrap.scss";
 
 .gift__wrapper {
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/background/gift-catalog.jpg");
+  background-image: linear-gradient(bootstrap.$secondary-green, bootstrap.$secondary-green), url("../img/background/gift-catalog.jpg");
   background-repeat: no-repeat;
   background-color: #68B738;
   background-size: cover;

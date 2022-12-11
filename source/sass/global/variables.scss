@@ -5,19 +5,24 @@ $dark-grey: #444444;
 $grey: #f2f2f2;
 $white: #ffffff;
 $green: #68b738;
+$secondary-green: rgba($green, 0.85);
 
 $primary-family: "Oswald", sans-serif;
 $secondary-family: "Lato", sans-serif;
 
+$font-60: 60px;
 $font-36: 36px;
 $font-24: 24px;
 $font-20: 20px;
+$font-18: 18px;
 $font-16: 16px;
 $font-14: 14px;
 $font-12: 12px;
 
+$height-60: 60px;
 $height-40: 40px;
 $height-36: 36px;
+$height-30: 30px;
 $height-26: 26px;
 $height-24: 24px;
 $height-20: 20px;
@@ -28,3 +33,6 @@ $height-12: 12px;
 
 $normal: 400;
 $medium: 500;
+
+$tablet-width: 768px;
+$desktop-width: 1440px;

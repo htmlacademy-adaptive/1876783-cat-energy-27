@@ -1,8 +1,29 @@
 @use "../global/bootstrap.scss";
 
+@media (min-width: bootstrap.$tablet-width){
+  .navigation__toggle{
+    display: none;
+  }
+}
+
 .navigation__list {
   @include bootstrap.list-reset;
   text-align: center;
+
+  @media (min-width: bootstrap.$tablet-width){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 440px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    @media (min-width: bootstrap.$desktop-width){
+      width: 478px;
+      padding-right: 110px;
+      padding-left: 110px;
+    }
 }
 
 .navigation__link {
@@ -12,4 +33,16 @@
   @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
   padding: 22px 20px 24px;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width){
+    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-18, bootstrap.$height-24, bootstrap.$primary-dark);
+    white-space: nowrap;
+    padding: 42px 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-30, bootstrap.$white);
+    padding: 69px 0;
+  }
+
 }
