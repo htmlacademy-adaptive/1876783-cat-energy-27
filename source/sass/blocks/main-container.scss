@@ -18,8 +18,12 @@
     padding: 20px 88px 0 88px;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
+    margin: 0 auto;
+    padding: 10px 0 10px 80px;
     width: 1220px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -35,29 +39,25 @@
   }
 }
 
+.main-container__slogan {
+  margin: 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+  text-transform: uppercase;
+}
+
 .main-container__title--index {
   color: bootstrap.$white;
   margin-bottom: 25px;
 
   @media (min-width: bootstrap.$tablet-width) {
     color: bootstrap.$primary-dark;
-    margin-bottom: 41px;
+    margin-bottom: 40px;
   }
-}
 
-.main-container__title--catalog {
-  padding: 27px 20px;
-}
-
-.main-container__title--form-food {
-  margin-bottom: 37px;
-}
-
-.main-container__slogan {
-  margin: 0;
-  font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
-  text-transform: uppercase;
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 82px;
+  }
 }
 
 .main-container__slogan--index {
@@ -74,6 +74,19 @@
     line-height: bootstrap.$height-20;
     color: bootstrap.$primary-dark;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-column: 1/2;
+    margin: 0;
+  }
+}
+
+.main-container__title--catalog {
+  padding: 27px 20px;
+}
+
+.main-container__title--form-food {
+  margin-bottom: 37px;
 }
 
 .main-container__slogan--form-food {
@@ -85,23 +98,47 @@
   display: block;
   margin-top: 3px;
   width: 100%;
-  order: 2;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     position: absolute;
+    top: 230px;
     margin-top: 0;
     box-sizing: border-box;
     width: 244px;
-    top: 230px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 80px;
+    top: 314px;
+  }
 }
+
+.main-container__image {
+  @media (min-width: bootstrap.$desktop-width) {
+    // position: absolute;
+    // left: 448px;
+    // top: 10px;
+  }
 }
 
 .main-container__programs {
   padding: 10px 20px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    padding: 0 30px 22px 30px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    padding: 72px 110px 10px;
+  }
 }
 
 .main-container__instruction {
   padding: 10px 20px 50px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    padding: 35px 30px;
+  }
 }
 
 .main-container__result {

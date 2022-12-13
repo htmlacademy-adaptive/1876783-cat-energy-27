@@ -41,8 +41,8 @@
   }
 
   @media (min-width: bootstrap.$desktop-width){
-    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-30, bootstrap.$white);
-    padding: 69px 0;
+    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-30, bootstrap.$primary-dark);
+    padding: 69px 0 22px;
   }
 
 }

@@ -5,24 +5,48 @@
   margin-bottom: 40px;
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
+
+  @media (min-width: bootstrap.$tablet-width){
+    margin-bottom: 32px;
+    font-size: bootstrap.$font-60;
+    line-height: bootstrap.$height-60;
+  }
 }
 
 .instruction__list {
   @include bootstrap.list-reset;
   display: grid;
   gap: 20px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    grid-template-columns: 230px 230px;
+    column-gap: 153px;
+    row-gap: 37px;
+  }
 }
 
 .instruction__item {
   display: grid;
   grid-template-columns: 60px auto;
   gap: 20px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    padding-top: 33px;
+    padding-bottom: 57px;
+  }
 }
 
 .instruction__picture {
   width: 60px;
   height: 60px;
   background-color: bootstrap.$green;
+
+  @media (min-width: bootstrap.$tablet-width){
+
+  }
 }
 
 .instruction__description {

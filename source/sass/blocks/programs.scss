@@ -1,19 +1,32 @@
 @use "../global/bootstrap.scss";
 
-.programs__wrapper {
-  display: grid;
-  row-gap: 20px;
-}
-
 .programs__list {
   @include bootstrap.list-reset;
   display: grid;
   row-gap: 20px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    row-gap: 30px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .programs__item {
   background-color: bootstrap.$grey;
   padding: 30px 33px 18px 20px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    padding-right: 61px;
+    padding-bottom: 55px;
+  }
 }
 
 .programs__title {
@@ -22,11 +35,30 @@
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-36, bootstrap.$primary-dark);
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width){
+    margin-bottom: 24px;
+    font-size: bootstrap.$font-36;
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    margin-bottom: 73px;
+    padding-left: 214px;
+  }
 }
 
 .programs__description {
   margin: 0;
   margin-bottom: 38px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    margin-bottom: 48px;
+    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-24, bootstrap.$primary-dark);
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    margin-bottom: 23px;
+  }
 }
 
 .programs__link {
@@ -35,4 +67,10 @@
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$primary-dark);
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width){
+    padding-right: 57px;
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-30;
+  }
 }
