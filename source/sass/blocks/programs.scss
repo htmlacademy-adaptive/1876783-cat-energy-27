@@ -2,14 +2,20 @@
 
 .programs__list {
   @include bootstrap.list-reset;
+  padding-right: 20px;
+  padding-left: 20px;
   display: grid;
   row-gap: 20px;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-right: 30px;
+    padding-left: 30px;
     row-gap: 30px;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-right: 110px;
+    padding-left: 110px;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
@@ -19,29 +25,30 @@
   background-color: bootstrap.$grey;
   padding: 30px 33px 18px 20px;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     padding: 77px 316px 53px 52px;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
-    padding-right: 61px;
-    padding-bottom: 55px;
+  @media (min-width: bootstrap.$desktop-width) {
+    padding: 77px 61px 55px 52px;
   }
 }
 
 .programs__title {
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 71px;
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-36, bootstrap.$primary-dark);
   text-transform: uppercase;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 24px;
+    padding-left: 0;
     font-size: bootstrap.$font-36;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     margin-bottom: 73px;
     padding-left: 214px;
   }
@@ -51,12 +58,12 @@
   margin: 0;
   margin-bottom: 38px;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 48px;
     @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-24, bootstrap.$primary-dark);
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     margin-bottom: 23px;
   }
 }
@@ -68,7 +75,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     padding-right: 57px;
     font-size: bootstrap.$font-20;
     line-height: bootstrap.$height-30;

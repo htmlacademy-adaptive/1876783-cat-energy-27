@@ -1,12 +1,24 @@
 @use "../global/bootstrap.scss";
 
+.instruction__wrapper {
+  padding: 10px 20px 50px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 35px 30px 47px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding: 61px 110px;
+  }
+}
+
 .instruction__title {
   margin: 0;
   margin-bottom: 40px;
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 32px;
     font-size: bootstrap.$font-60;
     line-height: bootstrap.$height-60;
@@ -18,10 +30,15 @@
   display: grid;
   gap: 20px;
 
-  @media (min-width: bootstrap.$tablet-width){
-    grid-template-columns: 230px 230px;
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
     column-gap: 153px;
     row-gap: 37px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -30,11 +47,10 @@
   grid-template-columns: 60px auto;
   gap: 20px;
 
-  @media (min-width: bootstrap.$tablet-width){
-    display: flex;
-    flex-direction: column;
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-template-columns: auto;
     gap: 31px;
-    padding-top: 33px;
+    padding-top: 40px;
     padding-bottom: 57px;
   }
 }
@@ -44,15 +60,17 @@
   height: 60px;
   background-color: bootstrap.$green;
 
-  @media (min-width: bootstrap.$tablet-width){
-
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 80px;
+    height: 80px;
   }
 }
 
 .instruction__description {
   margin: 0;
-}
 
-.instruction__number--hidden {
-  display: none;
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: bootstrap.$font-16;
+    line-height: bootstrap.$height-24;
+  }
 }

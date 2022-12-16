@@ -1,0 +1,125 @@
+@use "../global/bootstrap.scss";
+
+.inner__wrapper{
+  position: relative;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(bootstrap.$secondary-green, bootstrap.$secondary-green), url("../img/background/index-background-cat.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    background-image: none;
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.inner__title {
+  margin: 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-36, bootstrap.$primary-dark);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    text-align: left;
+    font-size: bootstrap.$font-60;
+    line-height: bootstrap.$height-60;
+  }
+}
+
+.inner__title--index {
+  color: bootstrap.$white;
+  padding-right: 35px;
+  padding-left: 35px;
+  margin-bottom: 25px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    color: bootstrap.$primary-dark;
+    width: 416px;
+    padding-left: 117px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 416px;
+    padding-top: 82px;
+    padding-left: 190px;
+  }
+}
+
+.inner__title--catalog {
+  padding: 27px 20px;
+}
+
+.inner__title--form-food {
+  margin-bottom: 37px;
+}
+
+.inner__slogan {
+  margin: 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+  text-transform: uppercase;
+}
+
+.inner__slogan--index {
+  margin-bottom: 29px;
+  padding-right: 60px;
+  padding-left: 60px;
+  font-size: bootstrap.$font-14;
+  line-height: bootstrap.$height-14;
+  color: bootstrap.$white;
+  text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 20px;
+    width: 300px;
+    padding-left: 117px;
+    text-align: left;
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-20;
+    color: bootstrap.$primary-dark;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 52px;
+    padding-left: 190px;
+  }
+}
+
+.inner__slogan--form-food {
+  font-size: bootstrap.$font-14;
+  line-height: bootstrap.$height-18;
+}
+
+.inner__image {
+  @media (min-width: bootstrap.$desktop-width) {}
+}
+
+.inner__link-programs {
+  display: block;
+  margin-top: 3px;
+  width: 100%;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    position: absolute;
+    top: 250px;
+    left: 117px;
+    margin-top: 0;
+    width: 244px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 190px;
+    top: 314px;
+  }
+}
