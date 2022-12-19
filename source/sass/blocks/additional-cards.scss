@@ -44,6 +44,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(0, 0);
     margin-bottom: 96px;
   }
 }
