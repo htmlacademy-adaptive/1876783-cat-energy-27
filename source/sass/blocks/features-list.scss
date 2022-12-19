@@ -1,12 +1,24 @@
 @use "../global/bootstrap.scss";
 
-.features-list__value {
-  margin: 0;
-}
-
 .features-list__item {
   display: flex;
   justify-content: space-between;
   font-family: bootstrap.$secondary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-16, bootstrap.$dark-grey);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: bootstrap.$font-16;
+  }
+}
+
+.features-list__item:not(:last-child) {
+  margin-bottom: 6px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 7px;
+  }
+}
+
+.features-list__value {
+  margin: 0;
 }

@@ -1,36 +1,153 @@
 @use "../global/bootstrap.scss";
 
-.main-container__result {
-  background-color: bootstrap.$light-grey;
+.main-container {
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+.main-container__wrapper {
+  margin: 0 auto;
+  @include bootstrap.offset-sides-y(27px, 10px);
+  @include bootstrap.offset-sides-x(20px, 20px);
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: bootstrap.$tablet-width) {
-    background-color: bootstrap.$white;
+    padding: 64px 30px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
   }
 }
 
-.main-container__basic-cards {
-  padding: 27px 20px 10px;
-}
-
-.main-container__cards-more {
-  padding: 25px 20px;
+.main-container__wrapper--index {
   text-align: center;
+  @include bootstrap.offset-sides-x(0, 0);
+  background-image: linear-gradient(bootstrap.$secondary-green, bootstrap.$secondary-green), url("../img/background/index-background-cat.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    position: relative;
+    background-image: none;
+    padding-bottom: 0;
+  }
 }
 
-.main-container__additional-cards {
-  padding: 25px 20px 19px;
+.main-container__wrapper--catalog {
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(74px, 74px);
+  }
 }
 
-.main-container__gift {
-  padding: 35px 20px;
-}
-
-.main-container__inner-form {
-  padding: 27px 20px 16px;
-}
-
-.main-container__form-food {
+.main-container__title {
+  margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-36, bootstrap.$primary-dark);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    text-align: left;
+    font-size: bootstrap.$font-60;
+    line-height: bootstrap.$height-60;
+  }
+}
+
+.main-container__title--index {
+  color: bootstrap.$white;
+  @include bootstrap.offset-sides-x(35px, 35px);
+  margin-bottom: 25px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    color: bootstrap.$primary-dark;
+    width: 416px;
+    padding-left: 117px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 416px;
+    padding-left: 190px;
+  }
+}
+
+.main-container__title--form-food {
+  text-align: left;
+  margin-bottom: 37px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-left: 40px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.main-container__slogan {
+  margin: 0;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
   text-transform: uppercase;
+}
+
+.main-container__slogan--index {
+  margin-bottom: 29px;
+  font-size: bootstrap.$font-14;
+  line-height: bootstrap.$height-14;
+  color: bootstrap.$white;
+  text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 300px;
+    padding-left: 117px;
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-20;
+    color: bootstrap.$primary-dark;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-left: 190px;
+  }
+}
+
+.main-container__slogan--form-food {
+  width: 226px;
+  font-size: bootstrap.$font-14;
+  line-height: bootstrap.$height-18;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-left: 40px;
+    width: 323px;
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-30;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-left: 0;
+  }
+}
+
+.main-container__link-programs {
+  display: block;
+  align-self: center;
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$white);
+  margin-top: 3px;
+  width: 280px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    position: absolute;
+    top: 290px;
+    left: 117px;
+    margin-top: 0;
+    width: 244px;
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-20;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 190px;
+  }
 }

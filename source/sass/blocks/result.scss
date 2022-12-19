@@ -1,15 +1,26 @@
 @use "../global/bootstrap.scss";
 
+.result {
+  background-color: bootstrap.$light-grey;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    background-color: bootstrap.$white;
+  }
+}
+
 .result__wrapper {
-  padding: 25px 20px 40px;
+  @include bootstrap.offset-sides-y(25px, 40px);
+  @include bootstrap.offset-sides-x(20px, 20px);
 
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding: 43px 30px 0;
+    @include bootstrap.offset-sides-y(43px, 0);
+    @include bootstrap.offset-sides-x(30px, 30px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding: 70px 110px 75px;
+    @include bootstrap.offset-sides-y(70px, 75px);
+    @include bootstrap.offset-sides-x(110px, 110px);
   }
 }
 
@@ -17,12 +28,12 @@
   display: grid;
   row-gap: 20px;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 1fr 1fr;
     row-gap: 54px;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     row-gap: 0;
     column-gap: 224px;
   }

@@ -3,15 +3,13 @@
 .button {
   display: inline-block;
   @include bootstrap.offset-sides-y(10px, 10px);
-  font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$white);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background-color: bootstrap.$green;
   border: none;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     font-size: bootstrap.$font-20;
   }
 }
@@ -19,7 +17,7 @@
 .button--programs {
   @include bootstrap.offset-sides-y(7px, 7px);
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     padding: 14px 26px;
   }
 }

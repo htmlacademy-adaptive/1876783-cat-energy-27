@@ -1,24 +1,57 @@
 @use "../global/bootstrap.scss";
 
+.cards-more{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 .cards-more__link-new-cards {
   @include bootstrap.link(bootstrap.$secondary-dark, bootstrap.$white);
+  grid-column: 1/-1;
+  margin-bottom: 8px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    margin-bottom:23px;
+  }
 }
 
 .cards-more__title {
   margin: 0;
-  margin-bottom: 8px;
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$secondary-dark);
   background-color: bootstrap.$white;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width){
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-22;
+  }
 }
 
 .cards-more__slogan {
   margin: 0;
+  grid-column: 1/-1;
+  font-family: bootstrap.$secondary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-16, bootstrap.$dark-grey);
+  background-color: bootstrap.$white;
+
+  @media (min-width: bootstrap.$tablet-width){
+    font-size: bootstrap.$font-16;
+    line-height: bootstrap.$height-18;
+  }
 }
 
 .cards-more__link {
+  grid-column: 1/-1;
   width: 100%;
   margin-top: 21px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
+  font-family: bootstrap.$primary-family;
+  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$dark-grey);
+
+
+  @media (min-width: bootstrap.$tablet-width){
+    margin-top: 87px;
+  }
 }

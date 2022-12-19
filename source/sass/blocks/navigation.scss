@@ -1,7 +1,7 @@
 @use "../global/bootstrap.scss";
 
-@media (min-width: bootstrap.$tablet-width){
-  .navigation__toggle{
+@media (min-width: bootstrap.$tablet-width) {
+  .navigation__toggle {
     display: none;
   }
 }
@@ -10,16 +10,16 @@
   @include bootstrap.list-reset;
   text-align: center;
 
-  @media (min-width: bootstrap.$tablet-width){
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 440px;
-    }
+  @media (min-width: bootstrap.$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 440px;
+  }
 
-    @media (min-width: bootstrap.$desktop-width){
-      width: 478px;
-    }
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 478px;
+  }
 }
 
 .navigation__link {
@@ -27,19 +27,17 @@
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$medium, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
   @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
-  padding-top: 22px;
-  padding-bottom: 24px;
+  @include bootstrap.offset-sides-y(22px, 24px);
   text-transform: uppercase;
 
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.font(bootstrap.$normal, bootstrap.$font-18, bootstrap.$height-24, bootstrap.$primary-dark);
     white-space: nowrap;
-    padding: 42px 0;
+    @include bootstrap.offset-sides-y(42px, 8px);
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-30, bootstrap.$primary-dark);
-    padding-top: 69px;
-    padding-bottom: 22px;
+    padding-top: 70px;
   }
 }

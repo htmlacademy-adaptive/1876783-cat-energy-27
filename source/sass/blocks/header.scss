@@ -1,41 +1,35 @@
 @use "../global/bootstrap.scss";
 
 .header__wrapper {
-  padding-right: 20px;
-  padding-left: 20px;
+  @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   flex-direction: column;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-right: 30px;
-    padding-left: 30px;
+    @include bootstrap.offset-sides-x(30px, 30px);
     flex-direction: row;
     justify-content: space-between;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
-    padding-right: 110px;
-    padding-left: 110px;
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
   }
 }
 
 .header__logo {
   display: block;
-  padding-top: 10px;
-  padding-bottom: 17px;
+  @include bootstrap.offset-sides-y(10px, 17px);
   width: 191px;
   height: 38px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    @include bootstrap.offset-sides-y(24px, 0);
     width: 174px;
     height: 51px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-top: 53px;
-    padding-bottom: 20px;
     width: 202px;
     height: 59px;
   }

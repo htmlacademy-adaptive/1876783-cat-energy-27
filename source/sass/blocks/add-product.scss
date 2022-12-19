@@ -1,7 +1,30 @@
 @use "../global/bootstrap.scss";
 
+.add-product {
+  @include bootstrap.offset-sides-y(10px, 10px);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(37px, 54px);
+    @include bootstrap.offset-sides-x(38px, 38px);
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-bottom: 61px;
+    @include bootstrap.offset-sides-x(0, 0);
+  }
+}
+
 .add-product__list {
   @include bootstrap.list-reset;
   display: grid;
   gap: 15px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

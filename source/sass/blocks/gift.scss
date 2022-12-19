@@ -1,11 +1,18 @@
 @use "../global/bootstrap.scss";
 
+.gift {
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 245px;
+  }
+}
+
 .gift__wrapper {
   background-image: linear-gradient(bootstrap.$secondary-green, bootstrap.$secondary-green), url("../img/background/gift-catalog.jpg");
   background-repeat: no-repeat;
   background-color: #68B738;
   background-size: cover;
-  padding: 187px 61px 43px 58px;
+  @include bootstrap.offset-sides-y(187px, 43px);
+  @include bootstrap.offset-sides-x(61px, 58px);
 }
 
 .gift__slogan {

@@ -2,20 +2,17 @@
 
 .programs__list {
   @include bootstrap.list-reset;
-  padding-right: 20px;
-  padding-left: 20px;
+  @include bootstrap.offset-sides-x(20px, 20px);
   display: grid;
   row-gap: 20px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-right: 30px;
-    padding-left: 30px;
+    @include bootstrap.offset-sides-x(30px, 30px);
     row-gap: 30px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    @include bootstrap.offset-sides-x(110px, 110px);
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
@@ -23,14 +20,17 @@
 
 .programs__item {
   background-color: bootstrap.$grey;
-  padding: 30px 33px 18px 20px;
+  @include bootstrap.offset-sides-y(30px, 18px);
+  @include bootstrap.offset-sides-x(33px, 30px);
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding: 77px 316px 53px 52px;
+    @include bootstrap.offset-sides-y(77px, 53px);
+    @include bootstrap.offset-sides-x(316px, 52px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding: 77px 61px 55px 52px;
+    @include bootstrap.offset-sides-y(77px, 55px);
+    @include bootstrap.offset-sides-x(61px, 52px);
   }
 }
 
@@ -69,7 +69,8 @@
 }
 
 .programs__link {
-  padding: 4px 47px 4px 0;
+  @include bootstrap.offset-sides-y(4px, 4px);
+  @include bootstrap.offset-sides-x(47px, 0);
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$primary-dark);
   text-decoration: none;

@@ -6,6 +6,10 @@
   align-items: center;
   text-decoration: none;
   color: #666666;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 163px;
+  }
 }
 
 .footer-copyright__text {

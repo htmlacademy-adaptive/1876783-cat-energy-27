@@ -14,27 +14,58 @@
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-30;
+  }
 }
 
 .form-group__field::placeholder {
   font-family: bootstrap.$primary-family;
   @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
-}
+  text-transform: uppercase;
 
-.contacts__form-group .form-group__field {
-  width: 100%;
-  padding: 14px 15px;
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: bootstrap.$font-20;
+    line-height: bootstrap.$height-30;
+  }
 }
 
 .personal-data__form-group .form-group__field {
   padding: 14px 20px;
   width: 100%;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 11px 20px;
+  }
+}
+
+.form-group__field--program {
+  @media (min-width: bootstrap.$tablet-width) {
+    color: bootstrap.$third-dark;
+  }
+}
+
+.contacts__form-group .form-group__field {
+  width: 100%;
+  @include bootstrap.offset-sides-y(14px, 14px);
+  @include bootstrap.offset-sides-x(50px, 15px);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(11px, 11px);
+    @include bootstrap.offset-sides-x(50px, 20px);
+  }
 }
 
 .add-product__form-group {
 
   .form-group__field {
-    margin-right: 15px;
+    margin-right: 16px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-right: 20px;
   }
 
   .form-group__label {

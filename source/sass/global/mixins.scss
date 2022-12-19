@@ -16,6 +16,11 @@
   padding-bottom: $padding-b;
 }
 
+@mixin offset-sides-x($padding-r, $padding-l){
+  padding-right: $padding-r;
+  padding-left: $padding-l;
+}
+
 @mixin list-reset {
   margin: 0;
   padding: 0;
