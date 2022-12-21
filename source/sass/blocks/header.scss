@@ -1,5 +1,17 @@
 @use "../global/bootstrap.scss";
 
+.header::before {
+  @media (min-width: bootstrap.$desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-desktop-cat.jpg");
+    width: 50%;
+    height: 694px;
+    left: 50%;
+  }
+}
+
 .header__wrapper {
   position: relative;
   @include bootstrap.offset-sides-x(20px, 20px);

@@ -1,5 +1,6 @@
 @use "../global/bootstrap.scss";
 
+
 @media (min-width: bootstrap.$tablet-width) {
   .navigation__toggle {
     display: none;
@@ -48,5 +49,6 @@
     line-height: 30px;
     color: bootstrap.$primary-dark;
     padding-top: 70px;
+    background-color: transparent;
   }
 }
