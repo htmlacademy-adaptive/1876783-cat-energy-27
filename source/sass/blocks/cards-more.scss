@@ -1,6 +1,6 @@
 @use "../global/bootstrap.scss";
 
-.cards-more{
+.cards-more {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -11,21 +11,23 @@
   grid-column: 1/-1;
   margin-bottom: 8px;
 
-  @media (min-width: bootstrap.$tablet-width){
-    margin-bottom:23px;
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 23px;
   }
 }
 
 .cards-more__title {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$secondary-dark);
-  background-color: bootstrap.$white;
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$secondary-dark;
   text-transform: uppercase;
 
-  @media (min-width: bootstrap.$tablet-width){
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-22;
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
@@ -33,12 +35,14 @@
   margin: 0;
   grid-column: 1/-1;
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-16, bootstrap.$dark-grey);
-  background-color: bootstrap.$white;
+  font-weight: bootstrap.$normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: bootstrap.$dark-grey;
 
-  @media (min-width: bootstrap.$tablet-width){
-    font-size: bootstrap.$font-16;
-    line-height: bootstrap.$height-18;
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
   }
 }
 
@@ -48,10 +52,12 @@
   margin-top: 21px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$dark-grey);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$dark-grey;
 
-
-  @media (min-width: bootstrap.$tablet-width){
+  @media (min-width: bootstrap.$tablet-width) {
     margin-top: 87px;
   }
 }

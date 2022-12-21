@@ -25,19 +25,28 @@
 .navigation__link {
   display: block;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$medium, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+  font-weight: bootstrap.$medium;
+  font-size: 20px;
+  line-height: 20px;
+  color: bootstrap.$primary-dark;
   @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
   @include bootstrap.offset-sides-y(22px, 24px);
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-18, bootstrap.$height-24, bootstrap.$primary-dark);
+    font-weight: bootstrap.$normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: bootstrap.$primary-dark;
     white-space: nowrap;
     @include bootstrap.offset-sides-y(42px, 8px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-30, bootstrap.$primary-dark);
+    font-weight: bootstrap.$normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: bootstrap.$primary-dark;
     padding-top: 70px;
   }
 }

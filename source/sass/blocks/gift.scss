@@ -7,17 +7,21 @@
 }
 
 .gift__wrapper {
-  background-image: linear-gradient(bootstrap.$secondary-green, bootstrap.$secondary-green), url("../img/background/gift-catalog.jpg");
-  background-repeat: no-repeat;
-  background-color: #68B738;
-  background-size: cover;
   @include bootstrap.offset-sides-y(187px, 43px);
   @include bootstrap.offset-sides-x(61px, 58px);
+  background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/gift-catalog.jpg");
+  background-repeat: no-repeat;
+  background-color: bootstrap.$green;
+  background-size: cover, 280px 290px;
+  background-position: 100%, center;
 }
 
 .gift__slogan {
   margin: 0;
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$white);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$white;
   text-align: center;
 }

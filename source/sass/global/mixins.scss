@@ -1,10 +1,3 @@
-@mixin font($weight, $size, $height, $color) {
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $height;
-  color: $color;
-}
-
 @mixin offset-sides-x($padding-r, $padding-l) {
   padding-right: $padding-r;
   padding-left: $padding-l;

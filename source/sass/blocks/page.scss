@@ -1,10 +1,12 @@
 @use "../global/bootstrap.scss";
 
-.page{
+.page {
   height: 100%;
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$dark-grey);
-  background-color: bootstrap.$white;
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: bootstrap.$primary-dark;
 }
 
 .page__container {

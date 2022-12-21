@@ -18,12 +18,15 @@
   margin: 0;
   margin-bottom: 40px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 32px;
-    font-size: bootstrap.$font-60;
-    line-height: bootstrap.$height-60;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -71,7 +74,7 @@
   margin: 0;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-16;
-    line-height: bootstrap.$height-24;
+    font-size: 16px;
+    line-height: 24px;
   }
 }

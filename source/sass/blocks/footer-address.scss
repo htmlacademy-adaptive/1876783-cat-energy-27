@@ -12,6 +12,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     position: absolute;
+    box-sizing: border-box;
     top: 95px;
     width: 565px;
     padding: 56px 80px;
@@ -21,19 +22,31 @@
 
 .footer-address__wrapper--index {
   background-color: bootstrap.$white;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.footer-address__location {
+  width: 100%;
+  height: 362px;
 }
 
 .footer-address__title {
   margin: 0;
   width: 139px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$secondary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$secondary-dark;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 172px;
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-26;
+    font-size: 20px;
+    line-height: 26px;
   }
 }
 
@@ -41,11 +54,14 @@
   margin: 0;
   width: 139px;
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-20, bootstrap.$dark-grey);
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 160px;
-    font-size: bootstrap.$font-16;
+    font-size: 16px;
     text-align: right;
   }
 }

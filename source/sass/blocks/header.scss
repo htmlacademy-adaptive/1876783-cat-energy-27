@@ -1,6 +1,7 @@
 @use "../global/bootstrap.scss";
 
 .header__wrapper {
+  position: relative;
   @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   flex-direction: column;

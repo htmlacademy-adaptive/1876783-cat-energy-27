@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
 
+
   @media (min-width: bootstrap.$tablet-width) {
     padding: 64px 30px;
   }
@@ -24,14 +25,22 @@
 .main-container__wrapper--index {
   text-align: center;
   @include bootstrap.offset-sides-x(0, 0);
-  background-image: linear-gradient(bootstrap.$secondary-green, bootstrap.$secondary-green), url("../img/background/index-background-cat.jpg");
+  background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
   background-repeat: no-repeat;
-  background-size: 320px 302px;
+  background-size: 100% 302px, 320px 302px;
+  background-position: top 50%;
 
   @media (min-width: bootstrap.$tablet-width) {
+    background-color: bootstrap.$white;
     position: relative;
     background-image: none;
+    padding-left: 117px;
     padding-bottom: 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    z-index: 0;
+    padding-left: 190px;
   }
 }
 
@@ -41,15 +50,28 @@
   }
 }
 
+.main-container__wrapper--form {
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(68px, 68px);
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
+  }
+}
+
 .main-container__title {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-36, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     text-align: left;
-    font-size: bootstrap.$font-60;
-    line-height: bootstrap.$height-60;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
@@ -59,15 +81,14 @@
   margin-bottom: 25px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(0, 0);
     color: bootstrap.$primary-dark;
     width: 416px;
-    padding-left: 117px;
     margin-bottom: 41px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 416px;
-    padding-left: 190px;
   }
 }
 
@@ -76,7 +97,6 @@
   margin-bottom: 37px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-left: 40px;
     margin-bottom: 54px;
   }
 
@@ -88,40 +108,37 @@
 .main-container__slogan {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-20, bootstrap.$height-20, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: bootstrap.$primary-dark;
   text-transform: uppercase;
 }
 
 .main-container__slogan--index {
   margin-bottom: 29px;
-  font-size: bootstrap.$font-14;
-  line-height: bootstrap.$height-14;
+  font-size: 14px;
+  line-height: 14px;
   color: bootstrap.$white;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 300px;
-    padding-left: 117px;
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-20;
+    font-size: 20px;
+    line-height: 20px;
     color: bootstrap.$primary-dark;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    padding-left: 190px;
   }
 }
 
 .main-container__slogan--form-food {
   width: 226px;
-  font-size: bootstrap.$font-14;
-  line-height: bootstrap.$height-18;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-left: 40px;
     width: 323px;
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-30;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -133,7 +150,10 @@
   display: block;
   align-self: center;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$white);
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: bootstrap.$white;
   margin-top: 3px;
   width: 280px;
 
@@ -143,8 +163,8 @@
     left: 117px;
     margin-top: 0;
     width: 244px;
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-20;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

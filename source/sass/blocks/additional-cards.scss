@@ -34,18 +34,22 @@
   margin: 0;
   margin-bottom: 49px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-24, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 80px;
-    padding-left: 38px;
-    font-size: bootstrap.$font-36;
-    line-height: bootstrap.$height-36;
+    margin-left: 38px;
+    font-size: 36px;
+    line-height: 36px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-x(0, 0);
     margin-bottom: 96px;
+    margin-left: 0;
   }
 }
 
@@ -68,7 +72,10 @@
 
 .additional-cards__link-buy {
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$white);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$white;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-column: 1/-1;

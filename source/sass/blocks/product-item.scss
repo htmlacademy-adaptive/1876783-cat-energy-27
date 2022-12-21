@@ -20,12 +20,15 @@
 .product-item__title {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$third-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: bootstrap.$third-dark;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-20;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
@@ -37,11 +40,14 @@
   display: flex;
   justify-content: space-between;
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-14, bootstrap.$dark-grey);
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-16;
-    line-height: bootstrap.$height-20;
+    font-size: 16px;
+    line-height: 20px;
     justify-content: end;
   }
 

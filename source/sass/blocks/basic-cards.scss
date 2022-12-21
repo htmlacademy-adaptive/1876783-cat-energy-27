@@ -73,22 +73,24 @@
   margin: 0;
   width: 76px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$third-dark);
-  text-decoration: none;
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$third-dark;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
     margin-bottom: 21px;
     width: 159px;
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-24;
+    font-size: 20px;
+    line-height: 24px;
     text-align: center;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 145px;
-    line-height: bootstrap.$height-20;
+    line-height: 20px;
   }
 }
 
@@ -112,7 +114,10 @@
   grid-column: 1/-1;
   margin-top: 13px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-20, bootstrap.$white);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$white;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-top: 33px;

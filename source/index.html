@@ -146,8 +146,12 @@
             <h2 class="footer-address__title">приглашаем<br>к сотрудничеству дилеров!</h2>
             <p class="footer-address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
-          <img class="footer-address__location" src="img/location/map-location.png" width="320" height="362"
-            alt="Местонахождение Кэт энерджи на карте.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/location/map-location-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/location/map-location-tablet.png">
+            <img class="footer-address__location" src="img/location/map-location.png" width="320" height="362"
+              alt="Местонахождение Кэт энерджи на карте.">
+          </picture>
         </section>
         <div class="footer__content">
           <section class="footer__footer-logo footer-logo">

@@ -37,20 +37,23 @@
 .programs__title {
   margin: 0;
   margin-bottom: 29px;
-  padding-left: 71px;
+  margin-left: 71px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-36, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: bootstrap.$primary-dark;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 24px;
-    padding-left: 0;
-    font-size: bootstrap.$font-36;
+    margin-left: 0;
+    font-size: 36px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     margin-bottom: 73px;
-    padding-left: 214px;
+    margin-left: 214px;
   }
 }
 
@@ -60,7 +63,10 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 48px;
-    @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-24, bootstrap.$primary-dark);
+    font-weight: bootstrap.$normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: bootstrap.$primary-dark;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -72,13 +78,16 @@
   @include bootstrap.offset-sides-y(4px, 4px);
   @include bootstrap.offset-sides-x(47px, 0);
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: bootstrap.$primary-dark;
   text-decoration: none;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-right: 57px;
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-30;
+    font-size: 20px;
+    line-height: 30px;
   }
 }

@@ -4,7 +4,19 @@
   background-color: bootstrap.$light-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
+    position: relative;
     background-color: bootstrap.$white;
+    z-index: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: bootstrap.$light-grey;
+      width: 100%;
+      height: 462px;
+      z-index: -1;
+      bottom: 0;
+    }
   }
 }
 
@@ -43,12 +55,15 @@
   margin: 0;
   margin-bottom: 40px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-36, bootstrap.$height-40, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 63px;
-    font-size: bootstrap.$font-60;
-    line-height: bootstrap.$height-60;
+    font-size: 60px;
+    line-height: 60px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -60,11 +75,14 @@
   grid-column: 1/-1;
   margin: 0;
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-18, bootstrap.$dark-grey);
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-16;
-    line-height: bootstrap.$height-24;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -86,37 +104,46 @@
 
 .result__name {
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-12, bootstrap.$height-12, bootstrap.$dark-grey);
+  font-weight: bootstrap.$normal;
+  font-size: 12px;
+  line-height: 12px;
+  color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-14;
-    line-height: bootstrap.$height-14;
+    font-size: 14px;
+    line-height: 14px;
   }
 }
 
 .result__value {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-24, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-30;
-    line-height: bootstrap.$height-36;
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 
 .result__price {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-20, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-20;
+    font-size: 20px;
+    line-height: 20px;
     justify-self: end;
   }
 

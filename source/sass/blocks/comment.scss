@@ -19,14 +19,17 @@
   width: 100%;
   height: 150px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-18, bootstrap.$dark-grey);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: bootstrap.$dark-grey;
   text-transform: uppercase;
   white-space: nowrap;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-x(19px, 19px);
-    font-size: bootstrap.$font-20;
-    line-height: bootstrap.$height-30;
+    font-size: 20px;
+    line-height: 30px;
     height: 174px;
   }
 }
