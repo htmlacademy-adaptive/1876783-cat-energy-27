@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,85 +11,90 @@
 <body>
   <div class="page__container">
     <header class="header">
-      <div class="header__logo-wrapper">
+      <div class="header__wrapper">
         <a class="header__logo" href="#">
-          <img src="img/logo/header-logo-mobile.svg" width="191" height="38"
-            alt="Логотип Кэт энерджи c энергичным котиком.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo/header-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo/header-logo-tablet.svg">
+            <img src="img/logo/header-logo-mobile.svg" width="191" height="38"
+              alt="Логотип Кэт энерджи c энергичным котиком.">
+          </picture>
         </a>
+        <nav class="header__navigation navigation">
+          <button class="navigation__toggle navigation__toggle--open" type="button">
+            <span class="visually-hidden">Открыть меню.</span>
+          </button>
+          <div class="navigation__wrapper">
+            <ul class="navigation__list ">
+              <li class="navigation__item">
+                <a class="navigation__link" href="index.html">главная</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="catalog.html">каталог продукции</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--current">подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="header__navigation navigation">
-        <button class="navigation__toggle navigation__toggle--open" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-        <div class="navigation__wrapper">
-          <ul class="navigation__list ">
-            <li class="navigation__item">
-              <a class="navigation__link" href="index.html">главная</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="catalog.html">каталог продукции</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--current">подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
     </header>
-
     <main class="main-container">
-      <div class="main-container__inner-form">
+      <div class="main-container__wrapper main-container__wrapper--form">
         <h1 class="main-container__title main-container__title--form-food">Подбор программы</h1>
         <p class="main-container__slogan main-container__slogan--form-food">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
       </div>
       <form class="main-container__form-food form-food" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form-food__content form-food__content--personal-data personal-data">
-          <legend class="visually-hidden">Персональные данные (данные кота).</legend>
-          <p class="personal-data__form-group form-group">
-            <label class="form-group__label" for="data-name">ИМЯ:*</label>
-            <input class="form-group__field" id="data-name" type="text" name="data-name" placeholder="барсик" required>
-          </p>
-          <p class="personal-data__form-group form-group">
-            <label class="form-group__label" for="data-weight">Вес (кг):*</label>
-            <input class="form-group__field" id="data-weight" type="number" name="data-weight" placeholder="7" required>
-          </p>
-          <p class="personal-data__form-group form-group">
-            <label class="form-group__label" for="data-age">Возраст (лет):</label>
-            <input class="form-group__field" id="data-age" type="number" name="data-age" placeholder="7">
-          </p>
-        </fieldset>
-
-        <fieldset class="form-food__content form-food__content--program program">
-          <legend class="visually-hidden">Программа питания для кота.</legend>
-          <ul class="program__list">
-            <li class="program__item">
-              <p class="program__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="radio" name="program" value="program-decrease"
-                    checked>похудение
-                </label>
-              </p>
-            </li>
-            <li class="program__item">
-              <p class="program__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="radio" name="program" value="program-increase">Набор массы
-                </label>
-              </p>
-            </li>
-            <li class="program__item">
-              <p class="program__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="radio" name="program" value="program-unknown">Не знаю (Нужен
-                  ваш совет)
-                </label>
-              </p>
-            </li>
-          </ul>
-        </fieldset>
-
+        <div class="form-food__wrapper-data">
+          <fieldset class="form-food__content form-food__content--personal-data personal-data">
+            <legend class="visually-hidden">Персональные данные (данные кота).</legend>
+            <p class="personal-data__form-group form-group">
+              <label class="form-group__label" for="data-name">ИМЯ:*</label>
+              <input class="form-group__field" id="data-name" type="text" name="data-name" placeholder="барсик"
+                required>
+            </p>
+            <p class="personal-data__form-group form-group">
+              <label class="form-group__label" for="data-weight">Вес (кг):*</label>
+              <input class="form-group__field" id="data-weight" type="number" name="data-weight" placeholder="7"
+                required>
+            </p>
+            <p class="personal-data__form-group form-group">
+              <label class="form-group__label" for="data-age">Возраст (лет):</label>
+              <input class="form-group__field" id="data-age" type="number" name="data-age" placeholder="7">
+            </p>
+          </fieldset>
+          <fieldset class="form-food__content form-food__content--program program">
+            <legend class="visually-hidden">Программа питания для кота.</legend>
+            <ul class="program__list">
+              <li class="program__item">
+                <p class="program__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field form-group__field--program" type="radio" name="program"
+                      value="program-decrease" checked>похудение
+                  </label>
+                </p>
+              </li>
+              <li class="program__item">
+                <p class="program__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field" type="radio" name="program" value="program-increase">Набор массы
+                  </label>
+                </p>
+              </li>
+              <li class="program__item">
+                <p class="program__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field" type="radio" name="program" value="program-unknown">Не знаю (Нужен
+                    ваш совет)
+                  </label>
+                </p>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="form-food__content form-food__content--contacts contacts">
           <legend class="form-food__title form-food__title--contacts">Контактные данные (владельца кота)</legend>
           <p class="contacts__form-group form-group">
@@ -102,16 +108,14 @@
               placeholder="8 (960) 900-60-90" required>
           </p>
         </fieldset>
-
         <fieldset class="form-food__content form-food__content--comment comment">
-          <legend class="form-food__title">Комментарий</legend>
+          <legend class="form-food__title form-food__title--comment">Комментарий</legend>
           <label class="visually-hidden" for="comment-form">Комментарий.</label>
           <textarea class="comment__field" id="comment-form" name="comment-form"
             rows="10">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-
         <fieldset class="form-food__content form-food__content--add-product add-product">
-          <legend class="form-food__title">Дополнительно</legend>
+          <legend class="form-food__title form-food__title--add-product">Дополнительно</legend>
           <ul class="add-product__list">
             <li class="add-product__item">
               <p class="add-product__form-group form-group">
@@ -143,13 +147,14 @@
             </li>
           </ul>
         </fieldset>
-        <button class="form-food__button button" type="submit">отправить заявку</button>
-        <div class="form-food__wrapper-mark">
-          <span class="form-food__mark">* - Обязательные поля</span>
+        <div class="form-food__wrapper-button">
+          <button class="form-food__button button" type="submit">отправить заявку</button>
+          <div class="form-food__wrapper-mark">
+            <span class="form-food__mark">* - Обязательные поля</span>
+          </div>
         </div>
       </form>
     </main>
-
     <footer class="footer">
       <div class="footer__wrapper footer__wrapper--form">
         <section class="footer__address footer-address">

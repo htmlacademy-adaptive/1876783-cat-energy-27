@@ -1,4 +1,36 @@
+@use "../global/bootstrap.scss";
+
+.contacts {
+  @include bootstrap.offset-sides-y(26px, 12px);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 38px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    @include bootstrap.offset-sides-x(0, 0);
+  }
+}
+
 .contacts__form-group {
   display: flex;
   gap: 11px;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 568px;
+  }
+}
+
+.contacts__form-group:not(:last-child) {
+  margin-bottom: 14px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 0;
+  }
 }

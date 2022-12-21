@@ -1,54 +1,145 @@
 @use "../global/bootstrap.scss";
 
+.form-food {
+  @include bootstrap.offset-sides-y(29px, 23px);
+  @include bootstrap.offset-sides-x(20px, 20px);
+  font-family: bootstrap.$primary-family;
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: bootstrap.$dark-grey;
+  text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(2px, 72px);
+    @include bootstrap.offset-sides-x(30px, 30px);
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
+    padding-bottom: 82px;
+  }
+}
+
+.form-food__wrapper-data {
+  padding-bottom: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 38px;
+    @include bootstrap.offset-sides-x(38px, 38px);
+    gap: 72px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 34px;
+    @include bootstrap.offset-sides-x(0, 0);
+  }
+}
+
 .form-food__content {
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 13px;
   border: none;
 }
 
-.form-food__content--personal-data,
-.form-food__content--program {
-  padding: 23px 20px;
-}
-
-.form-food__content--contacts {
-  padding: 23px 20px 12px;
-}
-
-.form-food__content--comment {
-  padding: 12px 20px;
-}
-
-.form-food__content--add-product {
-  padding: 12px 20px 23px;
-}
-
 .form-food__title {
-  margin-bottom: 22px;
+  margin: 0;
   padding: 0;
-  padding-top: 12px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-26, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: bootstrap.$primary-dark;
   text-transform: none;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form-food__title--contacts {
-  padding-top: 23px;
+  padding-top: 26px;
+  margin-bottom: 11px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 37px;
+    margin-bottom: 39px;
+  }
+}
+
+.form-food__title--comment {
+  padding-top: 12px;
+  margin-bottom: 26px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 30px;
+    margin-bottom: 46px;
+  }
+}
+
+.form-food__title--add-product {
+  padding-top: 10px;
+  margin-bottom: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 37px;
+    margin-bottom: 20px;
+  }
+}
+
+.form-food__wrapper-button {
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(38px, 38px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(0, 0);
+  }
 }
 
 .form-food__button {
+  font-family: bootstrap.$primary-family;
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: bootstrap.$white;
   width: 100%;
-  margin-top: 25px;
+  margin-top: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 282px;
+    margin-top: 0;
+  }
 }
 
 .form-food__wrapper-mark {
+  margin-top: 0px;
   padding: 21px 63px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .form-food__mark {
   font-family: bootstrap.$secondary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-16, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: bootstrap.$primary-dark;
   text-transform: none;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 16px;
+  }
 }

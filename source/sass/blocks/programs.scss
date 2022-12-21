@@ -1,38 +1,93 @@
 @use "../global/bootstrap.scss";
 
-.programs__wrapper {
-  display: grid;
-  row-gap: 20px;
-}
-
 .programs__list {
   @include bootstrap.list-reset;
+  @include bootstrap.offset-sides-x(20px, 20px);
   display: grid;
   row-gap: 20px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(30px, 30px);
+    row-gap: 30px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .programs__item {
   background-color: bootstrap.$grey;
-  padding: 30px 33px 18px 20px;
+  @include bootstrap.offset-sides-y(30px, 18px);
+  @include bootstrap.offset-sides-x(33px, 30px);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(77px, 53px);
+    @include bootstrap.offset-sides-x(316px, 52px);
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(77px, 55px);
+    @include bootstrap.offset-sides-x(61px, 52px);
+  }
 }
 
 .programs__title {
   margin: 0;
   margin-bottom: 29px;
+  margin-left: 71px;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-24, bootstrap.$height-36, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: bootstrap.$primary-dark;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 24px;
+    margin-left: 0;
+    font-size: 36px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 73px;
+    margin-left: 214px;
+  }
 }
 
 .programs__description {
   margin: 0;
   margin-bottom: 38px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 48px;
+    font-weight: bootstrap.$normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: bootstrap.$primary-dark;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .programs__link {
-  padding: 4px 47px 4px 0;
+  @include bootstrap.offset-sides-y(4px, 4px);
+  @include bootstrap.offset-sides-x(47px, 0);
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$primary-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: bootstrap.$primary-dark;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-right: 57px;
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

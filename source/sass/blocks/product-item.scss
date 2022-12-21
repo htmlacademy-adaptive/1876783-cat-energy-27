@@ -2,18 +2,65 @@
 
 .product-item {
   display: grid;
+  row-gap: 14px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    row-gap: 25px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: 1fr 1fr 240px;
+    column-gap: 40px;
+    row-gap: 0;
+  }
 }
 
 .product-item__title {
   margin: 0;
   font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-16, bootstrap.$height-16, bootstrap.$third-dark);
+  font-weight: bootstrap.$normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: bootstrap.$third-dark;
   text-transform: uppercase;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.product-item__list {
+  margin: 0;
 }
 
 .product-item__description {
   display: flex;
   justify-content: space-between;
-  font-family: bootstrap.$primary-family;
-  @include bootstrap.font(bootstrap.$normal, bootstrap.$font-14, bootstrap.$height-14, bootstrap.$dark-grey);
+  font-family: bootstrap.$secondary-family;
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 14px;
+  color: bootstrap.$primary-dark;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    justify-content: end;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    justify-content: space-between;
+  }
+}
+
+.product-item__value {
+  margin: 0;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 90px;
+    text-align: end;
+  }
 }

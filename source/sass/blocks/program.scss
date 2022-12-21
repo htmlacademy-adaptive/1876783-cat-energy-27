@@ -1,9 +1,15 @@
 @use "../global/bootstrap.scss";
 
+.program {
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 569px;
+  }
+}
+
 .program__list {
   @include bootstrap.list-reset;
   display: grid;
-  gap: 15px;
+  gap: 13px;
 }
 
 .program__form-group {

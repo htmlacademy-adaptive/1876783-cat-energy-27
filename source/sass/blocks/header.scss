@@ -1,13 +1,49 @@
 @use "../global/bootstrap.scss";
 
-.header {
-  display: flex;
-  flex-direction: column;
+.header::before {
+  @media (min-width: bootstrap.$desktop-width) {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-desktop-cat.jpg");
+    width: 50%;
+    height: 694px;
+    left: 50%;
+  }
 }
 
-.header__logo-wrapper {
+.header__wrapper {
+  position: relative;
   @include bootstrap.offset-sides-x(20px, 20px);
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-x(30px, 30px);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
+  }
+}
+
+.header__logo {
+  display: block;
+  @include bootstrap.offset-sides-y(10px, 17px);
   width: 191px;
   height: 38px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(24px, 0);
+    width: 174px;
+    height: 51px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 53px;
+    width: 202px;
+    height: 59px;
+  }
 }
