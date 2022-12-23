@@ -60,6 +60,7 @@
 }
 
 .instruction__picture {
+  position: relative;
   width: 60px;
   height: 60px;
   background-color: bootstrap.$green;
@@ -69,6 +70,55 @@
     height: 80px;
   }
 }
+
+.instruction__picture--leaf::after {
+  position: absolute;
+  content: url("../img/index-icon/icon-leaf.svg");
+  top: 14px;
+  left: 15px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 25px;
+    left: 24px;
+  }
+}
+
+.instruction__picture--water::after {
+  position: absolute;
+  content: url("../img/index-icon/icon-water.svg");
+  top: 16px;
+  left: 17px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 26px;
+    left: 27px;
+  }
+}
+
+.instruction__picture--eat::after {
+  position: absolute;
+  content: url("../img/index-icon/icon-eat.svg");
+  top: 15px;
+  left: 17px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 25px;
+    left: 28px;
+  }
+}
+
+.instruction__picture--watch::after {
+  position: absolute;
+  content: url("../img/index-icon/icon-watch.svg");
+  top: 15px;
+  left: 17px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 25px;
+    left: 27px;
+  }
+}
+
 
 .instruction__description {
   margin: 0;

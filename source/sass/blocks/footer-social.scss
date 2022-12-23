@@ -3,5 +3,18 @@
 .footer-social__list {
   @include bootstrap.list-reset;
   display: flex;
+  justify-content: center;
   gap: 24px;
+}
+
+.footer-social__link {
+  color: bootstrap.$third-grey;
+
+  &:hover {
+    color: bootstrap.$green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

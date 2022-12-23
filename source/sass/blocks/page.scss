@@ -11,12 +11,4 @@
 
 .page__container {
   margin: 0 auto;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    width: bootstrap.$tablet-width;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    width: bootstrap.$desktop-width;
-  }
 }

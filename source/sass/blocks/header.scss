@@ -1,11 +1,11 @@
 @use "../global/bootstrap.scss";
 
-.header::before {
+.header--index::before {
   @media (min-width: bootstrap.$desktop-width) {
     content: "";
     position: absolute;
-    z-index: -1;
-    background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-desktop-cat.jpg");
+    background-image: linear-gradient(rgba(bootstrap.$green, $alpha: 0.85), rgba(bootstrap.$green, $alpha: 0.85)), url("../img/background/index-background-desktop-cat.jpg");
+    background-repeat: no-repeat;
     width: 50%;
     height: 694px;
     left: 50%;
@@ -14,7 +14,6 @@
 
 .header__wrapper {
   position: relative;
-  @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   flex-direction: column;
 
@@ -32,11 +31,21 @@
 .header__logo {
   display: block;
   @include bootstrap.offset-sides-y(10px, 17px);
+  @include bootstrap.offset-sides-x(20px, 20px);
   width: 191px;
   height: 38px;
 
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    opacity: 0.6;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(24px, 0);
+    @include bootstrap.offset-sides-x(20px, 0);
     width: 174px;
     height: 51px;
   }

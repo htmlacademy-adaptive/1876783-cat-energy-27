@@ -18,6 +18,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 32px;
     @include bootstrap.offset-sides-x(110px, 110px);
   }
 }
@@ -28,10 +29,9 @@
   background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: 100% 302px, 320px 302px;
-  background-position: top 50%;
+  background-position: top center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    background-color: bootstrap.$white;
     position: relative;
     background-image: none;
     padding-left: 117px;
@@ -39,8 +39,9 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    z-index: 0;
+    min-height: 550px;
     padding-left: 190px;
+    padding-bottom: 42px;
   }
 }
 
@@ -88,7 +89,9 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 50px;
     width: 416px;
+    // grid-column: 1/2;
   }
 }
 
@@ -127,6 +130,10 @@
     font-size: 20px;
     line-height: 20px;
     color: bootstrap.$primary-dark;
+  }
+
+  @media (min-width: bootstrap.$desktop-width){
+    // grid-column: 1/2;
   }
 }
 
@@ -170,4 +177,12 @@
   @media (min-width: bootstrap.$desktop-width) {
     left: 190px;
   }
+}
+
+.main-container__image{
+  @media (min-width: bootstrap.$desktop-width) {
+    position: absolute;
+    top:32px;
+    right: 330px;
+}
 }
