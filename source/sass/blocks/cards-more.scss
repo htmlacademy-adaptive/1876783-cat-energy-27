@@ -4,12 +4,17 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    border: 2px solid bootstrap.$grey;
+  }
+
 }
 
 .cards-more__link-new-cards {
   @include bootstrap.link(bootstrap.$secondary-dark, bootstrap.$white);
   grid-column: 1/-1;
-  margin-bottom: 8px;
+
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 23px;
@@ -17,13 +22,24 @@
 }
 
 .cards-more__title {
+  position: relative;
   margin: 0;
+  margin-bottom: 8px;
+  padding-top: 70px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
   line-height: 20px;
   color: bootstrap.$secondary-dark;
   text-transform: uppercase;
+
+
+  &::before {
+    position: absolute;
+    content: url("../img/catalog-icon/plus-icon.svg");
+    top: 0;
+    left: 85px;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
@@ -47,15 +63,23 @@
 }
 
 .cards-more__link {
+  margin-top: 21px;
   grid-column: 1/-1;
   width: 100%;
-  margin-top: 21px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
   line-height: 20px;
   color: bootstrap.$dark-grey;
+
+  &:hover {
+    background-color: bootstrap.$dark-white;
+  }
+
+  &:active {
+    color: opacity(bootstrap.$dark-grey), 0.3;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-top: 87px;

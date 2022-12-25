@@ -86,7 +86,6 @@
   }
 }
 
-
 @media (min-width: bootstrap.$tablet-width) {
   .navigation__link--current {
     position: relative;
@@ -104,15 +103,10 @@
     background: bootstrap.$green;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     background: bootstrap.$white;
   }
 }
-
-
-
-
-
 
 .navigation__toggle {
   position: absolute;

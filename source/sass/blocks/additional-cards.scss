@@ -18,9 +18,11 @@
   display: flex;
   flex-direction: column;
   gap: 54px;
+  padding-top: 13px;
 
   @media (min-width: bootstrap.$tablet-width) {
     gap: 97px;
+    padding-top: 26px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -31,19 +33,35 @@
 }
 
 .additional-cards__title {
+  position: relative;
   margin: 0;
-  margin-bottom: 49px;
+  margin-bottom: 36px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
   line-height: 24px;
   color: bootstrap.$primary-dark;
 
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -36px;
+    height: 1px;
+    background-color: bootstrap.$third-light-grey;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 80px;
     margin-left: 38px;
     font-size: 36px;
     line-height: 36px;
+
+    &::after {
+      left: -38px;
+      bottom: -80px;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {

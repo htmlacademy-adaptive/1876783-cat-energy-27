@@ -1,5 +1,35 @@
 @use "../global/bootstrap.scss";
 
+.footer-social {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    right: 20px;
+    left: 20px;
+    height: 1px;
+    background-color: bootstrap.$secondary-light-grey;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .footer-social__list {
   @include bootstrap.list-reset;
   display: flex;

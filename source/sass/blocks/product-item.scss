@@ -1,13 +1,30 @@
 @use "../global/bootstrap.scss";
 
 .product-item {
+  position: relative;
   display: grid;
   row-gap: 14px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -19px;
+    height: 1px;
+    background-color: bootstrap.$third-light-grey;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     row-gap: 25px;
+
+    &::after {
+      left: -38px;
+      right: -38px;
+      bottom: -28px;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {

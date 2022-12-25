@@ -21,18 +21,34 @@
 }
 
 .result__wrapper {
+  position: relative;
   @include bootstrap.offset-sides-y(25px, 40px);
   @include bootstrap.offset-sides-x(20px, 20px);
+
 
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(43px, 0);
     @include bootstrap.offset-sides-x(30px, 30px);
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: bootstrap.$secondary-grey;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(70px, 75px);
     @include bootstrap.offset-sides-x(110px, 110px);
+
+    &::before {
+      display: none;
+    }
   }
 }
 

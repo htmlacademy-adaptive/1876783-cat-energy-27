@@ -7,7 +7,7 @@
 
 .main-container__wrapper {
   margin: 0 auto;
-  @include bootstrap.offset-sides-y(27px, 10px);
+  @include bootstrap.offset-sides-y(27px, 41px);
   @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   flex-direction: column;
@@ -46,6 +46,34 @@
 }
 
 .main-container__wrapper--catalog {
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: bootstrap.$dark-white;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(74px, 74px);
   }
@@ -91,7 +119,6 @@
   @media (min-width: bootstrap.$desktop-width) {
     padding-top: 50px;
     width: 416px;
-    // grid-column: 1/2;
   }
 }
 
@@ -132,7 +159,7 @@
     color: bootstrap.$primary-dark;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
+  @media (min-width: bootstrap.$desktop-width) {
     // grid-column: 1/2;
   }
 }
@@ -179,10 +206,10 @@
   }
 }
 
-.main-container__image{
+.main-container__image {
   @media (min-width: bootstrap.$desktop-width) {
     position: absolute;
-    top:32px;
+    top: 32px;
     right: 330px;
-}
+  }
 }

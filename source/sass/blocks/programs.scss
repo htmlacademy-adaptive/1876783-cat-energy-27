@@ -2,6 +2,7 @@
 
 .programs__list {
   @include bootstrap.list-reset;
+  padding-top: 10px;
   @include bootstrap.offset-sides-x(20px, 20px);
   display: grid;
   row-gap: 20px;
@@ -23,7 +24,7 @@
   display: grid;
   grid-template-columns: 50px 1fr;
   column-gap: 19px;
-  row-gap: 22px;
+  // row-gap: 22px;
   background-color: bootstrap.$grey;
   @include bootstrap.offset-sides-y(30px, 18px);
   @include bootstrap.offset-sides-x(33px, 20px);
@@ -51,6 +52,7 @@
   height: 50px;
   border-radius: 50%;
   background-color: bootstrap.$green;
+  // margin-bottom: 22px;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 200px;
@@ -104,8 +106,21 @@
 }
 
 .programs__description {
+  position: relative;
   margin: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
   grid-column: 1/-1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: bootstrap.$secondary-light-grey;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     font-weight: bootstrap.$normal;
@@ -113,6 +128,10 @@
     line-height: 24px;
     color: bootstrap.$primary-dark;
     grid-column: 1/2;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -122,6 +141,7 @@
 
 .programs__link {
   position: relative;
+  margin-top: 15px;
   @include bootstrap.offset-sides-y(4px, 4px);
   @include bootstrap.offset-sides-x(47px, 0);
   font-family: bootstrap.$primary-family;
@@ -132,6 +152,15 @@
   text-decoration: none;
   text-transform: uppercase;
   grid-column: 1/-1;
+
+
+
+  // &:hover::after{
+  //   content: "";
+  //   position: absolute;
+  //   background-image: url("../img/index-icon/icon-arrow-hover.svg");
+  //   background-repeat: no-repeat;
+  // }
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-right: 57px;
