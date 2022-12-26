@@ -26,9 +26,10 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding: 0;
+    // padding: 0;
     flex-direction: row;
-    gap: 79px;
+    // gap: 79px;
+    justify-content: space-between;
   }
 }
 
@@ -65,9 +66,14 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(0, 0);
-    margin-bottom: 96px;
-    margin-left: 0;
+    // @include bootstrap.offset-sides-x(0, 0);
+    // margin-bottom: 96px;
+    // margin-left: 0;
+
+    // &::after{
+    //   left: 0;
+    //   right: 324px;
+    // }
   }
 }
 
@@ -82,9 +88,9 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 896px;
-    gap: 32px;
-    @include bootstrap.offset-sides-x(0, 0);
+    // width: 896px;
+    // gap: 32px;
+    // @include bootstrap.offset-sides-x(0, 0);
   }
 }
 

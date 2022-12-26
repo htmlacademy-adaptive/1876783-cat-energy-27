@@ -21,8 +21,10 @@
   row-gap: 19px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    position: relative;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
+
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -58,6 +60,16 @@
     &::after {
       display: none;
     }
+
+    &:not(:last-child)::before {
+      position: absolute;
+      content: "";
+      width: 324px;
+      height: 430px;
+      background-color: bootstrap.$grey;
+      bottom: 0;
+      z-index: -1;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -74,10 +86,6 @@
   @media (min-width: bootstrap.$desktop-width) {
     margin-bottom: 46px;
   }
-}
-
-.basic-cards__link-img {
-  @include bootstrap.link(bootstrap.$third-dark, bootstrap.$white);
 }
 
 .basic-cards__link {
@@ -137,5 +145,6 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-top: 33px;
+    width: 248px;
   }
 }

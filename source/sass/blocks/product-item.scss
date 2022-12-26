@@ -28,9 +28,10 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    width: 894px;
     grid-template-columns: 1fr 1fr 240px;
     column-gap: 40px;
-    row-gap: 0;
+    // row-gap: 0;
   }
 }
 

@@ -52,36 +52,26 @@
     white-space: nowrap;
     @include bootstrap.offset-sides-y(42px, 8px);
     border-top: none;
-
-    // &--current{
-    //   position: relative;
-    // }
-
-    // &::after{
-    //   content: "";
-    //   position: absolute;
-    //   right: 0px;
-    //   left: 0;
-    //   bottom: 0;
-    //   height: 2px;
-    //   background: bootstrap.$green;
-    // }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     font-weight: bootstrap.$normal;
     font-size: 20px;
     line-height: 30px;
-    color: bootstrap.$white;
+    color: bootstrap.$secondary-dark;
     padding-top: 70px;
-    background-color: transparent;
 
-    &:hover {
-      color: rgba(bootstrap.$white, $alpha: 0.6);
-    }
+    &--index {
+      background-color: transparent;
+      color: bootstrap.$white;
 
-    &:active {
-      color: rgba(bootstrap.$white, $alpha: 0.3);
+      &:hover {
+        color: rgba(bootstrap.$white, $alpha: 0.6);
+      }
+
+      &:active {
+        color: rgba(bootstrap.$white, $alpha: 0.3);
+      }
     }
   }
 }
@@ -100,7 +90,7 @@
     left: 0;
     bottom: 0;
     height: 2px;
-    background: bootstrap.$green;
+    background-color: bootstrap.$green;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

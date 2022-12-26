@@ -25,8 +25,6 @@
   @include bootstrap.offset-sides-y(25px, 40px);
   @include bootstrap.offset-sides-x(20px, 20px);
 
-
-
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(43px, 0);
     @include bootstrap.offset-sides-x(30px, 30px);
@@ -118,6 +116,15 @@
   }
 }
 
+.result__item {
+  display: grid;
+  row-gap: 7px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    row-gap: 11px;
+  }
+}
+
 .result__name {
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
@@ -140,6 +147,7 @@
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
+  grid-row: 1/2;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 30px;

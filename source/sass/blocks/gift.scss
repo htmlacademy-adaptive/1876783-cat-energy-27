@@ -28,6 +28,12 @@
     @include bootstrap.offset-sides-x(124px, 422px);
     background-position: 100%, 0 -330px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(187px, 43px);
+    @include bootstrap.offset-sides-x(61px, 58px);
+    background-position: 100%, center;
+  }
 }
 
 .gift__slogan {
