@@ -92,10 +92,6 @@
     height: 2px;
     background-color: bootstrap.$green;
   }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    background: bootstrap.$white;
-  }
 }
 
 .navigation__toggle {

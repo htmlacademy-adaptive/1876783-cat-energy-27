@@ -20,18 +20,35 @@
     align-items: center;
     row-gap: 25px;
 
-    &::after {
+    &:not(:first-child):before {
+      position: absolute;
+      content: "";
       left: -38px;
       right: -38px;
-      bottom: -28px;
+      top: -27px;
+      height: 1px;
+      background-color: bootstrap.$third-light-grey;
+    }
+
+    &::after {
+      display: none;
     }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 894px;
-    grid-template-columns: 1fr 1fr 240px;
-    column-gap: 40px;
-    // row-gap: 0;
+    width: 896px;
+    grid-template-columns: 1fr 1fr 244px;
+    gap: 40px;
+
+    &:not(:first-child):before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: -16px;
+      height: 1px;
+      background-color: bootstrap.$third-light-grey;
+    }
   }
 }
 

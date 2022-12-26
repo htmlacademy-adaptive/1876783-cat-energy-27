@@ -1,6 +1,18 @@
 @use "../global/bootstrap.scss";
 
 .program {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: -20px;
+    right: -20px;
+    top: -22px;
+    height: 1px;
+    background-color: bootstrap.$secondary-light-grey;
+  }
+
   @media (min-width: bootstrap.$desktop-width) {
     width: 569px;
   }
@@ -17,5 +29,9 @@
 
   .form-group__field {
     margin-right: 15px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    color: bootstrap.$third-dark;
   }
 }

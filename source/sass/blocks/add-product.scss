@@ -14,6 +14,21 @@
   }
 }
 
+.add-product__form-group {
+
+  .form-group__field {
+    margin-right: 16px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-right: 20px;
+  }
+
+  .form-group__label {
+    color: bootstrap.$primary-dark;
+  }
+}
+
 .add-product__list {
   @include bootstrap.list-reset;
   display: grid;

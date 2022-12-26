@@ -19,7 +19,7 @@
   &::before {
     position: absolute;
     content: url("../img/catalog-icon/gift-icon.svg");
-    top: 59px;
+    top: 57px;
     left: 101px;
   }
 
@@ -27,12 +27,20 @@
     @include bootstrap.offset-sides-y(71px, 69px);
     @include bootstrap.offset-sides-x(124px, 422px);
     background-position: 100%, 0 -330px;
+
+    &::before {
+      left: 77px;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(187px, 43px);
-    @include bootstrap.offset-sides-x(61px, 58px);
+    @include bootstrap.offset-sides-y(185px, 42px);
+    @include bootstrap.offset-sides-x(42px, 42px);
     background-position: 100%, center;
+
+    &::before {
+      left: 84px;
+    }
   }
 }
 
@@ -47,5 +55,9 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     text-align: start;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    text-align: center;
   }
 }

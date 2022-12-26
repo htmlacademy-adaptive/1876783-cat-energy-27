@@ -25,6 +25,7 @@
   color: bootstrap.$dark-grey;
   text-transform: uppercase;
   white-space: nowrap;
+  border: 1px solid bootstrap.$grey-4;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-x(19px, 19px);

@@ -10,26 +10,8 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(21px, 86px);
     @include bootstrap.offset-sides-x(110px, 110px);
-  }
-}
-
-.additional-cards__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 54px;
-  padding-top: 13px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    gap: 97px;
-    padding-top: 26px;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    // padding: 0;
-    flex-direction: row;
-    // gap: 79px;
-    justify-content: space-between;
   }
 }
 
@@ -60,20 +42,28 @@
     line-height: 36px;
 
     &::after {
-      left: -38px;
-      bottom: -80px;
+      display: none;
     }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    // @include bootstrap.offset-sides-x(0, 0);
-    // margin-bottom: 96px;
-    // margin-left: 0;
+    margin-left: 0;
+  }
+}
 
-    // &::after{
-    //   left: 0;
-    //   right: 324px;
-    // }
+.additional-cards__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    gap: 97px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -81,16 +71,25 @@
   @include bootstrap.list-reset;
   display: grid;
   gap: 32px;
+  padding-top: 13px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    border: 1px solid bootstrap.$third-light-grey;
     @include bootstrap.offset-sides-x(38px, 38px);
     gap: 54px;
+    padding-top: 27px;
+    padding-bottom: 27px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    // width: 896px;
-    // gap: 32px;
-    // @include bootstrap.offset-sides-x(0, 0);
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-top: 1px solid bootstrap.$third-light-grey;
+    border-bottom: 1px solid bootstrap.$third-light-grey;
+    padding-left: 0;
+    padding-right: 0;
+    gap: 32px;
   }
 }
 

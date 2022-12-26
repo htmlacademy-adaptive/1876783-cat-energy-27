@@ -24,7 +24,6 @@
     position: relative;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -75,6 +74,10 @@
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(28px, 40px);
     row-gap: 0;
+
+    &:not(:last-child)::before {
+      width: 245px;
+    }
   }
 }
 
@@ -146,5 +149,9 @@
   @media (min-width: bootstrap.$tablet-width) {
     margin-top: 33px;
     width: 248px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 168px;
   }
 }

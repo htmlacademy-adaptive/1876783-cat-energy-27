@@ -17,6 +17,19 @@
   line-height: 18px;
   color: bootstrap.$dark-grey;
   text-transform: uppercase;
+  border: 1px solid bootstrap.$grey-4;
+
+  &:hover {
+    border-color: bootstrap.$third-light-grey;
+  }
+
+  &:focus {
+    border: 2px solid bootstrap.$dark-grey;
+  }
+
+  &--error {
+    border: 2px solid bootstrap.$error-red;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
@@ -35,46 +48,5 @@
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-}
-
-.personal-data__form-group .form-group__field {
-  padding: 14px 20px;
-  width: 100%;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    padding: 11px 20px;
-  }
-}
-
-.form-group__field--program {
-  @media (min-width: bootstrap.$tablet-width) {
-    color: bootstrap.$third-dark;
-  }
-}
-
-.contacts__form-group .form-group__field {
-  width: 100%;
-  @include bootstrap.offset-sides-y(14px, 14px);
-  @include bootstrap.offset-sides-x(50px, 15px);
-
-  @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(11px, 11px);
-    @include bootstrap.offset-sides-x(50px, 20px);
-  }
-}
-
-.add-product__form-group {
-
-  .form-group__field {
-    margin-right: 16px;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-    margin-right: 20px;
-  }
-
-  .form-group__label {
-    color: bootstrap.$primary-dark;
   }
 }
