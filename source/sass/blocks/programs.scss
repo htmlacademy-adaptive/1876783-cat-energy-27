@@ -1,20 +1,34 @@
 @use "../global/bootstrap.scss";
 
-.programs__list {
-  @include bootstrap.list-reset;
+.programs {
   padding-top: 10px;
-  @include bootstrap.offset-sides-x(20px, 20px);
-  display: grid;
-  row-gap: 20px;
+  padding-bottom: 10px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(30px, 30px);
+    padding-bottom: 15px;
+    padding-top: 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.programs__list {
+  @include bootstrap.list-reset;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 20px;
+  width: 280px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 708px;
     row-gap: 30px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(110px, 110px);
-    padding-top: 40px;
+    width: 1220px;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
@@ -24,7 +38,6 @@
   display: grid;
   grid-template-columns: 50px 1fr;
   column-gap: 19px;
-  // row-gap: 22px;
   background-color: bootstrap.$grey;
   @include bootstrap.offset-sides-y(30px, 18px);
   @include bootstrap.offset-sides-x(33px, 20px);

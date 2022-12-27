@@ -1,16 +1,27 @@
 @use "../global/bootstrap.scss";
 
-.instruction__wrapper {
+.instruction {
   @include bootstrap.offset-sides-y(10px, 50px);
-  @include bootstrap.offset-sides-x(20px, 20px);
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(35px, 47px);
-    @include bootstrap.offset-sides-x(30px, 30px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding: 61px 110px;
+    @include bootstrap.offset-sides-y(61px, 61px);
+  }
+}
+
+.instruction__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 1220px;
   }
 }
 

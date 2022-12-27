@@ -7,25 +7,24 @@
 
 .main-container__wrapper {
   margin: 0 auto;
-  @include bootstrap.offset-sides-y(27px, 41px);
-  @include bootstrap.offset-sides-x(20px, 20px);
   display: flex;
   flex-direction: column;
+  align-items: center;
 
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding: 64px 30px;
+    width: 708px;
+    align-items: flex-start;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-top: 32px;
-    @include bootstrap.offset-sides-x(110px, 110px);
+    width: 1220px;
   }
 }
 
 .main-container__wrapper--index {
+  padding-bottom: 10px;
   text-align: center;
-  @include bootstrap.offset-sides-x(0, 0);
   background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
   background-repeat: no-repeat;
   background-size: 100% 302px, 320px 302px;
@@ -34,74 +33,91 @@
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
     background-image: none;
-    padding-left: 117px;
     padding-bottom: 0;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     min-height: 550px;
-    padding-left: 190px;
-    padding-bottom: 42px;
+    padding-bottom: 82px;
   }
 }
 
-.main-container__wrapper--catalog {
-  position: relative;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    height: 1px;
-    background-color: bootstrap.$dark-white;
+// .main-container__wrapper--catalog {
+//   position: relative;
+
+//   &::before,
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     left: 0;
+//     right: 0;
+//     height: 1px;
+//     background-color: bootstrap.$dark-white;
+//   }
+
+//   &::before {
+//     top: 0;
+//   }
+
+//   &::after {
+//     bottom: 0;
+//   }
+
+//   @media (min-width: bootstrap.$tablet-width) {
+
+//     &::before,
+//     &::after {
+//       display: none;
+//     }
+//   }
+
+//   @media (min-width: bootstrap.$desktop-width) {
+//     @include bootstrap.offset-sides-y(74px, 74px);
+//   }
+// }
+
+// .main-container__wrapper--form {
+//   position: relative;
+
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     height: 1px;
+//     background-color: bootstrap.$secondary-light-grey;
+//   }
+
+//   @media (min-width: bootstrap.$tablet-width) {
+//     @include bootstrap.offset-sides-x(68px, 68px);
+
+//     &::after {
+//       display: none;
+//     }
+//   }
+
+//   @media (min-width: bootstrap.$desktop-width) {
+//     @include bootstrap.offset-sides-x(110px, 110px);
+//   }
+// }
+
+.main-container__intro{
+  @include bootstrap.offset-sides-y(28px, 28px);
+  @include bootstrap.offset-sides-x(35px, 35px);
+  width: 250px;
+
+  @media (min-width: bootstrap.$tablet-width){
+    @include bootstrap.offset-sides-y(64px, 20px);
+    @include bootstrap.offset-sides-x(90px, 90px);
+    width: 414px;
+    text-align: start;
   }
 
-  &::before {
-    top: 0;
-  }
-
-  &::after {
-    bottom: 0;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-
-    &::before,
-    &::after {
-      display: none;
-    }
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(74px, 74px);
-  }
-}
-
-.main-container__wrapper--form {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 1px;
-    background-color: bootstrap.$secondary-light-grey;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(68px, 68px);
-
-    &::after {
-      display: none;
-    }
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(110px, 110px);
+  @media (min-width: bootstrap.$desktop-width){
+    padding-top: 32px;
+    @include bootstrap.offset-sides-x(80px, 80px);
   }
 }
 
@@ -122,11 +138,9 @@
 
 .main-container__title--index {
   color: bootstrap.$white;
-  @include bootstrap.offset-sides-x(35px, 35px);
   margin-bottom: 25px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(0, 0);
     color: bootstrap.$primary-dark;
     width: 416px;
     margin-bottom: 41px;
@@ -134,22 +148,21 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-top: 50px;
-    width: 416px;
   }
 }
 
-.main-container__title--form-food {
-  text-align: left;
-  margin-bottom: 37px;
+// .main-container__title--form-food {
+//   text-align: left;
+//   margin-bottom: 37px;
 
-  @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 54px;
-  }
+//   @media (min-width: bootstrap.$tablet-width) {
+//     margin-bottom: 54px;
+//   }
 
-  @media (min-width: bootstrap.$desktop-width) {
-    padding-left: 0;
-  }
-}
+//   @media (min-width: bootstrap.$desktop-width) {
+//     padding-left: 0;
+//   }
+// }
 
 .main-container__slogan {
   margin: 0;
@@ -162,41 +175,36 @@
 }
 
 .main-container__slogan--index {
-  margin-bottom: 29px;
   font-size: 14px;
   line-height: 14px;
   color: bootstrap.$white;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 300px;
     font-size: 20px;
     line-height: 20px;
     color: bootstrap.$primary-dark;
   }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    // grid-column: 1/2;
-  }
 }
 
-.main-container__slogan--form-food {
-  width: 226px;
-  font-size: 14px;
-  line-height: 18px;
+// .main-container__slogan--form-food {
+//   width: 226px;
+//   font-size: 14px;
+//   line-height: 18px;
 
-  @media (min-width: bootstrap.$tablet-width) {
-    width: 323px;
-    font-size: 20px;
-    line-height: 30px;
-  }
+//   @media (min-width: bootstrap.$tablet-width) {
+//     width: 323px;
+//     font-size: 20px;
+//     line-height: 30px;
+//   }
 
-  @media (min-width: bootstrap.$desktop-width) {
-    padding-left: 0;
-  }
-}
+//   @media (min-width: bootstrap.$desktop-width) {
+//     padding-left: 0;
+//   }
+// }
 
 .main-container__link-programs {
+  box-sizing: border-box;
   display: block;
   align-self: center;
   font-family: bootstrap.$primary-family;
@@ -210,7 +218,7 @@
   @media (min-width: bootstrap.$tablet-width) {
     position: absolute;
     top: 290px;
-    left: 117px;
+    left: 90px;
     margin-top: 0;
     width: 244px;
     font-size: 20px;
@@ -218,7 +226,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    left: 190px;
+    left: 80px;
   }
 }
 
@@ -226,6 +234,6 @@
   @media (min-width: bootstrap.$desktop-width) {
     position: absolute;
     top: 32px;
-    right: 330px;
+    right: 220px;
   }
 }

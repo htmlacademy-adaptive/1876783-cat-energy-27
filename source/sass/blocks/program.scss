@@ -28,6 +28,11 @@
   @include bootstrap.list-reset;
   display: grid;
   gap: 13px;
+
+  @media (min-width: bootstrap.$desktop-width){
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .program__form-group {

@@ -1,10 +1,12 @@
 @use "../global/bootstrap.scss";
 
 .result {
+  @include bootstrap.offset-sides-y(25px, 40px);
   background-color: bootstrap.$light-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
+    @include bootstrap.offset-sides-y(43px, 0);
     background-color: bootstrap.$white;
     z-index: 0;
 
@@ -18,16 +20,19 @@
       bottom: 0;
     }
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(70px, 75px);
+  }
 }
 
 .result__wrapper {
   position: relative;
-  @include bootstrap.offset-sides-y(25px, 40px);
-  @include bootstrap.offset-sides-x(20px, 20px);
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(43px, 0);
-    @include bootstrap.offset-sides-x(30px, 30px);
+    width: 708px;
 
     &::before {
       position: absolute;
@@ -41,8 +46,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(70px, 75px);
-    @include bootstrap.offset-sides-x(110px, 110px);
+    width: 1220px;
 
     &::before {
       display: none;
