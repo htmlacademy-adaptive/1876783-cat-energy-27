@@ -82,7 +82,7 @@
 .main-container__wrapper--form {
   position: relative;
 
-  &::after{
+  &::after {
     position: absolute;
     content: "";
     left: 0;
@@ -94,6 +94,10 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-x(68px, 68px);
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {

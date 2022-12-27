@@ -13,6 +13,12 @@
     background-color: bootstrap.$secondary-light-grey;
   }
 
+  @media (min-width: bootstrap.$tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+
   @media (min-width: bootstrap.$desktop-width) {
     width: 569px;
   }
