@@ -1,16 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .add-product {
-  @include bootstrap.offset-sides-y(10px, 10px);
+  padding-bottom: 10px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(37px, 54px);
-    @include bootstrap.offset-sides-x(38px, 38px);
+    padding-bottom: 54px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-bottom: 61px;
-    @include bootstrap.offset-sides-x(0, 0);
   }
 }
 
@@ -31,6 +29,7 @@
 
 .add-product__list {
   @include bootstrap.list-reset;
+  margin: 0 auto;
   display: grid;
   gap: 15px;
 

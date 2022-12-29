@@ -1,6 +1,7 @@
 @use "../global/bootstrap.scss";
 
 .footer-social {
+  @include bootstrap.offset-sides-y(20px, 20px);
   position: relative;
 
   &::before,
@@ -22,6 +23,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(0, 0);
 
     &::before,
     &::after {

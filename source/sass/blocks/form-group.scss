@@ -14,10 +14,14 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.12;
   color: bootstrap.$dark-grey;
   text-transform: uppercase;
   border: 1px solid bootstrap.$grey-4;
+
+  &::placeholder {
+    font-family: inherit;
+  }
 
   &:hover {
     border-color: bootstrap.$third-light-grey;
@@ -33,20 +37,10 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
-    line-height: 30px;
-  }
-}
+    line-height: 1.5;
 
-.form-group__field::placeholder {
-  font-family: bootstrap.$primary-family;
-  font-weight: bootstrap.$normal;
-  font-size: 16px;
-  line-height: 18px;
-  color: bootstrap.$dark-grey;
-  text-transform: uppercase;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
+    &::placeholder {
+      font-family: inherit;
+    }
   }
 }

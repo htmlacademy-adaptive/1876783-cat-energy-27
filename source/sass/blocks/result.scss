@@ -13,6 +13,16 @@
     &::before {
       position: absolute;
       content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: bootstrap.$secondary-grey;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
       background-color: bootstrap.$light-grey;
       width: 100%;
       height: 462px;
@@ -23,34 +33,23 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(70px, 75px);
+
+    &::before {
+      display: none;
+    }
   }
 }
 
 .result__wrapper {
-  position: relative;
   width: 280px;
   margin: 0 auto;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 708px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      top: 0;
-      height: 1px;
-      background-color: bootstrap.$secondary-grey;
-    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
-
-    &::before {
-      display: none;
-    }
   }
 }
 
@@ -75,13 +74,13 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 63px;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -95,12 +94,12 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.29;
   color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -133,12 +132,12 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 1;
   }
 }
 
@@ -147,7 +146,7 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
@@ -155,7 +154,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 30px;
-    line-height: 36px;
+    line-height: 1.2;
   }
 }
 
@@ -164,14 +163,14 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.43;
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
     justify-self: end;
   }
 

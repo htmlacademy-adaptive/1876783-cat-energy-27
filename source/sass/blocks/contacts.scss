@@ -1,31 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .contacts {
-  position: relative;
-  @include bootstrap.offset-sides-y(26px, 12px);
-
-  &::before {
-    position: absolute;
-    content: "";
-    left: -20px;
-    right: -20px;
-    top: -87px;
-    height: 1px;
-    background-color: bootstrap.$secondary-light-grey;
-  }
+  padding-bottom: 24px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding: 38px;
-
-    &::before {
-      display: none;
-    }
+    padding-bottom: 71px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    display: flex;
-    justify-content: space-between;
-    @include bootstrap.offset-sides-x(0, 0);
+    padding-bottom: 67px;
   }
 }
 

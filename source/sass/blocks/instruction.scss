@@ -31,13 +31,13 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 32px;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
   }
 }
 
@@ -76,66 +76,65 @@
   height: 60px;
   background-color: bootstrap.$green;
 
+  &--leaf::after {
+    position: absolute;
+    content: url("../img/index-icon/icon-leaf.svg");
+    top: 14px;
+    left: 15px;
+  }
+
+  &--water::after {
+    position: absolute;
+    content: url("../img/index-icon/icon-water.svg");
+    top: 16px;
+    left: 17px;
+  }
+
+  &--eat::after {
+    position: absolute;
+    content: url("../img/index-icon/icon-eat.svg");
+    top: 15px;
+    left: 17px;
+  }
+
+  &--watch::after {
+    position: absolute;
+    content: url("../img/index-icon/icon-watch.svg");
+    top: 15px;
+    left: 17px;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     width: 80px;
     height: 80px;
+
+    &--leaf::after {
+      top: 25px;
+      left: 24px;
+    }
+
+    &--water::after {
+      top: 26px;
+      left: 27px;
+    }
+
+    &--eat::after {
+      top: 25px;
+      left: 28px;
+    }
+
+    &--watch::after {
+      top: 25px;
+      left: 27px;
+    }
   }
 }
-
-.instruction__picture--leaf::after {
-  position: absolute;
-  content: url("../img/index-icon/icon-leaf.svg");
-  top: 14px;
-  left: 15px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    top: 25px;
-    left: 24px;
-  }
-}
-
-.instruction__picture--water::after {
-  position: absolute;
-  content: url("../img/index-icon/icon-water.svg");
-  top: 16px;
-  left: 17px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    top: 26px;
-    left: 27px;
-  }
-}
-
-.instruction__picture--eat::after {
-  position: absolute;
-  content: url("../img/index-icon/icon-eat.svg");
-  top: 15px;
-  left: 17px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    top: 25px;
-    left: 28px;
-  }
-}
-
-.instruction__picture--watch::after {
-  position: absolute;
-  content: url("../img/index-icon/icon-watch.svg");
-  top: 15px;
-  left: 17px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    top: 25px;
-    left: 27px;
-  }
-}
-
 
 .instruction__description {
   margin: 0;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 }

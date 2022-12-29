@@ -1,24 +1,21 @@
 @use "../global/bootstrap.scss";
 
 .form-food {
-  padding-bottom: 23px;
-  @include bootstrap.offset-sides-x(20px, 20px);
+  @include bootstrap.offset-sides-y(23px, 23px);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.12;
   color: bootstrap.$dark-grey;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(2px, 72px);
-    @include bootstrap.offset-sides-x(30px, 30px);
+    @include bootstrap.offset-sides-y(33px, 72px);
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(110px, 110px);
     padding-bottom: 82px;
   }
 }
@@ -27,19 +24,18 @@
   padding-bottom: 19px;
   display: flex;
   flex-direction: column;
-  gap: 46px;
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-bottom: 38px;
-    @include bootstrap.offset-sides-x(38px, 38px);
     gap: 72px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 34px;
-    @include bootstrap.offset-sides-x(0, 0);
   }
 }
 
@@ -49,61 +45,74 @@
   border: none;
 }
 
+.form-food__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 628px;
+    @include bootstrap.offset-sides-x(40px, 40px);
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 1220px;
+    @include bootstrap.offset-sides-x(0, 0);
+
+    &--personal-data,
+    &--program {
+      width: 568px;
+    }
+
+    &--contacts {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
 .form-food__title {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  @include bootstrap.offset-sides-x(20px, 20px);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
-  line-height: 26px;
+  line-height: 1.08;
   color: bootstrap.$primary-dark;
   text-transform: none;
+  width: 280px;
+  align-items: center;
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 76px;
+    @include bootstrap.offset-sides-x(70px, 70px);
     font-size: 36px;
-    line-height: 36px;
+    line-height: 1;
+    width: 628px;
+
+    &--add-product {
+      margin-bottom: 57px;
+    }
   }
-}
 
-.form-food__title--contacts {
-  padding-top: 26px;
-  margin-bottom: 11px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 37px;
-    margin-bottom: 39px;
-  }
-}
-
-.form-food__title--comment {
-  padding-top: 12px;
-  margin-bottom: 26px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 30px;
-    margin-bottom: 46px;
-  }
-}
-
-.form-food__title--add-product {
-  padding-top: 10px;
-  margin-bottom: 24px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 37px;
-    margin-bottom: 20px;
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(110px, 110px);
+    width: 1220px;
   }
 }
 
 .form-food__wrapper-button {
+  width: 280px;
+  margin: 0 auto;
+
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(38px, 38px);
+    width: 628px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(0, 0);
+    width: 1220px;
   }
 }
 
@@ -111,7 +120,7 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: bootstrap.$white;
   width: 100%;
   margin-top: 24px;
@@ -119,6 +128,10 @@
   @media (min-width: bootstrap.$tablet-width) {
     width: 282px;
     margin-top: 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 568px;
   }
 }
 
@@ -135,7 +148,7 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   color: bootstrap.$primary-dark;
   text-transform: none;
 

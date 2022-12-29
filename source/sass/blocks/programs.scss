@@ -1,17 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .programs {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  @include bootstrap.offset-sides-y(10px, 10px);
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 15px;
-    padding-top: 0;
+    @include bootstrap.offset-sides-y(0, 15px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    @include bootstrap.offset-sides-y(40px, 40px);
   }
 }
 
@@ -65,7 +62,20 @@
   height: 50px;
   border-radius: 50%;
   background-color: bootstrap.$green;
-  // margin-bottom: 22px;
+
+  &--slim::after {
+    position: absolute;
+    content: url("../img/index-icon/cat-slim.svg");
+    left: 7px;
+    top: -3px;
+  }
+
+  &--pro::after {
+    position: absolute;
+    content: url("../img/index-icon/cat-pro.svg");
+    left: -9px;
+    top: 11px;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 200px;
@@ -84,26 +94,12 @@
   }
 }
 
-.programs__picture--slim::after {
-  position: absolute;
-  content: url("../img/index-icon/cat-slim.svg");
-  left: 7px;
-  top: -3px;
-}
-
-.programs__picture--pro::after {
-  position: absolute;
-  content: url("../img/index-icon/cat-pro.svg");
-  left: -9px;
-  top: 11px;
-}
-
 .programs__title {
   margin: 0;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 1.5;
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
   align-self: center;
@@ -121,8 +117,7 @@
 .programs__description {
   position: relative;
   margin: 0;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  @include bootstrap.offset-sides-y(22px, 22px);
   grid-column: 1/-1;
 
   &::after {
@@ -138,7 +133,7 @@
   @media (min-width: bootstrap.$tablet-width) {
     font-weight: bootstrap.$normal;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     color: bootstrap.$primary-dark;
     grid-column: 1/2;
 
@@ -160,25 +155,16 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
   text-decoration: none;
   text-transform: uppercase;
   grid-column: 1/-1;
 
-
-
-  // &:hover::after{
-  //   content: "";
-  //   position: absolute;
-  //   background-image: url("../img/index-icon/icon-arrow-hover.svg");
-  //   background-repeat: no-repeat;
-  // }
-
   @media (min-width: bootstrap.$tablet-width) {
     padding-right: 57px;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
   }
 }
 

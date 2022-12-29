@@ -1,17 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .basic-cards {
-  @include bootstrap.offset-sides-y(8px, 10px);
-  @include bootstrap.offset-sides-x(20px, 20px);
+  @include bootstrap.offset-sides-y(8px, 25px);
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(18px, 55px);
-    @include bootstrap.offset-sides-x(30px, 30px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-top: 10px;
-    @include bootstrap.offset-sides-x(110px, 110px);
   }
 }
 
@@ -19,14 +16,18 @@
   @include bootstrap.list-reset;
   display: grid;
   row-gap: 19px;
+  text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
+    margin: 0 auto;
+    width: 708px;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    width: 1220px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
     row-gap: 63px;
@@ -36,43 +37,45 @@
 .basic-cards__item {
   position: relative;
   @include bootstrap.offset-sides-y(11px, 14px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
 
   &::after {
     position: absolute;
     content: "";
-    left: -20px;
-    right: -20px;
+    left: 0;
+    right: 0;
     bottom: -8px;
     height: 1px;
     background-color: bootstrap.$dark-white;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(8px, 40px);
-    @include bootstrap.offset-sides-x(38px, 38px);
-    grid-template-columns: 1fr;
+    @include bootstrap.offset-sides-y(0, 40px);
 
     &::after {
       display: none;
     }
 
-    &:not(:last-child)::before {
-      position: absolute;
-      content: "";
-      width: 324px;
-      height: 430px;
-      background-color: bootstrap.$grey;
-      bottom: 0;
-      z-index: -1;
+    &:last-child {
+      border: 2px solid bootstrap.$grey;
     }
+  }
+}
+
+.basic-cards__wrapper-item {
+  width: 280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 252px;
+    grid-template-columns: 1fr;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(28px, 40px);
+    width: 180px;
     row-gap: 0;
 
     &:not(:last-child)::before {
@@ -102,7 +105,7 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: bootstrap.$third-dark;
   text-transform: uppercase;
 
@@ -111,7 +114,7 @@
     margin-bottom: 21px;
     width: 159px;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 1.2;
     text-align: center;
   }
 
@@ -137,13 +140,13 @@
 }
 
 .basic-cards__link-buy {
-  width: 100%;
+  width: 280px;
   grid-column: 1/-1;
   margin-top: 13px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: bootstrap.$white;
 
   @media (min-width: bootstrap.$tablet-width) {

@@ -1,17 +1,19 @@
 @use "../global/bootstrap.scss";
 
 .additional-cards {
-  @include bootstrap.offset-sides-y(25px, 35px);
-  @include bootstrap.offset-sides-x(20px, 20px);
+  margin: 0 auto;
+  padding-bottom: 35px;
+  width: 280px;
+
 
   @media (min-width: bootstrap.$tablet-width) {
+    width: 706px;
     @include bootstrap.offset-sides-y(13px, 34px);
-    @include bootstrap.offset-sides-x(30px, 30px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    width: 1220px;
     @include bootstrap.offset-sides-y(21px, 86px);
-    @include bootstrap.offset-sides-x(110px, 110px);
   }
 }
 
@@ -22,7 +24,7 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
 
   &::after {
@@ -39,7 +41,7 @@
     margin-bottom: 80px;
     margin-left: 38px;
     font-size: 36px;
-    line-height: 36px;
+    line-height: 1;
 
     &::after {
       display: none;
@@ -74,22 +76,20 @@
   padding-top: 13px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    border: 1px solid bootstrap.$third-light-grey;
     @include bootstrap.offset-sides-x(38px, 38px);
     gap: 54px;
     padding-top: 27px;
     padding-bottom: 27px;
+    border: 1px solid bootstrap.$third-light-grey;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-y(16px, 16px);
+    @include bootstrap.offset-sides-x(0, 0);
+    gap: 32px;
     border: none;
-    padding-top: 16px;
-    padding-bottom: 16px;
     border-top: 1px solid bootstrap.$third-light-grey;
     border-bottom: 1px solid bootstrap.$third-light-grey;
-    padding-left: 0;
-    padding-right: 0;
-    gap: 32px;
   }
 }
 
@@ -97,7 +97,7 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: bootstrap.$white;
 
   @media (min-width: bootstrap.$tablet-width) {

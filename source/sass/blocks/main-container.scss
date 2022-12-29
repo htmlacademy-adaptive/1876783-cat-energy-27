@@ -11,113 +11,142 @@
   flex-direction: column;
   align-items: center;
 
+  &--index {
+    padding-bottom: 10px;
+    text-align: center;
+    background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 302px, 320px 302px;
+    background-position: top center;
+  }
+
+  &--catalog {
+    @include bootstrap.offset-sides-y(27px, 41px);
+    @include bootstrap.offset-sides-x(20px, 20px);
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: bootstrap.$dark-white;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  &--form {
+    position: relative;
+    @include bootstrap.offset-sides-y(27px, 15px);
+    @include bootstrap.offset-sides-x(20px, 20px);
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: bootstrap.$secondary-light-grey;
+    }
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 708px;
     align-items: flex-start;
+
+    &--index {
+      position: relative;
+      background-image: none;
+      padding-bottom: 0;
+    }
+
+    &--catalog {
+      margin: 0 auto;
+      width: 708px;
+      @include bootstrap.offset-sides-y(65px, 65px);
+      @include bootstrap.offset-sides-x(0, 0);
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &--form {
+      width: 628px;
+      margin: 0 auto;
+      @include bootstrap.offset-sides-y(65px, 33px);
+      @include bootstrap.offset-sides-x(0, 0);
+
+      &::after {
+        display: none;
+      }
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
+
+    &--index {
+      min-height: 550px;
+      padding-bottom: 82px;
+    }
+
+    &--catalog {
+      width: 1220px;
+      @include bootstrap.offset-sides-y(74px, 74px);
+    }
+
+    &--form {
+      width: 1220px;
+      padding-top: 77px;
+    }
   }
 }
 
-.main-container__wrapper--index {
-  padding-bottom: 10px;
-  text-align: center;
-  background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 302px, 320px 302px;
-  background-position: top center;
+.main-container__intro {
 
-  @media (min-width: bootstrap.$tablet-width) {
-    position: relative;
-    background-image: none;
-    padding-bottom: 0;
+  &--index {
+    @include bootstrap.offset-sides-y(28px, 28px);
+    @include bootstrap.offset-sides-x(35px, 35px);
+    width: 250px;
   }
 
-  @media (min-width: bootstrap.$desktop-width) {
-    min-height: 550px;
-    padding-bottom: 82px;
-  }
-}
-
-
-// .main-container__wrapper--catalog {
-//   position: relative;
-
-//   &::before,
-//   &::after {
-//     position: absolute;
-//     content: "";
-//     left: 0;
-//     right: 0;
-//     height: 1px;
-//     background-color: bootstrap.$dark-white;
-//   }
-
-//   &::before {
-//     top: 0;
-//   }
-
-//   &::after {
-//     bottom: 0;
-//   }
-
-//   @media (min-width: bootstrap.$tablet-width) {
-
-//     &::before,
-//     &::after {
-//       display: none;
-//     }
-//   }
-
-//   @media (min-width: bootstrap.$desktop-width) {
-//     @include bootstrap.offset-sides-y(74px, 74px);
-//   }
-// }
-
-// .main-container__wrapper--form {
-//   position: relative;
-
-//   &::after {
-//     position: absolute;
-//     content: "";
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     height: 1px;
-//     background-color: bootstrap.$secondary-light-grey;
-//   }
-
-//   @media (min-width: bootstrap.$tablet-width) {
-//     @include bootstrap.offset-sides-x(68px, 68px);
-
-//     &::after {
-//       display: none;
-//     }
-//   }
-
-//   @media (min-width: bootstrap.$desktop-width) {
-//     @include bootstrap.offset-sides-x(110px, 110px);
-//   }
-// }
-
-.main-container__intro{
-  @include bootstrap.offset-sides-y(28px, 28px);
-  @include bootstrap.offset-sides-x(35px, 35px);
-  width: 250px;
-
-  @media (min-width: bootstrap.$tablet-width){
-    @include bootstrap.offset-sides-y(64px, 20px);
-    @include bootstrap.offset-sides-x(90px, 90px);
-    width: 414px;
+  &--form {
+    width: 280px;
     text-align: start;
   }
 
-  @media (min-width: bootstrap.$desktop-width){
-    padding-top: 32px;
-    @include bootstrap.offset-sides-x(80px, 80px);
+  @media (min-width: bootstrap.$tablet-width) {
+
+    &--index {
+      @include bootstrap.offset-sides-y(64px, 20px);
+      @include bootstrap.offset-sides-x(90px, 90px);
+      width: 414px;
+      text-align: start;
+    }
+
+    &--form {
+      width: 433px;
+    }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+
+    &--index {
+      padding-top: 32px;
+      @include bootstrap.offset-sides-x(80px, 80px);
+    }
   }
 }
 
@@ -126,82 +155,96 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 36px;
-  line-height: 36px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
+
+  &--index {
+    color: bootstrap.$white;
+    margin-bottom: 25px;
+  }
+
+  &--catalog {
+    width: 280px;
+    text-align: start;
+  }
+
+  &--form-food {
+    text-align: left;
+    margin-bottom: 37px;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     text-align: left;
     font-size: 60px;
-    line-height: 60px;
-  }
-}
+    line-height: 1;
 
-.main-container__title--index {
-  color: bootstrap.$white;
-  margin-bottom: 25px;
+    &--index {
+      color: bootstrap.$primary-dark;
+      width: 416px;
+      margin-bottom: 41px;
+    }
 
-  @media (min-width: bootstrap.$tablet-width) {
-    color: bootstrap.$primary-dark;
-    width: 416px;
-    margin-bottom: 41px;
+    &--catalog {
+      width: 431px;
+    }
+
+    &--form-food {
+      margin-bottom: 54px;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-top: 50px;
+    &--index {
+      padding-top: 50px;
+    }
+
+    &--form-food {
+      padding-left: 0;
+    }
   }
 }
-
-// .main-container__title--form-food {
-//   text-align: left;
-//   margin-bottom: 37px;
-
-//   @media (min-width: bootstrap.$tablet-width) {
-//     margin-bottom: 54px;
-//   }
-
-//   @media (min-width: bootstrap.$desktop-width) {
-//     padding-left: 0;
-//   }
-// }
 
 .main-container__slogan {
   margin: 0;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
-}
 
-.main-container__slogan--index {
-  font-size: 14px;
-  line-height: 14px;
-  color: bootstrap.$white;
-  text-transform: uppercase;
+  &--index {
+    font-size: 14px;
+    line-height: 1;
+    color: bootstrap.$white;
+  }
+
+  &--form-food {
+    width: 226px;
+    font-size: 14px;
+    line-height: 1.29;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
-    color: bootstrap.$primary-dark;
+    &--index {
+      font-size: 20px;
+      line-height: 1;
+      color: bootstrap.$primary-dark;
+    }
+
+    &--form-food {
+      width: 323px;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    &--form-food {
+      padding-left: 0;
+    }
   }
 }
-
-// .main-container__slogan--form-food {
-//   width: 226px;
-//   font-size: 14px;
-//   line-height: 18px;
-
-//   @media (min-width: bootstrap.$tablet-width) {
-//     width: 323px;
-//     font-size: 20px;
-//     line-height: 30px;
-//   }
-
-//   @media (min-width: bootstrap.$desktop-width) {
-//     padding-left: 0;
-//   }
-// }
 
 .main-container__link-programs {
   box-sizing: border-box;
@@ -210,7 +253,7 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.29;
   color: bootstrap.$white;
   margin-top: 3px;
   width: 280px;
@@ -222,7 +265,7 @@
     margin-top: 0;
     width: 244px;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

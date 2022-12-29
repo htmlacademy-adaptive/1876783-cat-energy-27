@@ -1,8 +1,23 @@
 @use "../global/bootstrap.scss";
 
 .personal-data {
-  @media (min-width: bootstrap.$desktop-width) {
-    width: 569px;
+  padding-bottom: 24px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: bootstrap.$secondary-light-grey;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    &::after {
+      display: none;
+    }
   }
 }
 

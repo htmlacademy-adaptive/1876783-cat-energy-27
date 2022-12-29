@@ -57,13 +57,13 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   color: bootstrap.$third-dark;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
   }
 }
 
