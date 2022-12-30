@@ -77,12 +77,12 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 14px;
-  color: bootstrap.$primary-dark;
+  line-height: 1;
+  color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.25;
     justify-content: end;
   }
 

@@ -62,8 +62,9 @@
         display: none;
       }
 
-      .navigation__list {
+      .navigation__wrapper {
         position: relative;
+        display: block;
       }
     }
   }

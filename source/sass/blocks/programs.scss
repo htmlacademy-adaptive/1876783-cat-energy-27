@@ -119,6 +119,12 @@
   margin: 0;
   @include bootstrap.offset-sides-y(22px, 22px);
   grid-column: 1/-1;
+  font-family: bootstrap.$secondary-family;
+  font-weight: bootstrap.$normal;
+  font-size: 14px;
+  line-height: 1.29;
+  color: bootstrap.$dark-grey;
+
 
   &::after {
     position: absolute;
@@ -131,7 +137,6 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-weight: bootstrap.$normal;
     font-size: 16px;
     line-height: 1.5;
     color: bootstrap.$primary-dark;

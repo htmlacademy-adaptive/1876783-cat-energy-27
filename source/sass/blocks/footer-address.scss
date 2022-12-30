@@ -1,36 +1,43 @@
 @use "../global/bootstrap.scss";
 
 .footer-address {
-  background-color: bootstrap.$white;
+  background-color: bootstrap.$grey;
 
-  @media (min-width: bootstrap.$tablet-width) {
-    background-color: bootstrap.$grey;
+  &--index {
+    background-color: bootstrap.$white;
   }
 }
 
 .footer-address__wrapper {
   margin: 0 auto;
   width: 280px;
-  @include bootstrap.offset-sides-y(26px, 26px);
-  display: flex;
-  justify-content: space-between;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 628px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    position: relative;
+    width: 1220px;
+  }
+}
+
+.footer-address__intro {
+  display: flex;
+  justify-content: space-between;
+  @include bootstrap.offset-sides-y(26px, 26px);
+
+  @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(56px, 56px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     position: absolute;
-    box-sizing: border-box;
-    top: 95px;
     width: 565px;
-    padding: 56px 80px;
+    top: 95px;
+    @include bootstrap.offset-sides-x(60px, 80px);
     background-color: bootstrap.$white;
-
-    &--index {
-      margin-left: 110px;
-    }
+    box-sizing: border-box;
   }
 }
 
