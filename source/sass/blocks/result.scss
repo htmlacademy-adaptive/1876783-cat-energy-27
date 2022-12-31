@@ -1,14 +1,26 @@
 @use "../global/bootstrap.scss";
 
 .result {
+  @include bootstrap.offset-sides-y(25px, 40px);
   background-color: bootstrap.$light-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
+    @include bootstrap.offset-sides-y(43px, 0);
     background-color: bootstrap.$white;
     z-index: 0;
 
     &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 1px;
+      background-color: bootstrap.$secondary-grey;
+    }
+
+    &::after {
       position: absolute;
       content: "";
       background-color: bootstrap.$light-grey;
@@ -18,21 +30,26 @@
       bottom: 0;
     }
   }
-}
-
-.result__wrapper {
-  @include bootstrap.offset-sides-y(25px, 40px);
-  @include bootstrap.offset-sides-x(20px, 20px);
-
-
-  @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(43px, 0);
-    @include bootstrap.offset-sides-x(30px, 30px);
-  }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(70px, 75px);
-    @include bootstrap.offset-sides-x(110px, 110px);
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.result__wrapper {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 1220px;
   }
 }
 
@@ -57,13 +74,13 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 36px;
-  line-height: 40px;
+  line-height: 1.11;
   color: bootstrap.$primary-dark;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 63px;
     font-size: 60px;
-    line-height: 60px;
+    line-height: 1;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -77,12 +94,12 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 18px;
-  color: bootstrap.$primary-dark;
+  line-height: 1.29;
+  color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -102,16 +119,25 @@
   }
 }
 
+.result__item {
+  display: grid;
+  row-gap: 7px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    row-gap: 11px;
+  }
+}
+
 .result__name {
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 12px;
-  line-height: 12px;
-  color: bootstrap.$primary-dark;
+  line-height: 1;
+  color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 14px;
-    line-height: 14px;
+    line-height: 1;
   }
 }
 
@@ -120,14 +146,15 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 1;
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
+  grid-row: 1/2;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 30px;
-    line-height: 36px;
+    line-height: 1.2;
   }
 }
 
@@ -136,14 +163,14 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.43;
   color: bootstrap.$primary-dark;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
     justify-self: end;
   }
 

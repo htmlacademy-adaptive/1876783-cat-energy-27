@@ -1,15 +1,49 @@
 @use "../global/bootstrap.scss";
 
 .program {
+  position: relative;
+  padding-bottom: 19px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: bootstrap.$secondary-light-grey;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 35px;
+
+    &::after {
+      display: none;
+    }
+  }
+
   @media (min-width: bootstrap.$desktop-width) {
-    width: 569px;
+    padding-bottom: 0;
   }
 }
 
 .program__list {
   @include bootstrap.list-reset;
+  margin: 0 auto;
+  padding-top: 22px;
   display: grid;
   gap: 13px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    box-sizing: border-box;
+    width: 628px;
+    padding: 25px 28px;
+    border: 1px solid bootstrap.$grey-4;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 568px;
+  }
 }
 
 .program__form-group {
@@ -17,5 +51,9 @@
 
   .form-group__field {
     margin-right: 15px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    color: bootstrap.$third-dark;
   }
 }

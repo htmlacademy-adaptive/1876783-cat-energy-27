@@ -1,15 +1,21 @@
 @use "../global/bootstrap.scss";
 
-.cards-more {
+.cards-more__wrapper {
+  @include bootstrap.offset-sides-y(78px, 25px);
+  width: 280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 165px;
+  }
 }
 
 .cards-more__link-new-cards {
   @include bootstrap.link(bootstrap.$secondary-dark, bootstrap.$white);
   grid-column: 1/-1;
-  margin-bottom: 8px;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 23px;
@@ -17,17 +23,26 @@
 }
 
 .cards-more__title {
+  position: relative;
   margin: 0;
+  margin-bottom: 8px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: bootstrap.$secondary-dark;
   text-transform: uppercase;
 
+  &::before {
+    position: absolute;
+    content: url("../img/catalog-icon/plus-icon.svg");
+    top: -59px;
+    left: 125px;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
-    line-height: 22px;
+    line-height: 1.1;
   }
 }
 
@@ -37,27 +52,39 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 1.12;
   }
 }
 
 .cards-more__link {
-  grid-column: 1/-1;
-  width: 100%;
   margin-top: 21px;
+  grid-column: 1/-1;
+  width: 280px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
-  color: bootstrap.$dark-grey;
+  line-height: 1.25;
+
+  &:hover {
+    background-color: bootstrap.$dark-white;
+  }
+
+  &:active {
+    color: opacity(bootstrap.$dark-grey), 0.3;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
+    width: 249px;
     margin-top: 87px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 169px;
   }
 }

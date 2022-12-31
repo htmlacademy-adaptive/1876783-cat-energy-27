@@ -5,18 +5,11 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 1.29;
   color: bootstrap.$primary-dark;
 }
 
-.page__container {
-  margin: 0 auto;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    width: bootstrap.$tablet-width;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    width: bootstrap.$desktop-width;
-  }
+.page__body {
+  margin: 0;
+  min-height: 100%;
 }

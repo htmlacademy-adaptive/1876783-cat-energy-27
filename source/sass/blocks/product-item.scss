@@ -1,19 +1,54 @@
 @use "../global/bootstrap.scss";
 
 .product-item {
+  position: relative;
   display: grid;
   row-gap: 14px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -19px;
+    height: 1px;
+    background-color: bootstrap.$third-light-grey;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     row-gap: 25px;
+
+    &:not(:first-child):before {
+      position: absolute;
+      content: "";
+      left: -38px;
+      right: -38px;
+      top: -27px;
+      height: 1px;
+      background-color: bootstrap.$third-light-grey;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    grid-template-columns: 1fr 1fr 240px;
-    column-gap: 40px;
-    row-gap: 0;
+    width: 896px;
+    grid-template-columns: 1fr 1fr 244px;
+    gap: 40px;
+
+    &:not(:first-child):before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      top: -16px;
+      height: 1px;
+      background-color: bootstrap.$third-light-grey;
+    }
   }
 }
 
@@ -22,13 +57,13 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 1;
   color: bootstrap.$third-dark;
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
-    line-height: 20px;
+    line-height: 1;
   }
 }
 
@@ -42,12 +77,12 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
-  line-height: 14px;
-  color: bootstrap.$primary-dark;
+  line-height: 1;
+  color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 1.25;
     justify-content: end;
   }
 

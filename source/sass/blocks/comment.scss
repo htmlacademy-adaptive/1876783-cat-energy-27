@@ -1,15 +1,10 @@
 @use "../global/bootstrap.scss";
 
 .comment {
-  @include bootstrap.offset-sides-y(12px, 12px);
+  padding-bottom: 23px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(30px, 30px);
-    @include bootstrap.offset-sides-x(38px, 38px);
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(0px, 0px);
+    padding-bottom: 65px;
   }
 }
 
@@ -21,15 +16,16 @@
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 1.12;
   color: bootstrap.$dark-grey;
   text-transform: uppercase;
   white-space: nowrap;
+  border: 1px solid bootstrap.$grey-4;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-x(19px, 19px);
     font-size: 20px;
-    line-height: 30px;
+    line-height: 1.5;
     height: 174px;
   }
 }

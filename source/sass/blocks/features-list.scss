@@ -6,19 +6,30 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   color: bootstrap.$dark-grey;
 
-  @media (min-width: bootstrap.$tablet-width) {
-    font-size: 16px;
+  &:not(:last-child) {
+    margin-bottom: 4px;
   }
-}
-
-.features-list__item:not(:last-child) {
-  margin-bottom: 6px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 7px;
+    position: relative;
+    font-size: 16px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: -9px;
+      height: 1px;
+      background-color: bootstrap.$third-light-grey;
+    }
   }
 }
 

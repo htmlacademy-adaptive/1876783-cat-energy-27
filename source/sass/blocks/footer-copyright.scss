@@ -1,11 +1,40 @@
 @use "../global/bootstrap.scss";
 
+.footer-copyright {
+  @include bootstrap.offset-sides-y(20px, 40px);
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin: 0;
+    width: 168px;
+    @include bootstrap.offset-sides-y(0, 0);
+  }
+}
+
 .footer-copyright__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: #666666;
+  color: bootstrap.$third-grey;
+
+  &:hover {
+    .footer-copyright__logo {
+      color: bootstrap.$green;
+    }
+  }
+
+  &:active {
+    .footer-copyright__text {
+      color: bootstrap.$dark-grey;
+      opacity: 0.3;
+    }
+
+    .footer-copyright__logo {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 163px;
@@ -17,6 +46,6 @@
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.25;
   color: bootstrap.$dark-grey;
 }

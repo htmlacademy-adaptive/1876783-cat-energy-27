@@ -1,8 +1,23 @@
 @use "../global/bootstrap.scss";
 
 .personal-data {
-  @media (min-width: bootstrap.$desktop-width) {
-    width: 569px;
+  padding-bottom: 24px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: bootstrap.$secondary-light-grey;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -10,15 +25,24 @@
   display: flex;
   gap: 11px;
 
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  & .form-group__field {
+    padding: 14px 20px;
+    width: 100%;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     gap: 13px;
-  }
-}
 
-.personal-data__form-group:not(:last-child) {
-  margin-bottom: 14px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
 
-  @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 20px;
+    .form-group__field {
+      padding: 11px 20px;
+    }
   }
 }

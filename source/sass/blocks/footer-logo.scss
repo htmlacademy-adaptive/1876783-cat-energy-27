@@ -1,0 +1,20 @@
+@use "../global/bootstrap.scss";
+
+.footer-logo {
+  @include bootstrap.offset-sides-y(40px, 20px);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(0, 0);
+  }
+}
+
+.footer-logo__logo-link {
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
