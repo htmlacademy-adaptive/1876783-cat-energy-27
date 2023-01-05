@@ -7,6 +7,12 @@
 .form-group__label {
   align-self: center;
   white-space: nowrap;
+
+  sup {
+    position: static;
+    vertical-align: baseline;
+    font-size: inherit;
+  }
 }
 
 .form-group__field {
@@ -27,8 +33,8 @@
     border-color: bootstrap.$third-light-grey;
   }
 
-  &:focus {
-    border: 2px solid bootstrap.$dark-grey;
+  &:focus-within {
+    outline: 2px solid bootstrap.$dark-grey;
   }
 
   &--error {

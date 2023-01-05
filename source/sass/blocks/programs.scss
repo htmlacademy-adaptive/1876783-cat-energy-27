@@ -32,70 +32,25 @@
 }
 
 .programs__item {
-  display: grid;
-  grid-template-columns: 50px 1fr;
-  column-gap: 19px;
   background-color: bootstrap.$grey;
   @include bootstrap.offset-sides-y(30px, 18px);
-  @include bootstrap.offset-sides-x(33px, 20px);
+  @include bootstrap.offset-sides-x(20px, 20px);
 
   @media (min-width: bootstrap.$tablet-width) {
-    grid-template-columns: 1fr 200px;
     @include bootstrap.offset-sides-y(77px, 53px);
-    @include bootstrap.offset-sides-x(62px, 52px);
-    column-gap: 54px;
-    row-gap: 0;
+    @include bootstrap.offset-sides-x(316px, 52px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(47px, 55px);
     @include bootstrap.offset-sides-x(61px, 52px);
-    grid-template-columns: 100px 1fr;
-    column-gap: 62px;
-    row-gap: 23px;
-  }
-}
-
-.programs__picture {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: bootstrap.$green;
-
-  &--slim::after {
-    position: absolute;
-    content: url("../img/index-icon/cat-slim.svg");
-    left: 7px;
-    top: -3px;
-  }
-
-  &--pro::after {
-    position: absolute;
-    content: url("../img/index-icon/cat-pro.svg");
-    left: -9px;
-    top: 11px;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-    width: 200px;
-    height: 200px;
-    grid-column: 2/3;
-    grid-row: 1/3;
-    margin-top: 22px;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    width: 100px;
-    height: 100px;
-    margin-top: 0;
-    grid-column: auto;
-    grid-row: auto;
   }
 }
 
 .programs__title {
   margin: 0;
+  margin-left: 71px;
+  padding-bottom: 29px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
@@ -105,20 +60,21 @@
   align-self: center;
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin-left: 0;
+    padding-bottom: 24px;
     font-size: 36px;
-    grid-column: 1/2;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    grid-column: auto;
+    margin-left: 162px;
+    padding-bottom: 73px;
   }
 }
 
 .programs__description {
   position: relative;
   margin: 0;
-  @include bootstrap.offset-sides-y(22px, 22px);
-  grid-column: 1/-1;
+  padding-bottom: 38px;
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
@@ -131,16 +87,16 @@
     content: "";
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 15px;
     height: 1px;
     background-color: bootstrap.$secondary-light-grey;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 48px;
     font-size: 16px;
     line-height: 1.5;
     color: bootstrap.$primary-dark;
-    grid-column: 1/2;
 
     &::after {
       display: none;
@@ -148,14 +104,13 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    grid-column: 1/-1;
+    padding-bottom: 23px;
   }
 }
 
 .programs__link {
   position: relative;
   margin-top: 15px;
-  @include bootstrap.offset-sides-y(4px, 4px);
   @include bootstrap.offset-sides-x(47px, 0);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
@@ -164,9 +119,9 @@
   color: bootstrap.$primary-dark;
   text-decoration: none;
   text-transform: uppercase;
-  grid-column: 1/-1;
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin-top: 0;
     padding-right: 57px;
     font-size: 20px;
     line-height: 1.5;

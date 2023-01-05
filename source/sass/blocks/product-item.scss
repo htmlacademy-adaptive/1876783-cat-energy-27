@@ -5,6 +5,16 @@
   display: grid;
   row-gap: 14px;
 
+  &:first-child::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: -12px;
+    height: 1px;
+    background-color: bootstrap.$third-light-grey;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -20,6 +30,11 @@
     align-items: center;
     row-gap: 25px;
 
+    &:first-child::before,
+    &::after{
+      display: none;
+    }
+
     &:not(:first-child):before {
       position: absolute;
       content: "";
@@ -29,10 +44,6 @@
       height: 1px;
       background-color: bootstrap.$third-light-grey;
     }
-
-    &::after {
-      display: none;
-    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -41,13 +52,9 @@
     gap: 40px;
 
     &:not(:first-child):before {
-      position: absolute;
-      content: "";
       left: 0;
       right: 0;
       top: -16px;
-      height: 1px;
-      background-color: bootstrap.$third-light-grey;
     }
   }
 }

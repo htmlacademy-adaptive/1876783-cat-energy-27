@@ -14,8 +14,8 @@
       <div class="header__wrapper">
         <a class="header__logo" href="#">
           <picture>
-            <source media="(min-width: 1440px)" srcset="img/logo/header-logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/logo/header-logo-tablet.svg">
+            <source media="(min-width: 1440px)" srcset="img/logo/header-logo-desktop.svg" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/logo/header-logo-tablet.svg" width="174" height="52">
             <img src="img/logo/header-logo-mobile.svg" width="191" height="38"
               alt="Логотип Кэт энерджи c энергичным котиком.">
           </picture>
@@ -47,10 +47,14 @@
           <p class="main-container__slogan main-container__slogan--index">Занялся собой? Займись котом!</p>
         </div>
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/background/index-background-desktop.png">
-          <source media="(min-width: 768px)" srcset="img/background/index-background-tablet.png">
-          <img class="main-container__image" src="img/background/index-background-mobile.png"
-            alt="Упаковка корма со вкусом курицы весом 500 грамм.">
+          <source media="(min-width: 1440px)"
+            srcset="img/background/index-background-desktop.png 1x, img/background/index-background-desktop@2x.png 2x"
+            width="552" height="499">
+          <source media="(min-width: 768px)"
+            srcset="img/background/index-background-tablet.png 1x, img/background/index-background-tablet@2x.png 2x"
+            width="709" height="609">
+          <img class="main-container__image" src="img/background/index-background.png" width="280" height="270"
+            srcset="img/background/index-background@2x.png 2px" alt="Упаковка корма со вкусом курицы весом 500 грамм.">
         </picture>
         <a class="main-container__link-programs button button--programs" href="form.html">подобрать программу</a>
       </div>
@@ -58,8 +62,7 @@
         <h2 class="visually-hidden">Программы питания</h2>
         <ul class="programs__list">
           <li class="programs__item">
-            <div class="programs__picture programs__picture--slim"></div>
-            <h3 class="programs__title">похудение</h3>
+            <h3 class="programs__title programs__title--slim">похудение</h3>
             <p class="programs__description">
               Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy
               Slim поможет вашему питомцу сбросить лишний вес.
@@ -73,8 +76,7 @@
             </a>
           </li>
           <li class="programs__item">
-            <div class="programs__picture programs__picture--pro"></div>
-            <h3 class="programs__title">Набор массы</h3>
+            <h3 class="programs__title programs__title--pro">Набор массы</h3>
             <p class="programs__description">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
               нарастить необходимые мышцы!
@@ -162,12 +164,12 @@
               <p class="footer-address__text">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</p>
             </div>
           </div>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/location/map-location-desktop.png">
-            <source media="(min-width: 768px)" srcset="img/location/map-location-tablet.png">
-            <img class="footer-address__location" src="img/location/map-location.png" width="320" height="362"
-              alt="Местонахождение Кэт энерджи на карте.">
-          </picture>
+          <iframe class="footer-address__location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858715882473!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1672729317761!5m2!1sru!2sth"
+            width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург.">
+          </iframe>
         </section>
         <div class="footer__content">
           <section class="footer__footer-logo footer-logo">

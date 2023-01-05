@@ -47,6 +47,7 @@
   gap: 20px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    counter-reset: index;
     width: 633px;
     grid-template-columns: 1fr 1fr;
     column-gap: 148px;
@@ -68,8 +69,20 @@
     padding-left: 0;
     padding-top: 151px;
     padding-bottom: 57px;
-  }
 
+    &::before {
+      position: absolute;
+      counter-increment: index;
+      content: counters(index, '.', decimal);
+      color: bootstrap.$grey;
+      font-family: bootstrap.$primary-family;
+      font-weight: bootstrap.$normal;
+      font-size: 280px;
+      line-height: 1;
+      top: 0;
+      right: 0;
+    }
+  }
 }
 
 .instruction__description {

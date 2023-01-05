@@ -12,12 +12,26 @@
   align-items: center;
 
   &--index {
+    position: relative;
     padding-bottom: 10px;
     text-align: center;
     background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 302px, 320px 302px;
+    background-size: 100% 302px, 320px auto;
     background-position: top center;
+
+    @media (min-resolution: 2dppx){
+      background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat@2x.jpg");
+    }
+
+    &::before{
+      position: absolute;
+      content: "";
+      width: 100%;
+      min-height: 302px;
+      background-color: bootstrap.$dark-grey;
+      z-index: -1;
+    }
   }
 
   &--catalog {
@@ -68,6 +82,10 @@
       position: relative;
       background-image: none;
       padding-bottom: 0;
+
+      &::before{
+        display: none;
+      }
     }
 
     &--catalog {

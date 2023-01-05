@@ -55,12 +55,12 @@
             <legend class="visually-hidden">Персональные данные (данные кота).</legend>
             <div class="form-food__wrapper form-food__wrapper--personal-data">
               <p class="personal-data__form-group form-group">
-                <label class="form-group__label" for="data-name">ИМЯ:*</label>
+                <label class="form-group__label" for="data-name">ИМЯ:<sup>*</sup></label>
                 <input class="form-group__field" id="data-name" type="text" name="data-name" placeholder="барсик"
                   required>
               </p>
               <p class="personal-data__form-group form-group">
-                <label class="form-group__label" for="data-weight">Вес (кг):*</label>
+                <label class="form-group__label" for="data-weight">Вес (кг):<sup>*</sup></label>
                 <input class="form-group__field" id="data-weight" type="number" name="data-weight" placeholder="7"
                   required>
               </p>
@@ -72,7 +72,7 @@
           </fieldset>
           <fieldset class="form-food__content form-food__content--program program">
             <legend class="visually-hidden">Программа питания для кота.</legend>
-            <ul class="form-food__wrapper form-food__wrapper--program program__list form-food">
+            <ul class="form-food__wrapper program__list">
               <li class="program__item">
                 <p class="program__form-group form-group">
                   <label class="form-group__label">
@@ -99,62 +99,74 @@
             </ul>
           </fieldset>
         </div>
-        <fieldset class="form-food__content form-food__content--contacts contacts">
-          <legend class="form-food__title form-food__title--contacts">Контактные данные (владельца кота)</legend>
-          <div class="form-food__wrapper form-food__wrapper--contacts">
-            <p class="contacts__form-group contacts__form-group--mail form-group">
-              <label class="form-group__label" for="contacts-e-mail">E-mail:*</label>
-              <input class="form-group__field" id="contacts-e-mail" type="email" name="contacts-e-mail"
-                placeholder="kuklachev@gmail.com" required>
-            </p>
-            <p class="contacts__form-group contacts__form-group--phone form-group">
-              <label class="form-group__label" for="contacts-phone">Телефон:*</label>
-              <input class="form-group__field" id="contacts-phone" type="tel" name="contacts-phone"
-                placeholder="8 (960) 900-60-90" required>
-            </p>
+        <div class="form-food__content form-food__content--contacts contacts" role="group" aria-describedby="contacts">
+          <div id="contacts">
+            <div class="form-food__wrapper-title">
+              <p class="form-food__title form-food__title--contacts">Контактные данные (владельца кота)</p>
+            </div>
+            <div class="form-food__wrapper form-food__wrapper--contacts">
+              <p class="contacts__form-group contacts__form-group--mail form-group">
+                <label class="form-group__label" for="contacts-e-mail">E-mail:<sup>*</sup></label>
+                <input class="form-group__field" id="contacts-e-mail" type="email" name="contacts-e-mail"
+                  placeholder="kuklachev@gmail.com" required>
+              </p>
+              <p class="contacts__form-group contacts__form-group--phone form-group">
+                <label class="form-group__label" for="contacts-phone">Телефон:<sup>*</sup></label>
+                <input class="form-group__field" id="contacts-phone" type="tel" name="contacts-phone"
+                  placeholder="8 (960) 900-60-90" required>
+              </p>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-food__content form-food__content--comment comment">
-          <legend class="form-food__title form-food__title--comment">Комментарий</legend>
-          <label class="visually-hidden" for="comment-form">Комментарий.</label>
-          <div class="form-food__wrapper">
-            <textarea class="comment__field" id="comment-form" name="comment-form"
-              rows="10">Расскажите обо всех повадках кота</textarea>
+        </div>
+        <div class="form-food__content form-food__content--comment comment" role="group" aria-describedby="comment">
+          <div id="comment">
+            <div class="form-food__wrapper-title">
+              <p class="form-food__title form-food__title--comment">Комментарий</p>
+            </div>
+            <label class="visually-hidden" for="comment-form">Комментарий.</label>
+            <div class="form-food__wrapper">
+              <textarea class="comment__field" id="comment-form" name="comment-form"
+                rows="10">Расскажите обо всех повадках кота</textarea>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-food__content form-food__content--add-product add-product">
-          <legend class="form-food__title form-food__title--add-product">Дополнительно</legend>
-          <ul class="form-food__wrapper add-product__list">
-            <li class="add-product__item">
-              <p class="add-product__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="checkbox" name="sugar" checked>сахарозаменитель
-                </label>
-              </p>
-            </li>
-            <li class="add-product__item">
-              <p class="add-product__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="checkbox" name="water">питьевая вода
-                </label>
-              </p>
-            </li>
-            <li class="add-product__item">
-              <p class="add-product__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="checkbox" name="milk">молоко
-                </label>
-              </p>
-            </li>
-            <li class="add-product__item">
-              <p class="add-product__form-group form-group">
-                <label class="form-group__label">
-                  <input class="form-group__field" type="checkbox" name="vitamins">витамины
-                </label>
-              </p>
-            </li>
-          </ul>
-        </fieldset>
+        </div>
+        <div class="form-food__content form-food__content--add-product add-product" role="group" aria-describedby="add">
+          <div id="add">
+            <div class="form-food__wrapper-title">
+              <p class="form-food__title form-food__title--add-product">Дополнительно</p>
+            </div>
+            <ul class="form-food__wrapper add-product__list">
+              <li class="add-product__item">
+                <p class="add-product__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field" type="checkbox" name="sugar" checked>сахарозаменитель
+                  </label>
+                </p>
+              </li>
+              <li class="add-product__item">
+                <p class="add-product__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field" type="checkbox" name="water">питьевая вода
+                  </label>
+                </p>
+              </li>
+              <li class="add-product__item">
+                <p class="add-product__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field" type="checkbox" name="milk">молоко
+                  </label>
+                </p>
+              </li>
+              <li class="add-product__item">
+                <p class="add-product__form-group form-group">
+                  <label class="form-group__label">
+                    <input class="form-group__field" type="checkbox" name="vitamins">витамины
+                  </label>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div class="form-food__wrapper-button">
           <button class="form-food__button button" type="submit">отправить заявку</button>
           <div class="form-food__wrapper-mark">
@@ -172,12 +184,12 @@
               <p class="footer-address__text">ул. Большая Конюшенная, д. 19/8 <br><br>Санкт-Петербург</p>
             </div>
           </div>
-          <picture>
-            <source media="(min-width: 1440px)" srcset="img/location/map-location-desktop.png">
-            <source media="(min-width: 768px)" srcset="img/location/map-location-tablet.png">
-            <img class="footer-address__location" src="img/location/map-location.png" width="320" height="362"
-              alt="Местонахождение Кэт энерджи на карте.">
-          </picture>
+          <iframe class="footer-address__location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858715882473!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sth!4v1672729317761!5m2!1sru!2sth"
+            width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Офис компании по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург.">
+          </iframe>
         </section>
         <div class="footer__content">
           <section class="footer__footer-logo footer-logo">
