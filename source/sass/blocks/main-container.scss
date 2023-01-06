@@ -15,13 +15,13 @@
     position: relative;
     padding-bottom: 10px;
     text-align: center;
-    background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
+    background-image: linear-gradient(rgba(bootstrap.$green, 0.85), rgba(bootstrap.$green, 0.85)), url("../img/background/index-background-cat.jpg");
     background-repeat: no-repeat;
     background-size: 100% 302px, 320px auto;
     background-position: top center;
 
     @media (min-resolution: 2dppx){
-      background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat@2x.jpg");
+      background-image: linear-gradient(rgba(bootstrap.$green, 0.85), rgba(bootstrap.$green, 0.85)), url("../img/background/index-background-cat@2x.jpg");
     }
 
     &::before{

@@ -4,6 +4,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     content: "";
     position: absolute;
+    background-color: bootstrap.$dark-grey;
     background-image: linear-gradient(rgba(bootstrap.$green, $alpha: 0.85), rgba(bootstrap.$green, $alpha: 0.85)), url("../img/background/index-background-desktop-cat.jpg");
     background-repeat: no-repeat;
     width: 50%;
@@ -11,7 +12,7 @@
     left: 50%;
     background-size: cover;
 
-    @media (min-resolution: 2dppx){
+    @media (min-resolution: 2dppx) {
       background-image: linear-gradient(rgba(bootstrap.$green, $alpha: 0.85), rgba(bootstrap.$green, $alpha: 0.85)), url("../img/background/index-background-desktop-cat@2x.jpg");
     }
   }

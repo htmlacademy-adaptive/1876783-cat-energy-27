@@ -96,21 +96,23 @@
           <h2 class="instruction__title">Как это работает</h2>
           <ul class="instruction__list">
             <li class="instruction__item">
-              <p class="instruction__description instruction__description--leaf">Функциональное питание содержит только
-                полезные питательные вещества.</p>
-            </li>
-            <li class="instruction__item">
-              <p class="instruction__description instruction__description--water">Выпускается в виде порошка, который
-                нужно лишь залить кипятком и готово.
+              <p class="instruction__description instruction__description--leaf">
+                Функциональное питание содержит только полезные питательные вещества.
               </p>
             </li>
             <li class="instruction__item">
-              <p class="instruction__description instruction__description--eat">Замените один-два приема обычной еды на
-                наше функциональное питание.</p>
+              <p class="instruction__description instruction__description--water">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              </p>
             </li>
             <li class="instruction__item">
-              <p class="instruction__description instruction__description--watch">Уже через месяц наслаждайтесь
-                изменениями к лучшему <br>вашего питомца!
+              <p class="instruction__description instruction__description--eat">
+                Замените один-два приема обычной еды на наше функциональное питание.
+              </p>
+            </li>
+            <li class="instruction__item">
+              <p class="instruction__description instruction__description--watch">
+                Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!
               </p>
             </li>
           </ul>
@@ -122,8 +124,7 @@
           <div class="result__intro">
             <p class="result__description">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
-              без
-              изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+              без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
             <dl class="result__list">
               <div class="result__item">
@@ -139,10 +140,20 @@
             <div class="result__slider slider-change">
               <ul class="slider-change__list">
                 <li class="slider-change__item">
-                  <img class="slider-change__before" src="img/index-picture/picture-left.png" width="280" height="256"
-                    alt="Толстый кот.">
-                  <img class="slider-change__after" src="img/index-picture/picture-right.png" width="280" height="256"
-                    alt="Худой кот.">
+                  <picture>
+                    <source media="(min-width: 768px)"
+                      srcset="img/index-picture/picture-before-tablet.png 1x, img/index-picture/picture-before-tablet@2x.png 2x"
+                      width="560" height="512">
+                    <img class="slider-change__before" src="img/index-picture/picture-before.png" width="280"
+                      height="256" srcset="img/index-picture/picture-before@2x.png 2x" alt="Толстый кот.">
+                  </picture>
+                  <picture>
+                    <source media="(min-width: 768px)"
+                      srcset="img/index-picture/picture-after-tablet.png 1x, img/index-picture/picture-after-tablet@2x.png 2x"
+                      width="560" height="512">
+                    <img class="slider-change__after" src="img/index-picture/picture-after.png" width="280" height="256"
+                      srcset="img/index-picture/picture-after@2x.png 2x" alt="Худой кот.">
+                  </picture>
                 </li>
               </ul>
               <div class="slider-change__scroller scroller">

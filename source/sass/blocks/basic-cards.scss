@@ -51,9 +51,9 @@
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(0, 40px);
 
-    &:not(:last-child){
-      background-color: bootstrap.$grey;
-    }
+    // &:not(:last-child){
+    //   background-color: bootstrap.$grey;
+    // }
 
     &::after {
       display: none;
@@ -77,7 +77,7 @@
     width: 252px;
     grid-template-columns: 1fr;
     position: relative;
-    top: -73px;
+    // top: -73px;
     // margin-bottom: -73px;
   }
 
