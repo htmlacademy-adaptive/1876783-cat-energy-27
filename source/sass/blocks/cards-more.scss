@@ -1,25 +1,29 @@
 @use "../global/bootstrap.scss";
 
-.cards-more__wrapper {
+.cards-more {
   @include bootstrap.offset-sides-y(78px, 25px);
-  width: 280px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
+    padding-bottom: 40px;
+    padding-top: 161px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+}
+
+.cards-more__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
+    margin: 0 auto;
     width: 165px;
   }
 }
 
 .cards-more__link-new-cards {
   @include bootstrap.link(bootstrap.$secondary-dark, bootstrap.$white);
-  grid-column: 1/-1;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 23px;
-  }
 }
 
 .cards-more__title {
@@ -43,6 +47,7 @@
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
     line-height: 1.1;
+    margin-bottom: 23px;
   }
 }
 
@@ -63,7 +68,6 @@
 
 .cards-more__link {
   margin-top: 21px;
-  grid-column: 1/-1;
   width: 280px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   font-family: bootstrap.$primary-family;
@@ -84,7 +88,7 @@
     margin-top: 87px;
   }
 
-  @media (min-width: bootstrap.$tablet-width) {
+  @media (min-width: bootstrap.$desktop-width) {
     width: 169px;
   }
 }

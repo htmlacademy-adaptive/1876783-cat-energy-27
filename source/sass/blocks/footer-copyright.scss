@@ -17,11 +17,11 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: bootstrap.$third-grey;
+  fill: bootstrap.$third-grey;
 
   &:hover {
     .footer-copyright__logo {
-      color: bootstrap.$green;
+      fill: bootstrap.$green;
     }
   }
 

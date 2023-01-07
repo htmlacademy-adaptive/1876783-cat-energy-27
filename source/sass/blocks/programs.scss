@@ -48,6 +48,7 @@
 }
 
 .programs__title {
+  position: relative;
   margin: 0;
   margin-left: 71px;
   padding-bottom: 29px;
@@ -135,6 +136,6 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-left: 25px;
-    top: 14px;
+    top: 10px;
   }
 }
