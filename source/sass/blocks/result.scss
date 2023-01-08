@@ -120,8 +120,15 @@
 }
 
 .result__item {
+  position: relative;
   display: grid;
   row-gap: 7px;
+  max-width: 82px;
+  padding-top: 14px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     row-gap: 11px;
@@ -129,11 +136,17 @@
 }
 
 .result__name {
+  display: block;
+  position: absolute;
+  top: 42px;
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 12px;
   line-height: 1;
   color: bootstrap.$dark-grey;
+  width: 77px;
+  text-align: center;
+  background-color: bootstrap.$light-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 14px;

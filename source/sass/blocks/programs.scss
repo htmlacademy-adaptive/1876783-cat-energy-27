@@ -15,9 +15,9 @@
 .programs__list {
   @include bootstrap.list-reset;
   margin: 0 auto;
+  width: 280px;
   display: grid;
   row-gap: 20px;
-  width: 280px;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 708px;
@@ -32,23 +32,76 @@
 }
 
 .programs__item {
-  background-color: bootstrap.$grey;
+  position: relative;
   @include bootstrap.offset-sides-y(30px, 18px);
   @include bootstrap.offset-sides-x(20px, 20px);
+  background-color: bootstrap.$grey;
+
+  &--slim::before {
+    position: absolute;
+    background-image: url("../img/cat-back/cat-slim.svg");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 53px;
+    top: 21px;
+    content: "";
+  }
+
+  &--pro::before {
+    position: absolute;
+    background-image: url("../img/cat-back/cat-pro.svg");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 50px;
+    top: 24px;
+    left: 13px;
+    content: "";
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(77px, 53px);
     @include bootstrap.offset-sides-x(316px, 52px);
+
+    &--slim::before {
+      background-image: url("../img/cat-back/cat-slim-tablet.svg");
+      width: 200px;
+      height: 211px;
+      top: 81px;
+      left: 446px;
+    }
+
+    &--pro::before {
+      background-image: url("../img/cat-back/cat-pro-tablet.svg");
+      width: 268px;
+      height: 200px;
+      top: 91px;
+      left: 412px;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-y(47px, 55px);
     @include bootstrap.offset-sides-x(61px, 52px);
+
+    &--slim::before {
+      background-image: url("../img/cat-back/cat-slim-desktop.svg");
+      width: 100px;
+      height: 106px;
+      top: 41px;
+      left: 52px;
+    }
+
+    &--pro::before {
+      background-image: url("../img/cat-back/cat-pro-desktop.svg");
+      width: 134px;
+      height: 100px;
+      top: 47px;
+      left: 33px;
+    }
   }
 }
 
 .programs__title {
-  position: relative;
   margin: 0;
   margin-left: 71px;
   padding-bottom: 29px;
@@ -85,12 +138,12 @@
 
   &::after {
     position: absolute;
-    content: "";
     left: 0;
     right: 0;
     bottom: 15px;
     height: 1px;
     background-color: bootstrap.$secondary-light-grey;
+    content: "";
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -121,6 +174,15 @@
   text-decoration: none;
   text-transform: uppercase;
 
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .programs__link-icon,
+  &:active .programs__link-icon {
+    transform: scaleX(1.4);
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     margin-top: 0;
     padding-right: 57px;
@@ -133,6 +195,9 @@
   position: absolute;
   margin-left: 15px;
   top: 7px;
+  transform: scaleX(1);
+  transform-origin: center left;
+  transition: transform 0.5s;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-left: 25px;
