@@ -80,23 +80,28 @@
               <li class="program__item">
                 <p class="program__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field form-group__field--program" type="radio" name="program"
-                      value="program-decrease" checked>похудение
+                    <input class="visually-hidden form-group__field form-group__field--program" type="radio" name="program"
+                      value="program-decrease" checked>
+                      <span class="form-group__mark"></span>
+                      <span class="form-group__mark-label">похудение</span>
                   </label>
                 </p>
               </li>
               <li class="program__item">
                 <p class="program__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field" type="radio" name="program" value="program-increase">Набор массы
+                    <input class="visually-hidden form-group__field" type="radio" name="program" value="program-increase">
+                    <span class="form-group__mark"></span>
+                    <span class="form-group__mark-label">Набор массы</span>
                   </label>
                 </p>
               </li>
               <li class="program__item">
                 <p class="program__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field" type="radio" name="program" value="program-unknown">Не знаю (Нужен
-                    ваш совет)
+                    <input class="visually-hidden form-group__field" type="radio" name="program" value="program-unknown">
+                    <span class="form-group__mark"></span>
+                    <span class="form-group__mark-label">Не знаю (Нужен ваш совет)</span>
                   </label>
                 </p>
               </li>
@@ -109,15 +114,21 @@
               <p class="form-food__title form-food__title--contacts">Контактные данные (владельца кота)</p>
             </div>
             <div class="form-food__wrapper form-food__wrapper--contacts">
-              <p class="contacts__form-group contacts__form-group--mail form-group">
+              <p class="contacts__form-group form-group">
                 <label class="form-group__label" for="contacts-e-mail">E-mail:<sup>*</sup></label>
                 <input class="form-group__field" id="contacts-e-mail" type="email" name="contacts-e-mail"
                   placeholder="kuklachev@gmail.com" required>
+                <svg class="form-group__image" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-e-mail"></use>
+                </svg>
               </p>
-              <p class="contacts__form-group contacts__form-group--phone form-group">
+              <p class="contacts__form-group form-group">
                 <label class="form-group__label" for="contacts-phone">Телефон:<sup>*</sup></label>
                 <input class="form-group__field" id="contacts-phone" type="tel" name="contacts-phone"
                   placeholder="8 (960) 900-60-90" required>
+                <svg class="form-group__image" width="20" height="20">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
               </p>
             </div>
           </div>
@@ -143,28 +154,36 @@
               <li class="add-product__item">
                 <p class="add-product__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field" type="checkbox" name="sugar" checked>сахарозаменитель
+                    <input class="visually-hidden form-group__field" type="checkbox" name="sugar" checked>
+                    <span class="form-group__mark"></span>
+                    <span class="form-group__mark-label">сахарозаменитель</span>
                   </label>
                 </p>
               </li>
               <li class="add-product__item">
                 <p class="add-product__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field" type="checkbox" name="water">питьевая вода
+                    <input class="visually-hidden form-group__field" type="checkbox" name="water">
+                    <span class="form-group__mark"></span>
+                    <span class="form-group__mark-label">питьевая вода</span>
                   </label>
                 </p>
               </li>
               <li class="add-product__item">
                 <p class="add-product__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field" type="checkbox" name="milk">молоко
+                    <input class="visually-hidden form-group__field" type="checkbox" name="milk">
+                    <span class="form-group__mark"></span>
+                    <span class="form-group__mark-label">молоко</span>
                   </label>
                 </p>
               </li>
               <li class="add-product__item">
                 <p class="add-product__form-group form-group">
                   <label class="form-group__label">
-                    <input class="form-group__field" type="checkbox" name="vitamins">витамины
+                    <input class="visually-hidden form-group__field" type="checkbox" name="vitamins">
+                    <span class="form-group__mark"></span>
+                    <span class="form-group__mark-label">витамины</span>
                   </label>
                 </p>
               </li>

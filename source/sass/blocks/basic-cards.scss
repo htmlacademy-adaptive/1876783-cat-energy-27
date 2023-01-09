@@ -43,7 +43,7 @@
     right: 0;
     bottom: -8px;
     height: 1px;
-    background-color: bootstrap.$dark-white;
+    background-color: bootstrap.$grey-5;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -76,15 +76,16 @@
   justify-items: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-left: 36px;
-    padding-right: 36px;
+    @include bootstrap.offset-sides-x(36px, 36px);
     padding-bottom: 40px;
     width: auto;
     grid-template-columns: 1fr;
     position: relative;
+
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(30px, 35px);
     width: 180px;
     row-gap: 0;
 
@@ -98,12 +99,11 @@
   display: block;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 34px;
-    margin-top: -73px;
-  }
+    $stats-shift: -73px;
 
-  @media (min-width: bootstrap.$desktop-width) {
-    margin-bottom: 46px;
+    position: relative;
+    top: $stats-shift;
+    margin-bottom: $stats-shift;
   }
 }
 
@@ -124,7 +124,8 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
-    margin-bottom: 21px;
+    padding-bottom: 21px;
+
     width: 159px;
     font-size: 20px;
     line-height: 1.2;

@@ -46,6 +46,10 @@
   }
 }
 
+.program__item {
+  @include bootstrap.offset-sides-y(6px, 6px);
+}
+
 .program__form-group {
   color: bootstrap.$third-dark;
 

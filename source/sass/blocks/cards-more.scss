@@ -8,10 +8,8 @@
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 40px;
-    padding-top: 161px;
-    padding-left: 38px;
-    padding-right: 38px;
+    @include bootstrap.offset-sides-y(130px, 40px);
+    @include bootstrap.offset-sides-x(38px, 38px);
   }
 }
 
@@ -39,7 +37,9 @@
 
   &::before {
     position: absolute;
-    content: url("../img/catalog-icon/plus-icon.svg");
+    content: url("../img/catalog-icons/plus-icon.svg");
+    width: 30px;
+    height: 30px;
     top: -59px;
     left: 125px;
   }
@@ -48,6 +48,15 @@
     font-size: 20px;
     line-height: 1.1;
     margin-bottom: 23px;
+
+    &::before {
+      position: absolute;
+      content: url("../img/catalog-icons/plus-icon-tablet.svg");
+      width: 60px;
+      height: 60px;
+      top: -109px;
+      left: 52px;
+    }
   }
 }
 
@@ -76,7 +85,7 @@
   line-height: 1.25;
 
   &:hover {
-    background-color: bootstrap.$dark-white;
+    background-color: bootstrap.$grey-5;
   }
 
   &:active {
@@ -85,7 +94,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 249px;
-    margin-top: 87px;
+    margin-top: 102px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
