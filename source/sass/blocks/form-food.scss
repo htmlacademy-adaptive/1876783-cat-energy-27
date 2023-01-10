@@ -31,11 +31,11 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 1220px;
     margin: 0 auto;
+    padding-bottom: 34px;
+    width: 1220px;
     flex-direction: row;
     justify-content: space-between;
-    padding-bottom: 34px;
   }
 }
 
@@ -70,125 +70,71 @@
   color: bootstrap.$primary-dark;
   text-transform: none;
 
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 22px);
+    width: 1000%;
+    height: 2px;
+    background-color: bootstrap.$green;
+    content: "";
+  }
+
   &--contacts {
     width: 187px;
 
     &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 1000%;
       left: calc(100% + 14px);
-      top: 50%;
-      background-color: bootstrap.$green;
     }
   }
 
   &--comment {
     width: 121px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 1000%;
-      left: calc(100% + 22px);
-      top: 50%;
-      background-color: bootstrap.$green;
-    }
   }
 
   &--add-product {
     width: 141px;
-
-    &::after {
-      position: absolute;
-      content: "";
-      height: 2px;
-      width: 1000%;
-      left: calc(100% + 23px);
-      top: 50%;
-      background-color: bootstrap.$green;
-    }
   }
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 76px;
+    margin-left: 38px;
     font-size: 36px;
     line-height: 1;
-    margin-left: 38px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      width: 1000%;
+      height: 2px;
+      background-color: bootstrap.$green;
+      content: "";
+    }
+
+    &::before {
+      right: calc(100% + 38px);
+    }
+
+    &::after {
+      left: calc(100% + 42px);
+    }
 
     &--contacts {
       width: 514px;
-
-      &::before {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 1000%;
-        right: calc(100% + 38px);
-        top: 50%;
-        background-color: bootstrap.$green;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 1000%;
-        left: calc(100% + 42px);
-        top: 50%;
-        background-color: bootstrap.$green;
-      }
     }
 
     &--comment {
       width: 182px;
 
-      &::before {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 1000%;
-        right: calc(100% + 38px);
-        top: 50%;
-        background-color: bootstrap.$green;
-      }
-
       &::after {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 1000%;
         left: calc(100% + 38px);
-        top: 50%;
-        background-color: bootstrap.$green;
       }
     }
 
     &--add-product {
-      width: 211px;
       margin-bottom: 57px;
-
-      &::before {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 1000%;
-        right: calc(100% + 38px);
-        top: 50%;
-        background-color: bootstrap.$green;
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        height: 2px;
-        width: 1000%;
-        left: calc(100% + 41px);
-        top: 50%;
-        background-color: bootstrap.$green;
-      }
+      width: 211px;
     }
   }
 
@@ -198,20 +144,19 @@
 }
 
 .form-food__wrapper {
-  width: 280px;
   margin: 0 auto;
+  width: 280px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 628px;
     @include bootstrap.offset-sides-x(40px, 40px);
+    width: 628px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
     @include bootstrap.offset-sides-x(0, 0);
 
-    &--personal-data,
-    &--program {
+    &--personal-data {
       width: 568px;
     }
 
@@ -222,11 +167,9 @@
   }
 }
 
-
-
 .form-food__wrapper-button {
-  width: 280px;
   margin: 0 auto;
+  width: 280px;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 628px;
@@ -240,17 +183,17 @@
 }
 
 .form-food__button {
+  margin-top: 24px;
+  width: 100%;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
   line-height: 1.25;
   color: bootstrap.$white;
-  width: 100%;
-  margin-top: 24px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 282px;
     margin-top: 0;
+    width: 282px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

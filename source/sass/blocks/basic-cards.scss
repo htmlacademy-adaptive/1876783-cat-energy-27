@@ -68,8 +68,9 @@
 }
 
 .basic-cards__wrapper-item {
-  width: 280px;
+  box-sizing: border-box;
   margin: 0 auto;
+  width: 280px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -81,17 +82,11 @@
     width: auto;
     grid-template-columns: 1fr;
     position: relative;
-
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.offset-sides-x(30px, 35px);
-    width: 180px;
     row-gap: 0;
-
-    &:not(:last-child)::before {
-      width: 245px;
-    }
   }
 }
 
@@ -109,6 +104,10 @@
 
 .basic-cards__link {
   @include bootstrap.link(bootstrap.$third-dark, bootstrap.$white);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.link(bootstrap.$third-dark, bootstrap.$grey);
+  }
 }
 
 .basic-cards__title {
@@ -125,7 +124,6 @@
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
     padding-bottom: 21px;
-
     width: 159px;
     font-size: 20px;
     line-height: 1.2;

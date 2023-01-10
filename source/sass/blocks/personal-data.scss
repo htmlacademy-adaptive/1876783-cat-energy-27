@@ -6,12 +6,12 @@
 
   &::after {
     position: absolute;
-    content: "";
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
     height: 1px;
     background-color: bootstrap.$secondary-light-grey;
+    content: "";
   }
 
   @media (min-width: bootstrap.$tablet-width) {

@@ -1,27 +1,18 @@
 @use "../global/bootstrap.scss";
 
 .instruction {
+  margin: 0 auto;
+  width: 280px;
   @include bootstrap.offset-sides-y(10px, 50px);
 
   @media (min-width: bootstrap.$tablet-width) {
+    width: 708px;
     @include bootstrap.offset-sides-y(35px, 47px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(61px, 61px);
-  }
-}
-
-.instruction__wrapper {
-  width: 280px;
-  margin: 0 auto;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    width: 708px;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
+    @include bootstrap.offset-sides-y(61px, 61px);
   }
 }
 
@@ -47,11 +38,11 @@
   gap: 20px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    counter-reset: index;
     width: 633px;
     grid-template-columns: 1fr 1fr;
     column-gap: 148px;
     row-gap: 37px;
+    counter-reset: index;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -67,20 +58,19 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-left: 0;
-    padding-top: 151px;
-    padding-bottom: 57px;
+    @include bootstrap.offset-sides-y(151px, 57px);
 
     &::before {
       position: absolute;
-      counter-increment: index;
-      content: counters(index, '.', decimal);
+      top: 0;
+      right: 0;
       color: bootstrap.$grey;
       font-family: bootstrap.$primary-family;
       font-weight: bootstrap.$normal;
       font-size: 280px;
       line-height: 1;
-      top: 0;
-      right: 0;
+      counter-increment: index;
+      content: counters(index, '.', decimal);
     }
   }
 }
@@ -94,36 +84,27 @@
   line-height: 1.29;
   color: bootstrap.$dark-grey;
 
-  &--leaf::before {
+  &::before {
     position: absolute;
-    content: url("../img/index-icon/icon-leaf.svg");
+    left: -80px;
     width: 60px;
     height: 60px;
-    left: -80px;
+  }
+
+  &--leaf::before {
+    content: url("../img/index-icon/icon-leaf.svg");
   }
 
   &--water::before {
-    position: absolute;
     content: url("../img/index-icon/icon-water.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
   }
 
   &--eat::before {
-    position: absolute;
     content: url("../img/index-icon/icon-eat.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
   }
 
   &--watch::before {
-    position: absolute;
     content: url("../img/index-icon/icon-watch.svg");
-    width: 60px;
-    height: 60px;
-    left: -80px;
   }
 
   @media (max-width: bootstrap.$mobail-width-only) {
@@ -139,6 +120,24 @@
     &::before {
       left: 0;
       top: -111px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &--leaf::before {
+      content: url("../img/index-icon/icon-leaf-tablet.svg");
+    }
+
+    &--water::before {
+      content: url("../img/index-icon/icon-water-tablet.svg");
+    }
+
+    &--eat::before {
+      content: url("../img/index-icon/icon-eat-tablet.svg");
+    }
+
+    &--watch::before {
+      content: url("../img/index-icon/icon-watch-tablet.svg");
     }
   }
 }
