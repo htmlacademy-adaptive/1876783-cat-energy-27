@@ -14,9 +14,9 @@
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin: 0 auto;
     @include bootstrap.offset-sides-y(55px, 55px);
     width: 708px;
-    margin: 0 auto;
     flex-direction: row;
     justify-content: space-between;
   }

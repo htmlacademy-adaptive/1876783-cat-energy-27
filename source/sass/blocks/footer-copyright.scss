@@ -1,14 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .footer-copyright {
+  margin: 0 auto;
   @include bootstrap.offset-sides-y(20px, 40px);
   width: 280px;
-  margin: 0 auto;
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0;
-    width: 168px;
     @include bootstrap.offset-sides-y(0, 0);
+    width: 168px;
   }
 }
 
@@ -17,11 +17,11 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: bootstrap.$third-grey;
+  fill: bootstrap.$third-grey;
 
   &:hover {
     .footer-copyright__logo {
-      color: bootstrap.$green;
+      fill: bootstrap.$green;
     }
   }
 

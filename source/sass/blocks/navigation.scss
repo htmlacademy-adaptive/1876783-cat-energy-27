@@ -49,9 +49,9 @@
     @media (max-width: bootstrap.$mobail-width-only) {
       .navigation__list {
         position: absolute;
+        width: 100%;
         background-color: bootstrap.$white;
         z-index: 10;
-        width: 100%;
       }
     }
   }
@@ -72,8 +72,8 @@
 
 .navigation__toggle {
   position: absolute;
-  right: 20px;
   top: -40px;
+  right: 20px;
   width: 24px;
   height: 18px;
   background-color: bootstrap.$white;
@@ -90,10 +90,10 @@
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
+    width: 440px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 440px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -116,12 +116,12 @@
 
   &::before {
     position: absolute;
-    content: "";
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
+    left: 0;
     height: 1px;
     background-color: bootstrap.$secondary-grey;
+    content: "";
   }
 
   &:hover {
@@ -149,23 +149,23 @@
       position: relative;
 
       &::after {
-        content: "";
         position: absolute;
         right: 0px;
         left: 0;
         bottom: 0;
         height: 2px;
         background-color: bootstrap.$green;
+        content: "";
       }
     }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 70px;
     font-weight: bootstrap.$normal;
     font-size: 20px;
     line-height: 1.5;
     color: bootstrap.$secondary-dark;
-    padding-top: 70px;
 
     &--index {
       background-color: transparent;

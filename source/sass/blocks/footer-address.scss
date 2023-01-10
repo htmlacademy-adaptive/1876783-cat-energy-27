@@ -23,9 +23,9 @@
 }
 
 .footer-address__intro {
+  @include bootstrap.offset-sides-y(26px, 26px);
   display: flex;
   justify-content: space-between;
-  @include bootstrap.offset-sides-y(26px, 26px);
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(56px, 56px);
@@ -44,6 +44,7 @@
 .footer-address__location {
   width: 100%;
   display: block;
+  border: none;
 }
 
 .footer-address__title {

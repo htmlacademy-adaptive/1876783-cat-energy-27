@@ -6,12 +6,12 @@
 
   &::after {
     position: absolute;
-    content: "";
-    left: 0;
     right: 0;
+    left: 0;
     bottom: 0;
     height: 1px;
     background-color: bootstrap.$secondary-light-grey;
+    content: "";
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -44,6 +44,10 @@
   @media (min-width: bootstrap.$desktop-width) {
     width: 568px;
   }
+}
+
+.program__item {
+  @include bootstrap.offset-sides-y(6px, 6px);
 }
 
 .program__form-group {

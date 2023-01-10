@@ -27,28 +27,6 @@
     @include bootstrap.offset-sides-x(50px, 15px);
   }
 
-  &--mail::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/form-icon/email-icon.svg");
-    background-repeat: no-repeat;
-    top: 16px;
-    right: 16px;
-    width: 20px;
-    height: 20px;
-  }
-
-  &--phone::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/form-icon/phone-icon.svg");
-    background-repeat: no-repeat;
-    top: 16px;
-    right: 16px;
-    width: 20px;
-    height: 20px;
-  }
-
   @media (min-width: bootstrap.$tablet-width) {
     &:not(:last-child) {
       margin-bottom: 20px;

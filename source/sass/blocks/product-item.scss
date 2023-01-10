@@ -5,14 +5,24 @@
   display: grid;
   row-gap: 14px;
 
+  &:first-child::before {
+    position: absolute;
+    top: -12px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background-color: bootstrap.$third-light-grey;
+    content: "";
+  }
+
   &::after {
     position: absolute;
-    content: "";
-    left: 0;
     right: 0;
+    left: 0;
     bottom: -19px;
     height: 1px;
     background-color: bootstrap.$third-light-grey;
+    content: "";
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -20,18 +30,19 @@
     align-items: center;
     row-gap: 25px;
 
-    &:not(:first-child):before {
-      position: absolute;
-      content: "";
-      left: -38px;
-      right: -38px;
-      top: -27px;
-      height: 1px;
-      background-color: bootstrap.$third-light-grey;
-    }
-
+    &:first-child::before,
     &::after {
       display: none;
+    }
+
+    &:not(:first-child):before {
+      position: absolute;
+      top: -27px;
+      right: -38px;
+      left: -38px;
+      height: 1px;
+      background-color: bootstrap.$third-light-grey;
+      content: "";
     }
   }
 
@@ -41,13 +52,9 @@
     gap: 40px;
 
     &:not(:first-child):before {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
       top: -16px;
-      height: 1px;
-      background-color: bootstrap.$third-light-grey;
+      right: 0;
+      left: 0;
     }
   }
 }

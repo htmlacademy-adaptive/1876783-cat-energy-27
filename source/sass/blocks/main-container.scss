@@ -12,27 +12,41 @@
   align-items: center;
 
   &--index {
+    position: relative;
     padding-bottom: 10px;
     text-align: center;
-    background-image: linear-gradient(rgba(bootstrap.$green, 85%), rgba(bootstrap.$green, 85%)), url("../img/background/index-background-cat.jpg");
+    background-image: linear-gradient(rgba(bootstrap.$green, 0.85), rgba(bootstrap.$green, 0.85)), url("../img/background/index-background-cat.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 302px, 320px 302px;
+    background-size: 100% 302px, 320px auto;
     background-position: top center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(bootstrap.$green, 0.85), rgba(bootstrap.$green, 0.85)), url("../img/background/index-background-cat@2x.jpg");
+    }
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      min-height: 302px;
+      background-color: bootstrap.$dark-grey;
+      z-index: -1;
+      content: "";
+    }
   }
 
   &--catalog {
+    position: relative;
     @include bootstrap.offset-sides-y(27px, 41px);
     @include bootstrap.offset-sides-x(20px, 20px);
-    position: relative;
 
     &::before,
     &::after {
       position: absolute;
-      content: "";
       left: 0;
       right: 0;
       height: 1px;
-      background-color: bootstrap.$dark-white;
+      background-color: bootstrap.$grey-5;
+      content: "";
     }
 
     &::before {
@@ -68,6 +82,10 @@
       position: relative;
       background-image: none;
       padding-bottom: 0;
+
+      &::before {
+        display: none;
+      }
     }
 
     &--catalog {
@@ -83,8 +101,8 @@
     }
 
     &--form {
-      width: 628px;
       margin: 0 auto;
+      width: 628px;
       @include bootstrap.offset-sides-y(65px, 33px);
       @include bootstrap.offset-sides-x(0, 0);
 
@@ -98,18 +116,18 @@
     width: 1220px;
 
     &--index {
-      min-height: 550px;
       padding-bottom: 82px;
+      min-height: 550px;
     }
 
     &--catalog {
-      width: 1220px;
       @include bootstrap.offset-sides-y(74px, 74px);
+      width: 1220px;
     }
 
     &--form {
-      width: 1220px;
       padding-top: 77px;
+      width: 1220px;
     }
   }
 }
@@ -159,8 +177,8 @@
   color: bootstrap.$primary-dark;
 
   &--index {
-    color: bootstrap.$white;
     margin-bottom: 25px;
+    color: bootstrap.$white;
   }
 
   &--catalog {
@@ -169,8 +187,8 @@
   }
 
   &--form-food {
-    text-align: left;
     margin-bottom: 37px;
+    text-align: left;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -179,9 +197,9 @@
     line-height: 1;
 
     &--index {
-      color: bootstrap.$primary-dark;
-      width: 416px;
       margin-bottom: 41px;
+      width: 416px;
+      color: bootstrap.$primary-dark;
     }
 
     &--catalog {
@@ -249,20 +267,20 @@
 .main-container__link-programs {
   box-sizing: border-box;
   display: block;
+  margin-top: 3px;
+  width: 280px;
   align-self: center;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
   line-height: 1.29;
   color: bootstrap.$white;
-  margin-top: 3px;
-  width: 280px;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: absolute;
+    margin-top: 0;
     top: 290px;
     left: 90px;
-    margin-top: 0;
     width: 244px;
     font-size: 20px;
     line-height: 1;

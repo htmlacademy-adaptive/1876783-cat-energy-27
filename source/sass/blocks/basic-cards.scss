@@ -4,11 +4,7 @@
   @include bootstrap.offset-sides-y(8px, 25px);
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(18px, 55px);
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    padding-top: 10px;
+    @include bootstrap.offset-sides-y(98px, 55px);
   }
 }
 
@@ -23,18 +19,20 @@
     margin: 0 auto;
     width: 708px;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 133px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 144px;
   }
 }
 
 .basic-cards__item {
+  box-sizing: border-box;
   position: relative;
   @include bootstrap.offset-sides-y(11px, 14px);
 
@@ -45,11 +43,19 @@
     right: 0;
     bottom: -8px;
     height: 1px;
-    background-color: bootstrap.$dark-white;
+    background-color: bootstrap.$grey-5;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(0, 40px);
+    @include bootstrap.offset-sides-y(0, 0);
+
+    &:not(:last-child) {
+      background-color: bootstrap.$grey;
+    }
+
+    &:nth-child(odd) .basic-cards__wrapper-image {
+      padding-top: 28px;
+    }
 
     &::after {
       display: none;
@@ -62,40 +68,46 @@
 }
 
 .basic-cards__wrapper-item {
-  width: 280px;
+  box-sizing: border-box;
   margin: 0 auto;
+  width: 280px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-items: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 252px;
+    @include bootstrap.offset-sides-x(36px, 36px);
+    padding-bottom: 40px;
+    width: auto;
     grid-template-columns: 1fr;
+    position: relative;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 180px;
+    @include bootstrap.offset-sides-x(30px, 35px);
     row-gap: 0;
-
-    &:not(:last-child)::before {
-      width: 245px;
-    }
   }
 }
 
 .basic-cards__wrapper-image {
-  @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 34px;
-  }
+  display: block;
 
-  @media (min-width: bootstrap.$desktop-width) {
-    margin-bottom: 46px;
+  @media (min-width: bootstrap.$tablet-width) {
+    $stats-shift: -73px;
+
+    position: relative;
+    top: $stats-shift;
+    margin-bottom: $stats-shift;
   }
 }
 
 .basic-cards__link {
   @include bootstrap.link(bootstrap.$third-dark, bootstrap.$white);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.link(bootstrap.$third-dark, bootstrap.$grey);
+  }
 }
 
 .basic-cards__title {
@@ -111,7 +123,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
-    margin-bottom: 21px;
+    padding-bottom: 21px;
     width: 159px;
     font-size: 20px;
     line-height: 1.2;
@@ -130,7 +142,6 @@
   width: 140px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 0;
     width: 252px;
   }
 

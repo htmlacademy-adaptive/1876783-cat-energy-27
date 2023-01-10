@@ -2,25 +2,32 @@
 
 .header--index::before {
   @media (min-width: bootstrap.$desktop-width) {
-    content: "";
     position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 694px;
+    background-color: bootstrap.$dark-grey;
     background-image: linear-gradient(rgba(bootstrap.$green, $alpha: 0.85), rgba(bootstrap.$green, $alpha: 0.85)), url("../img/background/index-background-desktop-cat.jpg");
     background-repeat: no-repeat;
-    width: 720px;
-    height: 694px;
-    left: 50%;
+    background-size: cover;
+    content: "";
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(bootstrap.$green, $alpha: 0.85), rgba(bootstrap.$green, $alpha: 0.85)), url("../img/background/index-background-desktop-cat@2x.jpg");
+    }
   }
 }
 
 .header__wrapper {
   margin: 0 auto;
+  width: 320px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: bootstrap.$tablet-width) {
+    width: 708px;
     flex-direction: row;
     justify-content: space-between;
-    width: 708px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -29,11 +36,11 @@
 }
 
 .header__logo {
-  display: block;
   box-sizing: border-box;
-  @include bootstrap.offset-sides-y(10px, 17px);
-  @include bootstrap.offset-sides-x(20px, 20px);
   width: 191px;
+  @include bootstrap.offset-sides-y(10px, 17px);
+  padding-left: 20px;
+
 
   &:hover {
     opacity: 0.8;
