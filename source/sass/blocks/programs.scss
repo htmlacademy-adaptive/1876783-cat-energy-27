@@ -17,11 +17,11 @@
   margin: 0 auto;
   width: 280px;
   display: grid;
-  row-gap: 20px;
+  row-gap: 22px;
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 708px;
-    row-gap: 30px;
+    row-gap: 32px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -59,8 +59,8 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(77px, 53px);
-    @include bootstrap.offset-sides-x(316px, 52px);
+    @include bootstrap.offset-sides-y(66px, 57px);
+    @include bootstrap.offset-sides-x(316px, 54px);
 
     &--slim::before {
       background-image: url("../img/cat-back/cat-slim-tablet.svg");
@@ -115,7 +115,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-left: 0;
-    padding-bottom: 24px;
+    padding-bottom: 14px;
     font-size: 36px;
   }
 
@@ -128,7 +128,7 @@
 .programs__description {
   position: relative;
   margin: 0;
-  padding-bottom: 38px;
+  padding-bottom: 42px;
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
@@ -140,14 +140,14 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 17px;
     height: 1px;
     background-color: bootstrap.$secondary-light-grey;
     content: "";
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 48px;
+    padding-bottom: 53px;
     font-size: 16px;
     line-height: 1.5;
     color: bootstrap.$primary-dark;

@@ -3,11 +3,11 @@
 .instruction {
   margin: 0 auto;
   width: 280px;
-  @include bootstrap.offset-sides-y(10px, 50px);
+  @include bootstrap.offset-sides-y(12px, 54px);
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 708px;
-    @include bootstrap.offset-sides-y(35px, 47px);
+    @include bootstrap.offset-sides-y(29px, 47px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -35,12 +35,12 @@
 .instruction__list {
   @include bootstrap.list-reset;
   display: grid;
-  gap: 20px;
+  gap: 26px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 633px;
+    width: 634px;
     grid-template-columns: 1fr 1fr;
-    column-gap: 148px;
+    column-gap: 137px;
     row-gap: 37px;
     counter-reset: index;
   }

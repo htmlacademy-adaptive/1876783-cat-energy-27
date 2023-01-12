@@ -37,8 +37,9 @@
   @media (min-width: bootstrap.$tablet-width) {
     box-sizing: border-box;
     width: 628px;
-    padding: 25px 28px;
+    padding: 24px 28px;
     border: 1px solid bootstrap.$grey-4;
+    gap: 11px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

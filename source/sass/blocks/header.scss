@@ -36,9 +36,8 @@
 }
 
 .header__logo {
-  box-sizing: border-box;
   width: 191px;
-  @include bootstrap.offset-sides-y(10px, 17px);
+  @include bootstrap.offset-sides-y(12px, 14px);
   padding-left: 20px;
 
 

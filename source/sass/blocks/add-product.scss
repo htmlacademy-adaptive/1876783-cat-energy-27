@@ -4,11 +4,11 @@
   padding-bottom: 10px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 54px;
+    padding-bottom: 57px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-bottom: 61px;
+    padding-bottom: 59px;
   }
 }
 
@@ -35,11 +35,12 @@
   @include bootstrap.list-reset;
   margin: 0 auto;
   display: grid;
-  gap: 15px;
+  gap: 12px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 32px;
+    column-gap: 58px;
+    row-gap: 28px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

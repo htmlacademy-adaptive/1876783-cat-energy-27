@@ -1,12 +1,12 @@
 @use "../global/bootstrap.scss";
 
 .result {
-  @include bootstrap.offset-sides-y(25px, 40px);
+  @include bootstrap.offset-sides-y(26px, 40px);
   background-color: bootstrap.$light-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
-    @include bootstrap.offset-sides-y(43px, 0);
+    @include bootstrap.offset-sides-y(43px, 5px);
     background-color: bootstrap.$white;
     z-index: 0;
 
@@ -58,7 +58,6 @@
 
 .result__intro {
   display: grid;
-  row-gap: 20px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -74,7 +73,7 @@
 
 .result__title {
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 36px;
@@ -95,6 +94,7 @@
 .result__description {
   grid-column: 1/-1;
   margin: 0;
+  margin-bottom: 20px;
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 14px;
@@ -102,6 +102,7 @@
   color: bootstrap.$dark-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 54px;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -116,10 +117,11 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 34px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 0;
+    margin-bottom: 0;
+    width: 366px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -143,7 +145,7 @@
     width: 102px;
     row-gap: 11px;
     @include bootstrap.offset-sides-y(15px, 20px);
-    @include bootstrap.offset-sides-x(30px, 30px);
+    @include bootstrap.offset-sides-x(30px, 28px);
   }
 }
 
@@ -151,8 +153,8 @@
   display: block;
   position: absolute;
   width: 60px;
-  top: 45px;
-  left: 17px;
+  top: 46px;
+  left: 18px;
   @include bootstrap.offset-sides-x(12px, 12px);
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
@@ -217,6 +219,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin-top: 6px;
     font-size: 20px;
     line-height: 1.5;
     justify-self: end;
@@ -244,7 +247,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
-    @include bootstrap.offset-sides-y(104px, 100px);
+    @include bootstrap.offset-sides-y(104px, 98px);
     width: 560px;
     height: auto;
   }

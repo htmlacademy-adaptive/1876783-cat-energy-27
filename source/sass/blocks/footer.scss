@@ -15,10 +15,11 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
-    @include bootstrap.offset-sides-y(55px, 55px);
+    @include bootstrap.offset-sides-y(98px, 55px);
     width: 708px;
     flex-direction: row;
     justify-content: space-between;
+    text-align: start;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

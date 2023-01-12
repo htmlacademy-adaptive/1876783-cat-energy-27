@@ -19,10 +19,6 @@
     color: rgba(bootstrap.$white, $alpha: 0.3);
   }
 
-  &--programs {
-    @include bootstrap.offset-sides-y(7px, 7px);
-  }
-
   &--cards-all {
 
     &:hover,
@@ -37,7 +33,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     &--programs {
-      padding: 14px 26px;
+      padding: 17px 26px;
     }
   }
 }

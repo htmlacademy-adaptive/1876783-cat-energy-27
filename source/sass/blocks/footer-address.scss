@@ -28,7 +28,7 @@
   justify-content: space-between;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(56px, 56px);
+    @include bootstrap.offset-sides-y(56px, 38px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -42,6 +42,7 @@
 }
 
 .footer-address__location {
+  position: relative;
   width: 100%;
   display: block;
   border: none;
@@ -73,15 +74,16 @@
   line-height: 1.43;
   color: bootstrap.$dark-grey;
 
-  @media (max-width: bootstrap.$mobail-width-only) {
-    br {
-      display: none;
-    }
-  }
-
   @media (min-width: bootstrap.$tablet-width) {
     width: 160px;
     font-size: 16px;
+    line-height: 1.05;
     text-align: right;
   }
+}
+
+.footer-address__city{
+  @media (min-width: bootstrap.$tablet-width){
+    line-height: 4.1;
+    }
 }

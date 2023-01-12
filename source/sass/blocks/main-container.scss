@@ -91,7 +91,7 @@
     &--catalog {
       margin: 0 auto;
       width: 708px;
-      @include bootstrap.offset-sides-y(65px, 65px);
+      @include bootstrap.offset-sides-y(61px, 65px);
       @include bootstrap.offset-sides-x(0, 0);
 
       &::before,
@@ -103,7 +103,7 @@
     &--form {
       margin: 0 auto;
       width: 628px;
-      @include bootstrap.offset-sides-y(65px, 33px);
+      @include bootstrap.offset-sides-y(61px, 33px);
       @include bootstrap.offset-sides-x(0, 0);
 
       &::after {
@@ -148,8 +148,8 @@
   @media (min-width: bootstrap.$tablet-width) {
 
     &--index {
-      @include bootstrap.offset-sides-y(64px, 20px);
-      @include bootstrap.offset-sides-x(90px, 90px);
+      @include bootstrap.offset-sides-y(61px, 20px);
+      @include bootstrap.offset-sides-x(90px, 91px);
       width: 414px;
       text-align: start;
     }
@@ -177,7 +177,7 @@
   color: bootstrap.$primary-dark;
 
   &--index {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     color: bootstrap.$white;
   }
 
