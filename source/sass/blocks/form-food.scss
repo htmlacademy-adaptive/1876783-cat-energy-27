@@ -17,6 +17,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-bottom: 82px;
+    padding-top: 32px;
   }
 }
 
@@ -32,7 +33,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     margin: 0 auto;
-    padding-bottom: 34px;
+    padding-bottom: 44px;
     width: 1220px;
     flex-direction: row;
     justify-content: space-between;
@@ -197,7 +198,7 @@
     @include bootstrap.offset-sides-y(14px, 14px);
     width: 282px;
     font-size: 20px;
-  line-height: 1;
+    line-height: 1;
 
   }
 
@@ -211,8 +212,13 @@
   padding: 19px 62px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-left: 30px;;
+    display: flex;
+    margin-left: 30px;
     padding: 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-left: 40px;
   }
 }
 
@@ -226,5 +232,6 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
+    align-self: center;
   }
 }

@@ -8,7 +8,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(40px, 40px);
+    @include bootstrap.offset-sides-y(28px, 14px);
   }
 }
 
@@ -80,7 +80,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(47px, 55px);
+    @include bootstrap.offset-sides-y(68px, 55px);
     @include bootstrap.offset-sides-x(61px, 52px);
 
     &--slim::before {
@@ -121,7 +121,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     margin-left: 162px;
-    padding-bottom: 73px;
+    padding-bottom: 62px;
   }
 }
 
@@ -158,7 +158,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-bottom: 23px;
+    padding-bottom: 28px;
   }
 }
 

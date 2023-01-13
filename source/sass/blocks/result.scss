@@ -32,7 +32,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-y(70px, 85px);
+    @include bootstrap.offset-sides-y(8px, 68px);
 
     &::before {
       display: none;
@@ -87,7 +87,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    margin-bottom: 76px;
+    margin-bottom: 146px;
   }
 }
 
@@ -126,7 +126,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-column: 1/2;
-    margin-bottom: 55px;
+    margin-bottom: 49px;
     width: 366px;
   }
 }
@@ -181,7 +181,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     background-color: bootstrap.$light-grey;
-    top: 70px;
+    top: 63px;
   }
 }
 

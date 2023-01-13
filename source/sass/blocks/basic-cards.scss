@@ -25,8 +25,8 @@
   @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 80px;
-    row-gap: 144px;
+    column-gap: 79px;
+    row-gap: 140px;
   }
 }
 
@@ -74,7 +74,7 @@
   grid-template-columns: 1fr 1fr;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(36px, 36px);
+    @include bootstrap.offset-sides-x(36px, 38px);
     padding-bottom: 40px;
     width: auto;
     grid-template-columns: 1fr;
@@ -82,13 +82,13 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(30px, 35px);
+    @include bootstrap.offset-sides-x(39px, 30px);
     row-gap: 0;
   }
 }
 
 .basic-cards__wrapper-image {
-  display: block;
+  display: flex;
   justify-self: center;
   align-self: flex-end;
 
@@ -112,6 +112,10 @@
 .basic-cards__wrapper-description {
   @media (min-width: bootstrap.$tablet-width) {
     padding-top: 24px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 29px;
   }
 }
 
@@ -138,6 +142,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     width: 145px;
     line-height: 20px;
+    margin-bottom: 26px;
   }
 }
 

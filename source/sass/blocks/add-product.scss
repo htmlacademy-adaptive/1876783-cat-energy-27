@@ -8,7 +8,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-bottom: 59px;
+    padding-bottom: 62px;
   }
 }
 
@@ -45,5 +45,6 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-template-columns: repeat(4, 1fr);
+    column-gap: 78px;
   }
 }
