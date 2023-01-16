@@ -92,19 +92,19 @@
   }
 
   &--leaf::before {
-    content: url("../img/index-icon/icon-leaf.svg");
+    content: url("../img/icon-leaf.svg");
   }
 
   &--water::before {
-    content: url("../img/index-icon/icon-water.svg");
+    content: url("../img/icon-water.svg");
   }
 
   &--eat::before {
-    content: url("../img/index-icon/icon-eat.svg");
+    content: url("../img/icon-eat.svg");
   }
 
   &--watch::before {
-    content: url("../img/index-icon/icon-watch.svg");
+    content: url("../img/icon-watch.svg");
   }
 
   @media (max-width: bootstrap.$mobail-width-only) {
@@ -125,19 +125,19 @@
     }
 
     &--leaf::before {
-      content: url("../img/index-icon/icon-leaf-tablet.svg");
+      content: url("../img/icon-leaf-tablet.svg");
     }
 
     &--water::before {
-      content: url("../img/index-icon/icon-water-tablet.svg");
+      content: url("../img/icon-water-tablet.svg");
     }
 
     &--eat::before {
-      content: url("../img/index-icon/icon-eat-tablet.svg");
+      content: url("../img/icon-eat-tablet.svg");
     }
 
     &--watch::before {
-      content: url("../img/index-icon/icon-watch-tablet.svg");
+      content: url("../img/icon-watch-tablet.svg");
     }
   }
 }

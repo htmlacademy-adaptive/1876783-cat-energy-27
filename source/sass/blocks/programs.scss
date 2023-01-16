@@ -39,7 +39,7 @@
 
   &--slim::before {
     position: absolute;
-    background-image: url("../img/cat-back/cat-slim.svg");
+    background-image: url("../img/cat-slim.svg");
     background-repeat: no-repeat;
     width: 50px;
     height: 53px;
@@ -49,7 +49,7 @@
 
   &--pro::before {
     position: absolute;
-    background-image: url("../img/cat-back/cat-pro.svg");
+    background-image: url("../img/cat-pro.svg");
     background-repeat: no-repeat;
     width: 67px;
     height: 50px;
@@ -63,7 +63,7 @@
     @include bootstrap.offset-sides-x(316px, 54px);
 
     &--slim::before {
-      background-image: url("../img/cat-back/cat-slim-tablet.svg");
+      background-image: url("../img/cat-slim-tablet.svg");
       width: 200px;
       height: 211px;
       top: 81px;
@@ -71,7 +71,7 @@
     }
 
     &--pro::before {
-      background-image: url("../img/cat-back/cat-pro-tablet.svg");
+      background-image: url("../img/cat-pro-tablet.svg");
       width: 268px;
       height: 200px;
       top: 91px;
@@ -84,7 +84,7 @@
     @include bootstrap.offset-sides-x(61px, 52px);
 
     &--slim::before {
-      background-image: url("../img/cat-back/cat-slim-desktop.svg");
+      background-image: url("../img/cat-slim-desktop.svg");
       width: 100px;
       height: 106px;
       top: 41px;
@@ -92,7 +92,7 @@
     }
 
     &--pro::before {
-      background-image: url("../img/cat-back/cat-pro-desktop.svg");
+      background-image: url("../img/cat-pro-desktop.svg");
       width: 134px;
       height: 100px;
       top: 47px;
@@ -134,7 +134,6 @@
   font-size: 14px;
   line-height: 1.29;
   color: bootstrap.$dark-grey;
-
 
   &::after {
     position: absolute;

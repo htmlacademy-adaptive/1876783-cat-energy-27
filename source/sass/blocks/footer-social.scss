@@ -44,13 +44,13 @@
 }
 
 .footer-social__link {
-  fill: bootstrap.$third-grey;
+  color: bootstrap.$third-grey;
 
-  &:hover {
-    fill: bootstrap.$green;
+  &:hover .footer-social__icon {
+    color: bootstrap.$green;
   }
 
-  &:active {
+  &:active .footer-social__icon {
     opacity: 0.3;
   }
 }

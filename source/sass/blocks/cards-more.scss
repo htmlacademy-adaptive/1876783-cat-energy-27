@@ -2,7 +2,6 @@
 
 .cards-more {
   @include bootstrap.offset-sides-y(70px, 14px);
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -37,7 +36,7 @@
 
   &::before {
     position: absolute;
-    content: url("../img/catalog-icons/plus-icon.svg");
+    content: url("../img/plus-icon.svg");
     width: 30px;
     height: 30px;
     top: -52px;
@@ -51,7 +50,7 @@
 
     &::before {
       position: absolute;
-      content: url("../img/catalog-icons/plus-icon-tablet.svg");
+      content: url("../img/plus-icon-tablet.svg");
       width: 60px;
       height: 60px;
       top: -109px;
@@ -76,6 +75,7 @@
 }
 
 .cards-more__link {
+  margin: 0 auto;
   margin-top: 20px;
   width: 280px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
