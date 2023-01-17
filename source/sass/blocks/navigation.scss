@@ -12,8 +12,8 @@
       background-color: bootstrap.$primary-dark;
       right: 0;
       top: 0;
-      box-shadow: 0 7px 0 0 bootstrap.$primary-dark,
-        0 14px 0 0 bootstrap.$primary-dark;
+      box-shadow: 0 8px 0 0 bootstrap.$primary-dark,
+        0 16px 0 0 bootstrap.$primary-dark;
     }
 
     @media (max-width: bootstrap.$mobail-width-only) {
@@ -31,7 +31,7 @@
         content: "";
         position: absolute;
         right: 0;
-        top: 10px;
+        top: 8px;
         width: 24px;
         height: 2px;
         background-color: bootstrap.$primary-dark;
@@ -72,7 +72,7 @@
 
 .navigation__toggle {
   position: absolute;
-  top: -40px;
+  top: -43px;
   right: 20px;
   width: 24px;
   height: 18px;

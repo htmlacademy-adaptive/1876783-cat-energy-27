@@ -4,15 +4,14 @@
   @include bootstrap.offset-sides-y(8px, 25px);
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(98px, 55px);
+    @include bootstrap.offset-sides-y(98px, 40px);
   }
 }
 
 .basic-cards__list {
   @include bootstrap.list-reset;
   display: grid;
-  row-gap: 19px;
-  text-align: center;
+  row-gap: 18px;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
@@ -20,28 +19,28 @@
     width: 708px;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 133px;
+    row-gap: 147px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 1220px;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 80px;
-    row-gap: 144px;
+    column-gap: 79px;
+    row-gap: 140px;
   }
 }
 
 .basic-cards__item {
   box-sizing: border-box;
   position: relative;
-  @include bootstrap.offset-sides-y(11px, 14px);
+  @include bootstrap.offset-sides-y(12px, 14px);
 
   &::after {
     position: absolute;
     content: "";
     left: 0;
     right: 0;
-    bottom: -8px;
+    bottom: -11px;
     height: 1px;
     background-color: bootstrap.$grey-5;
   }
@@ -53,8 +52,8 @@
       background-color: bootstrap.$grey;
     }
 
-    &:nth-child(odd) .basic-cards__wrapper-image {
-      padding-top: 28px;
+    &:first-child .basic-cards__wrapper-description {
+      padding-top: 30px;
     }
 
     &::after {
@@ -73,11 +72,9 @@
   width: 280px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(36px, 36px);
+    @include bootstrap.offset-sides-x(36px, 38px);
     padding-bottom: 40px;
     width: auto;
     grid-template-columns: 1fr;
@@ -85,20 +82,22 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    @include bootstrap.offset-sides-x(30px, 35px);
+    @include bootstrap.offset-sides-x(39px, 30px);
     row-gap: 0;
   }
 }
 
 .basic-cards__wrapper-image {
-  display: block;
+  display: flex;
+  justify-self: center;
+  align-self: flex-end;
 
   @media (min-width: bootstrap.$tablet-width) {
-    $stats-shift: -73px;
+    $cards-shift: -73px;
 
     position: relative;
-    top: $stats-shift;
-    margin-bottom: $stats-shift;
+    top: $cards-shift;
+    margin-bottom: $cards-shift;
   }
 }
 
@@ -106,13 +105,23 @@
   @include bootstrap.link(bootstrap.$third-dark, bootstrap.$white);
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.link(bootstrap.$third-dark, bootstrap.$grey);
+    color: bootstrap.$grey;
+  }
+}
+
+.basic-cards__wrapper-description {
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 29px;
   }
 }
 
 .basic-cards__title {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   width: 76px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
@@ -123,7 +132,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0 auto;
-    padding-bottom: 21px;
+    margin-bottom: 17px;
     width: 159px;
     font-size: 20px;
     line-height: 1.2;
@@ -133,12 +142,13 @@
   @media (min-width: bootstrap.$desktop-width) {
     width: 145px;
     line-height: 20px;
+    margin-bottom: 26px;
   }
 }
 
 .basic-cards__features {
   margin: 0;
-  padding-bottom: 9px;
+  padding-bottom: 10px;
   width: 140px;
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -153,7 +163,7 @@
 .basic-cards__link-buy {
   width: 280px;
   grid-column: 1/-1;
-  margin-top: 13px;
+  margin-top: 12px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
@@ -161,8 +171,8 @@
   color: bootstrap.$white;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-top: 33px;
-    width: 248px;
+    margin-top: 29px;
+    width: 252px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

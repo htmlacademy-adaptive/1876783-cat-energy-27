@@ -9,30 +9,31 @@
   line-height: 1.33;
   color: bootstrap.$dark-grey;
 
-  &:not(:last-child) {
-    margin-bottom: 4px;
-  }
-
   @media (min-width: bootstrap.$tablet-width) {
     position: relative;
     font-size: 16px;
 
     &:not(:last-child) {
-      margin-bottom: 14px;
-    }
+      margin-bottom: 11px;
 
-    &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      bottom: -9px;
-      height: 1px;
-      background-color: bootstrap.$third-light-grey;
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        height: 1px;
+        background-color: bootstrap.$third-light-grey;
+      }
     }
   }
 }
 
 .features-list__value {
   margin: 0;
+  word-spacing: 1px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    word-spacing: 6px;
+  }
 }

@@ -4,7 +4,7 @@
   padding-bottom: 24px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-bottom: 71px;
+    padding-bottom: 65px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -18,18 +18,20 @@
   gap: 11px;
 
   &:not(:last-child) {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
   }
 
   .form-group__field {
     width: 100%;
-    @include bootstrap.offset-sides-y(14px, 14px);
-    @include bootstrap.offset-sides-x(50px, 15px);
+    @include bootstrap.offset-sides-y(13px, 13px);
+    @include bootstrap.offset-sides-x(38px, 15px);
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    gap: 21px;
+
     &:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 17px;
     }
 
     .form-group__field {
@@ -39,10 +41,14 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 568px;
+    width: 571px;
 
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+
+    .form-group__field {
+      padding-left: 20px;
     }
   }
 }

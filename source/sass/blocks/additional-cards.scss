@@ -5,7 +5,7 @@
   overflow-x: hidden;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(13px, 34px);
+    @include bootstrap.offset-sides-y(13px, 80px);
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -28,6 +28,7 @@
 
 .additional-cards__title {
   position: relative;
+  margin-top: 12px;
   margin-bottom: 36px;
   width: 226px;
   font-family: bootstrap.$primary-family;
@@ -82,7 +83,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 706px;
-    gap: 97px;
+    gap: 72px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -97,12 +98,12 @@
   @include bootstrap.list-reset;
   display: grid;
   gap: 32px;
-  padding-top: 13px;
+  padding-top: 11px;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(27px, 27px);
     @include bootstrap.offset-sides-x(38px, 38px);
-    gap: 54px;
+    gap: 56px;
     border: 1px solid bootstrap.$third-light-grey;
   }
 

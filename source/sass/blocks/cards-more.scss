@@ -1,15 +1,14 @@
 @use "../global/bootstrap.scss";
 
 .cards-more {
-  @include bootstrap.offset-sides-y(78px, 25px);
-  margin: 0 auto;
+  @include bootstrap.offset-sides-y(70px, 14px);
   display: flex;
   flex-direction: column;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(130px, 40px);
-    @include bootstrap.offset-sides-x(38px, 38px);
+    @include bootstrap.offset-sides-y(154px, 40px);
+    @include bootstrap.offset-sides-x(39px, 37px);
   }
 }
 
@@ -27,7 +26,7 @@
 .cards-more__title {
   position: relative;
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
@@ -37,10 +36,10 @@
 
   &::before {
     position: absolute;
-    content: url("../img/catalog-icons/plus-icon.svg");
+    content: url("../img/plus-icon.svg");
     width: 30px;
     height: 30px;
-    top: -59px;
+    top: -52px;
     left: 125px;
   }
 
@@ -51,7 +50,7 @@
 
     &::before {
       position: absolute;
-      content: url("../img/catalog-icons/plus-icon-tablet.svg");
+      content: url("../img/plus-icon-tablet.svg");
       width: 60px;
       height: 60px;
       top: -109px;
@@ -76,7 +75,8 @@
 }
 
 .cards-more__link {
-  margin-top: 21px;
+  margin: 0 auto;
+  margin-top: 20px;
   width: 280px;
   @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   font-family: bootstrap.$primary-family;
@@ -94,10 +94,11 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 249px;
-    margin-top: 102px;
+    margin-top: 86px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     width: 169px;
+    margin-top: 89px;
   }
 }

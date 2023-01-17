@@ -22,18 +22,18 @@
 
   &::before {
     position: absolute;
-    content: url("../img/catalog-icons/gift-icon.svg");
-    top: 57px;
+    content: url("../img/gift-icon.svg");
+    top: 58px;
     left: 101px;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.offset-sides-y(71px, 69px);
-    @include bootstrap.offset-sides-x(124px, 422px);
+    @include bootstrap.offset-sides-x(123px, 422px);
     background-position: 100%, 0 -326px;
 
     &::before {
-      left: 77px;
+      left: 78px;
     }
   }
 
@@ -43,7 +43,8 @@
     background-position: 100%, -40px 0;
 
     &::before {
-      left: 84px;
+      top: 56px;
+      left: 85px;
     }
   }
 }

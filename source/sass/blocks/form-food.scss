@@ -1,7 +1,7 @@
 @use "../global/bootstrap.scss";
 
 .form-food {
-  @include bootstrap.offset-sides-y(23px, 23px);
+  @include bootstrap.offset-sides-y(22px, 13px);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;
@@ -10,29 +10,30 @@
   text-transform: uppercase;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-y(33px, 72px);
+    @include bootstrap.offset-sides-y(29px, 76px);
     font-size: 20px;
     line-height: 1.5;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-bottom: 82px;
+    padding-top: 32px;
   }
 }
 
 .form-food__wrapper-data {
-  padding-bottom: 19px;
+  padding-bottom: 27px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-bottom: 38px;
-    gap: 72px;
+    gap: 49px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     margin: 0 auto;
-    padding-bottom: 34px;
+    padding-bottom: 44px;
     width: 1220px;
     flex-direction: row;
     justify-content: space-between;
@@ -62,7 +63,7 @@
 .form-food__title {
   position: relative;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 24px;
@@ -84,6 +85,7 @@
     width: 187px;
 
     &::after {
+      top: 28%;
       left: calc(100% + 14px);
     }
   }
@@ -97,7 +99,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 76px;
+    margin-bottom: 74px;
     margin-left: 38px;
     font-size: 36px;
     line-height: 1;
@@ -148,8 +150,8 @@
   width: 280px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.offset-sides-x(40px, 40px);
-    width: 628px;
+    @include bootstrap.offset-sides-x(37px, 40px);
+    width: 633px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -193,7 +195,10 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     margin-top: 0;
+    @include bootstrap.offset-sides-y(14px, 14px);
     width: 282px;
+    font-size: 20px;
+    line-height: 1;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -203,10 +208,16 @@
 
 .form-food__wrapper-mark {
   margin-top: 0px;
-  padding: 21px 63px;
+  padding: 19px 62px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    display: flex;
+    margin-left: 30px;
     padding: 0;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-left: 40px;
   }
 }
 
@@ -220,5 +231,6 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 16px;
+    align-self: center;
   }
 }

@@ -7,7 +7,7 @@
 
   &:first-child::before {
     position: absolute;
-    top: -12px;
+    top: -14px;
     right: 0;
     left: 0;
     height: 1px;
@@ -28,7 +28,7 @@
   @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    row-gap: 25px;
+    row-gap: 22px;
 
     &:first-child::before,
     &::after {

@@ -1,7 +1,9 @@
 @use "../global/bootstrap.scss";
 
 .footer-social {
-  @include bootstrap.offset-sides-y(20px, 20px);
+  display: flex;
+  justify-content: center;
+  @include bootstrap.offset-sides-y(21px, 18px);
   position: relative;
 
   &::before,
@@ -35,18 +37,20 @@
 .footer-social__list {
   @include bootstrap.list-reset;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-content: center;
   gap: 24px;
 }
 
 .footer-social__link {
-  fill: bootstrap.$third-grey;
+  color: bootstrap.$third-grey;
 
-  &:hover {
-    fill: bootstrap.$green;
+  &:hover .footer-social__icon {
+    color: bootstrap.$green;
   }
 
-  &:active {
+  &:active .footer-social__icon {
     opacity: 0.3;
   }
 }
