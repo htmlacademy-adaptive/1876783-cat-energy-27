@@ -42,6 +42,10 @@
   }
 }
 
+.footer-address__location-image {
+  display: none;
+}
+
 .footer-address__location {
   position: relative;
   width: 100%;
@@ -49,6 +53,15 @@
   display: block;
   border: none;
 }
+
+.footer-address__wrapper-location--nojs .footer-address__location {
+  display: none;
+}
+
+.footer-address__wrapper-location--nojs .footer-address__location-image {
+    display: block;
+    width: 100%;
+  }
 
 .footer-address__title {
   margin: 0;
