@@ -70,6 +70,17 @@
   color: bootstrap.$dark-grey;
   text-transform: uppercase;
   border: 1px solid bootstrap.$grey-4;
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type="radio"] {
+    background-color: transparent;
+  }
 
   &[type="radio"]+.form-group__mark {
     border-radius: 50%;
@@ -121,16 +132,16 @@
     stroke: bootstrap.$green;
   }
 
-  &--error {
+  &:invalid {
     outline: 2px solid bootstrap.$error-red;
+  }
 
-    &[type="email"]+.form-group__image {
-      stroke: bootstrap.$error-red;
-    }
+  &[type="email"]+.form-group__image {
+    stroke: bootstrap.$error-red;
+  }
 
-    &[type="tel"]+.form-group__image {
-      stroke: bootstrap.$error-red;
-    }
+  &[type="tel"]+.form-group__image {
+    stroke: bootstrap.$error-red;
   }
 
   @media (min-width: bootstrap.$tablet-width) {

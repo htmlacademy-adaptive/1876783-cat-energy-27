@@ -243,6 +243,7 @@
 }
 
 .result__image-wrapper {
+  position: relative;
   padding-top: 20px;
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -261,4 +262,69 @@
 
 .result__image {
   display: block;
+}
+
+.result__scale {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 4px;
+  height: 256px;
+  border-radius: 2px;
+  background-color: bootstrap.$third-grey;
+
+  &:hover {
+    background-color: bootstrap.$green;
+
+    .result__scroller {
+      border-color: bootstrap.$green;
+    }
+
+    .result__thumb {
+      color: bootstrap.$green;
+    }
+  }
+
+  &:active {
+    background-color: bootstrap.$dark-green;
+    opacity: 0.6;
+
+    .result__scroller {
+      border-color: bootstrap.$dark-green;
+    }
+
+    .result__thumb {
+      color: bootstrap.$dark-green;
+    }
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    height: 512px;
+    top: 104px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    top: 0;
+  }
+}
+
+.result__scroller {
+  position: absolute;
+  bottom: 108px;
+  left: -18px;
+  box-sizing: border-box;
+  padding-top: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: bootstrap.$white;
+  border: 2px solid bootstrap.$third-grey;
+  border-radius: 50%;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 236px;
+  }
+}
+
+.result__thumb {
+  color: bootstrap.$third-grey;
 }
