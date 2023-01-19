@@ -1,8 +1,8 @@
 @use "../global/bootstrap.scss";
 
 .button {
-  display: inline-block;
   @include bootstrap.offset-sides-y(10px, 10px);
+  display: inline-block;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -19,16 +19,13 @@
     color: rgba(bootstrap.$white, $alpha: 0.3);
   }
 
-  &--cards-all {
+  &--cards-all:hover,
+  &--cards-all:active {
+    background-color: bootstrap.$grey-5;
+  }
 
-    &:hover,
-    &:active {
-      background-color: bootstrap.$grey-5;
-    }
-
-    &:active {
-      color: rgba(bootstrap.$dark-grey, $alpha: 0.3);
-    }
+  &--cards-all:active {
+    color: rgba(bootstrap.$dark-grey, $alpha: 0.3);
   }
 
   @media (min-width: bootstrap.$tablet-width) {

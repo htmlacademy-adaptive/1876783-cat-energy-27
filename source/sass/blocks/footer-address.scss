@@ -32,10 +32,10 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.offset-sides-x(76px, 80px);
     position: absolute;
     width: 565px;
     top: 95px;
-    @include bootstrap.offset-sides-x(76px, 80px);
     background-color: bootstrap.$white;
     box-sizing: border-box;
     z-index: 5;
@@ -59,9 +59,9 @@
 }
 
 .footer-address__wrapper-location--nojs .footer-address__location-image {
-    display: block;
-    width: 100%;
-  }
+  display: block;
+  width: 100%;
+}
 
 .footer-address__title {
   margin: 0;

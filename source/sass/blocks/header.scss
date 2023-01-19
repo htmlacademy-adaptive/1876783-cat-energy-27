@@ -36,8 +36,8 @@
 }
 
 .header__logo {
-  width: 191px;
   @include bootstrap.offset-sides-y(12px, 14px);
+  width: 191px;
   padding-left: 20px;
 
 

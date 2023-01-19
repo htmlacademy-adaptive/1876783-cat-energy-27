@@ -7,9 +7,9 @@
 }
 
 .gift__wrapper {
-  position: relative;
   @include bootstrap.offset-sides-y(187px, 43px);
   @include bootstrap.offset-sides-x(61px, 58px);
+  position: relative;
   background-image: linear-gradient(rgba(bootstrap.$green, 0.85), rgba(bootstrap.$green, 0.85)), url("../img/background/catalog-gift.jpg");
   background-repeat: no-repeat;
   background-color: bootstrap.$green;

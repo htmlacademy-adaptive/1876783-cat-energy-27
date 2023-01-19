@@ -5,8 +5,8 @@
   background-color: bootstrap.$light-grey;
 
   @media (min-width: bootstrap.$tablet-width) {
-    position: relative;
     @include bootstrap.offset-sides-y(43px, 5px);
+    position: relative;
     background-color: bootstrap.$white;
     z-index: 0;
 
@@ -132,30 +132,30 @@
 }
 
 .result__item {
+  @include bootstrap.offset-sides-y(14px, 17px);
+  @include bootstrap.offset-sides-x(20px, 20px);
   position: relative;
   display: grid;
   row-gap: 7px;
   width: 82px;
-  @include bootstrap.offset-sides-y(14px, 17px);
-  @include bootstrap.offset-sides-x(20px, 20px);
   border: 1px solid bootstrap.$third-light-grey;
   border-radius: 3px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 102px;
-    row-gap: 11px;
     @include bootstrap.offset-sides-y(15px, 20px);
     @include bootstrap.offset-sides-x(30px, 28px);
+    width: 102px;
+    row-gap: 11px;
   }
 }
 
 .result__name {
+  @include bootstrap.offset-sides-x(12px, 12px);
   display: block;
   position: absolute;
   width: 60px;
   top: 46px;
   left: 18px;
-  @include bootstrap.offset-sides-x(12px, 12px);
   font-family: bootstrap.$secondary-family;
   font-weight: bootstrap.$normal;
   font-size: 12px;
@@ -212,7 +212,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  @media(max-width:bootstrap.$mobail-width-only) {
+  @media (max-width: bootstrap.$mobail-width-only) {
     br {
       display: none;
     }
@@ -247,8 +247,8 @@
   padding-top: 20px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin: 0 auto;
     @include bootstrap.offset-sides-y(104px, 98px);
+    margin: 0 auto;
     width: 560px;
     height: auto;
   }

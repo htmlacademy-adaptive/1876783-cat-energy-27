@@ -24,35 +24,32 @@
   }
 
   &--opened {
-    .navigation__toggle {
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 8px;
-        width: 24px;
-        height: 2px;
-        background-color: bootstrap.$primary-dark;
-      }
-
-      &::before {
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
+    .navigation__toggle::before,
+    .navigation__toggle::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 24px;
+      height: 2px;
+      background-color: bootstrap.$primary-dark;
     }
 
-    @media (max-width: bootstrap.$mobail-width-only) {
-      .navigation__list {
-        position: absolute;
-        width: 100%;
-        background-color: bootstrap.$white;
-        z-index: 10;
-      }
+    .navigation__toggle::before {
+      transform: rotate(45deg);
+    }
+
+    .navigation__toggle::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (max-width: bootstrap.$mobail-width-only) {
+    .navigation__list {
+      position: absolute;
+      width: 100%;
+      background-color: bootstrap.$white;
+      z-index: 10;
     }
   }
 
@@ -102,6 +99,8 @@
 }
 
 .navigation__link {
+  @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
+  @include bootstrap.offset-sides-y(22px, 24px);
   position: relative;
   box-sizing: border-box;
   display: block;
@@ -110,8 +109,6 @@
   font-size: 20px;
   line-height: 1;
   color: bootstrap.$primary-dark;
-  @include bootstrap.link(bootstrap.$primary-dark, bootstrap.$white);
-  @include bootstrap.offset-sides-y(22px, 24px);
   text-transform: uppercase;
 
   &::before {
@@ -133,12 +130,12 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.offset-sides-y(18px, 8px);
     font-weight: bootstrap.$normal;
     font-size: 18px;
     line-height: 1.33;
     color: bootstrap.$primary-dark;
     white-space: nowrap;
-    @include bootstrap.offset-sides-y(18px, 8px);
     border-top: none;
 
     &::before {
@@ -150,7 +147,7 @@
 
       &::after {
         position: absolute;
-        right: 0px;
+        right: 0;
         left: 0;
         bottom: 0;
         height: 2px;

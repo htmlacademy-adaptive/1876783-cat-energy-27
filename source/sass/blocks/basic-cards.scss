@@ -31,9 +31,9 @@
 }
 
 .basic-cards__item {
+  @include bootstrap.offset-sides-y(12px, 14px);
   box-sizing: border-box;
   position: relative;
-  @include bootstrap.offset-sides-y(12px, 14px);
 
   &::after {
     position: absolute;

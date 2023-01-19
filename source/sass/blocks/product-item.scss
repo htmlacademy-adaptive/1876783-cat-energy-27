@@ -35,7 +35,7 @@
       display: none;
     }
 
-    &:not(:first-child):before {
+    &:not(:first-child)::before {
       position: absolute;
       top: -27px;
       right: -38px;
@@ -51,7 +51,7 @@
     grid-template-columns: 1fr 1fr 244px;
     gap: 40px;
 
-    &:not(:first-child):before {
+    &:not(:first-child)::before {
       top: -16px;
       right: 0;
       left: 0;

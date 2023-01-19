@@ -35,9 +35,9 @@
   }
 
   &--catalog {
-    position: relative;
     @include bootstrap.offset-sides-y(27px, 41px);
     @include bootstrap.offset-sides-x(20px, 20px);
+    position: relative;
 
     &::before,
     &::after {
@@ -59,9 +59,9 @@
   }
 
   &--form {
-    position: relative;
     @include bootstrap.offset-sides-y(27px, 15px);
     @include bootstrap.offset-sides-x(20px, 20px);
+    position: relative;
 
     &::after {
       position: absolute;
@@ -89,10 +89,10 @@
     }
 
     &--catalog {
-      margin: 0 auto;
-      width: 708px;
       @include bootstrap.offset-sides-y(61px, 65px);
       @include bootstrap.offset-sides-x(0, 0);
+      margin: 0 auto;
+      width: 708px;
 
       &::before,
       &::after {
@@ -101,10 +101,10 @@
     }
 
     &--form {
-      margin: 0 auto;
-      width: 628px;
       @include bootstrap.offset-sides-y(61px, 33px);
       @include bootstrap.offset-sides-x(0, 0);
+      margin: 0 auto;
+      width: 628px;
 
       &::after {
         display: none;
@@ -133,7 +133,6 @@
 }
 
 .main-container__intro {
-
   &--index {
     @include bootstrap.offset-sides-y(28px, 28px);
     @include bootstrap.offset-sides-x(35px, 35px);
@@ -146,7 +145,6 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-
     &--index {
       @include bootstrap.offset-sides-y(61px, 20px);
       @include bootstrap.offset-sides-x(90px, 91px);
@@ -160,10 +158,9 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-
     &--index {
-      padding-top: 32px;
       @include bootstrap.offset-sides-x(80px, 80px);
+      padding-top: 32px;
     }
   }
 }

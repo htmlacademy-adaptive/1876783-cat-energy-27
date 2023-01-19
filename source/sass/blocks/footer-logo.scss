@@ -9,13 +9,10 @@
   }
 }
 
-.footer-logo__logo-link {
+.footer-logo__logo-link:hover {
+  opacity: 0.8;
+}
 
-  &:hover {
-    opacity: 0.8;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
+.footer-logo__logo-link:active {
+  opacity: 0.6;
 }

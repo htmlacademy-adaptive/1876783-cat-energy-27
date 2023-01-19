@@ -1,9 +1,9 @@
 @use "../global/bootstrap.scss";
 
 .footer-social {
+  @include bootstrap.offset-sides-y(21px, 18px);
   display: flex;
   justify-content: center;
-  @include bootstrap.offset-sides-y(21px, 18px);
   position: relative;
 
   &::before,
