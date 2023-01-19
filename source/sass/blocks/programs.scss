@@ -32,9 +32,9 @@
 }
 
 .programs__item {
-  position: relative;
   @include bootstrap.offset-sides-y(30px, 18px);
   @include bootstrap.offset-sides-x(20px, 20px);
+  position: relative;
   background-color: bootstrap.$grey;
 
   &--slim::before {
@@ -162,9 +162,9 @@
 }
 
 .programs__link {
+  @include bootstrap.offset-sides-x(47px, 0);
   position: relative;
   margin-top: 15px;
-  @include bootstrap.offset-sides-x(47px, 0);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;

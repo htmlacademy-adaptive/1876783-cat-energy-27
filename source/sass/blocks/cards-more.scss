@@ -75,10 +75,10 @@
 }
 
 .cards-more__link {
+  @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   margin: 0 auto;
   margin-top: 20px;
   width: 280px;
-  @include bootstrap.link(bootstrap.$dark-grey, bootstrap.$grey);
   font-family: bootstrap.$primary-family;
   font-weight: bootstrap.$normal;
   font-size: 16px;

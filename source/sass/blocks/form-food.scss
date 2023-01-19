@@ -155,8 +155,8 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 1220px;
     @include bootstrap.offset-sides-x(0, 0);
+    width: 1220px;
 
     &--personal-data {
       width: 568px;
@@ -194,8 +194,8 @@
   color: bootstrap.$white;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-top: 0;
     @include bootstrap.offset-sides-y(14px, 14px);
+    margin-top: 0;
     width: 282px;
     font-size: 20px;
     line-height: 1;
@@ -207,7 +207,7 @@
 }
 
 .form-food__wrapper-mark {
-  margin-top: 0px;
+  margin-top: 0;
   padding: 19px 62px;
 
   @media (min-width: bootstrap.$tablet-width) {

@@ -1,18 +1,18 @@
 @use "../global/bootstrap.scss";
 
 .instruction {
+  @include bootstrap.offset-sides-y(12px, 54px);
   margin: 0 auto;
   width: 280px;
-  @include bootstrap.offset-sides-y(12px, 54px);
 
   @media (min-width: bootstrap.$tablet-width) {
-    width: 708px;
     @include bootstrap.offset-sides-y(29px, 47px);
+    width: 708px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 1220px;
     @include bootstrap.offset-sides-y(61px, 61px);
+    width: 1220px;
   }
 }
 
@@ -57,8 +57,8 @@
   padding-left: 80px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-left: 0;
     @include bootstrap.offset-sides-y(151px, 57px);
+    padding-left: 0;
 
     &::before {
       position: absolute;
@@ -70,7 +70,7 @@
       font-size: 280px;
       line-height: 1;
       counter-increment: index;
-      content: counters(index, '.', decimal);
+      content: counter(index);
     }
   }
 }

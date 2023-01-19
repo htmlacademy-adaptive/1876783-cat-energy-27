@@ -17,17 +17,20 @@
 }
 
 .add-product__form-group {
-
   .form-group__field {
     margin-right: 16px;
   }
 
-  @media (min-width: bootstrap.$tablet-width) {
-    margin-right: 20px;
+  .form-group__label {
+    color: bootstrap.$third-dark;
   }
 
-  .form-group__label {
-    color: bootstrap.$primary-dark;
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-right: 20px;
+
+    & .form-group__label {
+      color: bootstrap.$primary-dark;
+    }
   }
 }
 

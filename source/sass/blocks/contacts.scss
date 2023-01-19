@@ -22,9 +22,9 @@
   }
 
   .form-group__field {
-    width: 100%;
     @include bootstrap.offset-sides-y(13px, 13px);
     @include bootstrap.offset-sides-x(38px, 15px);
+    width: 100%;
   }
 
   @media (min-width: bootstrap.$tablet-width) {

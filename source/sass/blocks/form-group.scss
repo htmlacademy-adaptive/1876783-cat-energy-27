@@ -24,10 +24,10 @@
     .form-group__mark {
       border-color: bootstrap.$grey-6;
       opacity: 0.3;
+    }
 
-      &::before {
-        opacity: 0.3;
-      }
+    .form-group__mark::before {
+      opacity: 0.3;
     }
 
     .form-group__mark-label {
@@ -71,11 +71,26 @@
   text-transform: uppercase;
   border: 1px solid bootstrap.$grey-4;
 
-  &[type="radio"]+.form-group__mark {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &[type="radio"] {
+    background-color: transparent;
+    opacity: 0;
+  }
+
+  &[type="checkbox"] {
+    opacity: 0;
+  }
+
+  &[type="radio"] + .form-group__mark {
     border-radius: 50%;
   }
 
-  &[type="radio"]:checked+.form-group__mark::before {
+  &[type="radio"]:checked + .form-group__mark::before {
     position: absolute;
     top: 7px;
     left: 7px;
@@ -86,7 +101,7 @@
     content: "";
   }
 
-  &[type="checkbox"]:checked+.form-group__mark::before {
+  &[type="checkbox"]:checked + .form-group__mark::before {
     position: absolute;
     background-image: url("../img/checked-icon.svg");
     background-repeat: no-repeat;
@@ -109,42 +124,46 @@
     outline: 2px solid bootstrap.$dark-grey;
   }
 
-  &:focus~.form-group__mark {
+  &:focus ~ .form-group__mark {
     border-color: bootstrap.$dark-grey;
   }
 
-  &[type="email"]:focus-within+.form-group__image {
+  &[type="email"]:focus-within + .form-group__image {
     stroke: bootstrap.$green;
   }
 
-  &[type="tel"]:focus-within+.form-group__image {
+  &[type="tel"]:focus-within + .form-group__image {
     stroke: bootstrap.$green;
   }
 
-  &--error {
+  &:not(:placeholder-shown):invalid {
     outline: 2px solid bootstrap.$error-red;
 
-    &[type="email"]+.form-group__image {
+    &[type="email"] + .form-group__image {
       stroke: bootstrap.$error-red;
     }
 
-    &[type="tel"]+.form-group__image {
+    &[type="tel"] + .form-group__image {
       stroke: bootstrap.$error-red;
     }
+  }
+
+  &[type="tel"]:not(:placeholder-shown):invalid {
+    outline: 2px solid bootstrap.$error-red;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
     font-size: 20px;
     line-height: 1.5;
 
-    &[type="radio"]:checked+.form-group__mark::before {
+    &[type="radio"]:checked + .form-group__mark::before {
       width: 18px;
       height: 18px;
       top: 10px;
       left: 10px;
     }
 
-    &[type="checkbox"]:checked+.form-group__mark::before {
+    &[type="checkbox"]:checked + .form-group__mark::before {
       background-image: url("../img/checked-icon-tablet.svg");
       top: 7px;
       left: 7px;
